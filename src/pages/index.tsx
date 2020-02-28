@@ -23,6 +23,7 @@ const Index: NextPage<{}> = () => {
         h1 {
           margin: 0;
           font-size: 10rem;
+          letter-spacing: -1rem;
           line-height: 0.9;
         }
         p {
