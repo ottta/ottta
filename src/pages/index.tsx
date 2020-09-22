@@ -1,10 +1,8 @@
-import { NextPage } from "next";
 import Head from "next/head";
-import { Fragment } from "react";
 
-const Index: NextPage<{}> = () => {
+const Index = () => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Ottta's</title>
         <meta name="description" content="Ottta's the bla bla bla..." />
@@ -31,7 +29,7 @@ const Index: NextPage<{}> = () => {
           padding-left: 1rem;
         }
       `}</style>
-    </Fragment>
+    </>
   );
 };
 

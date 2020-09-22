@@ -1,9 +1,3 @@
 {
-  "version": 2,
-  "alias": [
-    "ottta.now.sh"
-  ],
-  "regions": [
-    "sin1"
-  ]
+  "version": 2
 }
