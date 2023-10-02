@@ -2,6 +2,9 @@
     "name": "ottta",
     "version": "2.0.0",
     "private": true,
+    "engines": {
+        "node": ">=18.x"
+    },
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -9,19 +12,24 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@tailwindcss/typography": "^0.5.10",
+        "clsx": "^2.0.0",
+        "next": "latest",
+        "next-themes": "^0.2.1",
         "react": "latest",
         "react-dom": "latest",
-        "next": "latest"
+        "tailwind-merge": "^1.14.0",
+        "typewriter-effect": "^2.21.0"
     },
     "devDependencies": {
-        "typescript": "latest",
-        "@types/react": "latest",
         "@types/node": "latest",
+        "@types/react": "latest",
         "@types/react-dom": "latest",
         "autoprefixer": "latest",
+        "eslint": "latest",
+        "eslint-config-next": "latest",
         "postcss": "latest",
         "tailwindcss": "latest",
-        "eslint": "latest",
-        "eslint-config-next": "latest"
+        "typescript": "latest"
     }
 }
