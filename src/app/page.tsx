@@ -10,7 +10,8 @@ export default function Page() {
                     "h-screen",
                     "flex flex-col",
                     "justify-between",
-                    "pt-8 lg:pt-24 pb-24"
+                    "pt-8 lg:pt-24 pb-24",
+                    "font-serif"
                 )}
             >
                 <div>
@@ -28,18 +29,10 @@ export default function Page() {
                     </div>
                 </div>
 
-                <p
-                    className={cn(
-                        "text-3xl lg:text-4xl",
-                        "w-full max-w-2xl",
-                        // "mb-12",
-                        "font-serif",
-                        "italic"
-                    )}
-                >
+                <p className={cn("text-3xl lg:text-4xl", "w-full max-w-2xl", "italic")}>
                     <q>
                         A Designer turned Software Developer. Now run <strong>Unforma Club</strong>,
-                        and develop typography products such a <strong>Truetype Supply</strong>{" "}
+                        and develop typography products such a <strong>Truetype Supply:</strong> a
                         software as a service for <strong>Type Designer &amp; Type Foundry</strong>.
                     </q>
                 </p>

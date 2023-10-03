@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 import localFont from "next/font/local";
-import { Alegreya } from "next/font/google";
+import { Alegreya, Inter } from "next/font/google";
 import Provider from "@/app/Provider";
 
 const sans = localFont({
@@ -21,6 +21,13 @@ const sans = localFont({
         }
     ]
 });
+
+// const sans = Inter({
+//     subsets: ["latin"],
+//     weight: "variable",
+//     style: ["normal"],
+//     variable: "--font-sans"
+// });
 
 const serif = Alegreya({
     subsets: ["latin"],
