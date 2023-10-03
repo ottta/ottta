@@ -1,6 +1,5 @@
 "use client";
 
-import { cn } from "@/libs/utils";
 import Type from "typewriter-effect";
 
 export default function Typewriter() {
@@ -8,61 +7,45 @@ export default function Typewriter() {
         <Type
             component="span"
             options={{
-                loop: true,
+                loop: false,
                 autoStart: true,
                 deleteSpeed: 5,
                 delay: 30
             }}
             onInit={(write) => {
                 write
-                    .typeString("I am <strong>Taufik Oktama</strong>")
+                    .typeString("I am <strong class='italic'>Taufik Oktama</strong>")
                     .pauseFor(1000)
                     .deleteChars(16)
-                    .typeString("can type with <strong>10 fingers</strong>")
+                    .typeString("can type with <strong class='italic'>10 fingers</strong>")
                     .pauseFor(500)
                     .changeDeleteSpeed(1)
                     .deleteChars(24)
-                    .typeString("make <strong>Website</strong>")
+                    .typeString("make <strong class='italic'>Website</strong>")
                     .pauseFor(500)
                     .deleteChars(7)
-                    .typeString("<strong>Typeface</strong>")
+                    .typeString("<strong class='italic'>Typeface</strong>")
                     .pauseFor(500)
                     .deleteChars(14)
-                    .typeString("do <strong>Font Production</strong>")
+                    .typeString("do <strong class='italic'>Font Production</strong>")
                     .pauseFor(500)
                     .deleteChars(15)
-                    .typeString("<strong>Font Quality Assurance</strong>")
+                    .typeString("<strong class='italic'>Font Quality Assurance</strong>")
                     .pauseFor(500)
                     .deleteChars(23)
-                    .typeString("<strong>Opentype Programming</strong>")
+                    .typeString("<strong class='italic'>Opentype Programming</strong>")
                     .pauseFor(500)
                     .deleteChars(23)
-                    .typeString("run <strong>Unforma Club</strong>")
+                    .typeString("run <strong class='italic'>Unforma Club</strong>")
                     .pauseFor(1000)
                     .deleteChars(12)
                     .changeDeleteSpeed(5)
-                    .typeString("<strong>Truetype Supply</strong>")
+                    .typeString("<strong class='italic'>Truetype Supply</strong>")
                     .pauseFor(1000)
-                    .deleteAll(2)
-                    .pauseFor(1000)
+                    .deleteChars(20)
+                    .typeString("am <strong class='italic'>Taufik Oktama</strong>")
                     .start();
             }}
-            // options={{
-            //     strings: [
-            //         "am <strong>Taufik Oktama</strong>",
-            //         "do <strong class='text-red-500'>UI/UX Design</strong>",
-            //         "do <strong>Web Development</strong>",
-            //         "do <strong>Typing with 10 Fingers</strong>",
-            //         "make digital product",
-            //         "do something based on design & technology",
-            //         "run <strong>Unforma Club</strong>",
-            //         "run <strong>Truetype Supply</strong>"
-            //     ],
-            //     autoStart: true,
-            //     loop: true,
-            //     deleteSpeed: 5,
-            //     delay: 50
-            // }}
         />
     );
 }

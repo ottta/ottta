@@ -5,7 +5,7 @@
         "employer": "ATAP Promotion",
         "category": "Part Time",
         "role": "Event Documenter",
-        "scope": "Photographer, Videographer",
+        "scope": "Photography, Videography",
         "date": {
             "start": "2009-01-01T00:00:00.000Z",
             "end": "2015-12-30T00:00:00.000Z"
@@ -21,7 +21,7 @@
         "scope": "Editorial Photography & Videography, Motion Graphic, Branding, Event & Community",
         "date": {
             "start": "2012-03-01T00:00:00.000Z",
-            "end": "2018-09-30T00:00:00.000Z"
+            "end": "2018-11-30T00:00:00.000Z"
         },
         "description": "This was my first opportunity to work professionally, I work here while a sophomore in visual communication design. I do a lot of work such as editorial photography, motion graphics, and UI/UX. Enjoy all the work because I can directly apply the knowledge taught at university to the real world. During those works, I also responsible to maintain brand image for each company products with my partner and owner."
     },
@@ -44,7 +44,7 @@
         "employer": "Stuart Membery",
         "category": "Full Time",
         "role": "Multimedia Designer",
-        "scope": "Editorial Photography, UI/UX Design",
+        "scope": "Editorial Photography, Graphic Design, UI/UX Design",
         "date": {
             "start": "2019-01-08T00:00:00.000Z",
             "end": "2020-01-28T00:00:00.000Z"
@@ -53,11 +53,11 @@
     },
     {
         "project": "Sutasoma Typeface",
-        "principle": "IKN / Ibu Kota Negara Indonesia",
+        "principle": "IKN / Ibu Kota Negara (Indonesia)",
         "employer": "Kiwari Collective",
         "category": "Freelance",
         "role": "Font Engineer",
-        "scope": "Quality Assurance, Font Production, Minisite, Software Version Control System",
+        "scope": "Quality Assurance, Font Production, Minisite, Version Control System",
         "date": {
             "start": "2023-06-16T00:00:00.000Z",
             "end": "2023-09-16T00:00:00.000Z"
@@ -79,7 +79,7 @@
     },
     {
         "project": "Tech & Anxiety",
-        "principle": "Lexus",
+        "principle": "Lexus Indonesia",
         "employer": "Convert Textured",
         "category": "Freelance",
         "role": "Web Development",
@@ -121,8 +121,8 @@
         "principle": "Telkom Indonesia",
         "employer": "PSH Digital",
         "category": "Freelance",
-        "role": "Font Engineer",
-        "scope": "QA, Production",
+        "role": "Front-End Developer",
+        "scope": "Design & Engineering",
         "date": {
             "start": "2020-07-08T00:00:00.000Z",
             "end": "2020-07-22T00:00:00.000Z"
@@ -148,7 +148,7 @@
         "employer": "Marsnev Typefoundry",
         "category": "Freelance",
         "role": "Web Development",
-        "scope": "Fullstack, Administrator",
+        "scope": "Fullstack, Web Administrator",
         "date": {
             "start": "2020-06-01T00:00:00.000Z",
             "end": "now"
