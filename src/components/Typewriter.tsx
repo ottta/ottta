@@ -11,25 +11,32 @@ export default function Typewriter() {
                 loop: true,
                 autoStart: true,
                 deleteSpeed: 5,
-                delay: 30,
-                wrapperClassName: cn("text-4xl"),
-                cursorClassName: cn("text-4xl")
+                delay: 30
             }}
             onInit={(write) => {
                 write
                     .typeString("I am <strong>Taufik Oktama</strong>")
                     .pauseFor(1000)
                     .deleteChars(16)
-                    .typeString("make <strong>UI/UX</strong>")
+                    .typeString("can type with <strong>10 fingers</strong>")
                     .pauseFor(500)
                     .changeDeleteSpeed(1)
-                    .deleteChars(5)
-                    .typeString("<strong>Website</strong>")
+                    .deleteChars(24)
+                    .typeString("make <strong>Website</strong>")
                     .pauseFor(500)
                     .deleteChars(7)
                     .typeString("<strong>Typeface</strong>")
                     .pauseFor(500)
                     .deleteChars(14)
+                    .typeString("do <strong>Font Production</strong>")
+                    .pauseFor(500)
+                    .deleteChars(15)
+                    .typeString("<strong>Font Quality Assurance</strong>")
+                    .pauseFor(500)
+                    .deleteChars(23)
+                    .typeString("<strong>Opentype Programming</strong>")
+                    .pauseFor(500)
+                    .deleteChars(23)
                     .typeString("run <strong>Unforma Club</strong>")
                     .pauseFor(1000)
                     .deleteChars(12)

@@ -1,0 +1,158 @@
+[
+    {
+        "project": "Event Organizer",
+        "principle": "ATAP Promotion",
+        "employer": "ATAP Promotion",
+        "category": "Part Time",
+        "role": "Event Documenter",
+        "scope": "Photographer, Videographer",
+        "date": {
+            "start": "2009-01-01T00:00:00.000Z",
+            "end": "2015-12-30T00:00:00.000Z"
+        },
+        "description": "This was my first opportunity to work professionally, I work here while a sophomore in visual communication design. I do a lot of work such as editorial photography, motion graphics, and UI/UX. Enjoy all the work because I can directly apply the knowledge taught at university to the real world. During those works, I also responsible to maintain brand image for each company products with my partner and owner."
+    },
+    {
+        "project": "®Sch., Gummo Ltd., The White Label, Bureau Coffee & Dine",
+        "principle": "CV. Sailan Industries",
+        "employer": "CV. Sailan Industries",
+        "category": "Full Time",
+        "role": "Multimedia Designer",
+        "scope": "Editorial Photography & Videography, Motion Graphic, Branding, Event & Community",
+        "date": {
+            "start": "2012-03-01T00:00:00.000Z",
+            "end": "2018-09-30T00:00:00.000Z"
+        },
+        "description": "This was my first opportunity to work professionally, I work here while a sophomore in visual communication design. I do a lot of work such as editorial photography, motion graphics, and UI/UX. Enjoy all the work because I can directly apply the knowledge taught at university to the real world. During those works, I also responsible to maintain brand image for each company products with my partner and owner."
+    },
+    {
+        "project": "Kireina Phinisi",
+        "principle": "PT. Mata Ratu Kireina",
+        "employer": "PT. Mata Ratu Kireina",
+        "category": "Part Time",
+        "role": "Multimedia Designer",
+        "scope": "Editorial Photography, Branding",
+        "date": {
+            "start": "2016-04-01T00:00:00.000Z",
+            "end": "2018-04-28T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Stuart Membery Home Collection",
+        "principle": "Stuart Membery",
+        "employer": "Stuart Membery",
+        "category": "Full Time",
+        "role": "Multimedia Designer",
+        "scope": "Editorial Photography, UI/UX Design",
+        "date": {
+            "start": "2019-01-08T00:00:00.000Z",
+            "end": "2020-01-28T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Sutasoma Typeface",
+        "principle": "IKN / Ibu Kota Negara Indonesia",
+        "employer": "Kiwari Collective",
+        "category": "Freelance",
+        "role": "Font Engineer",
+        "scope": "Quality Assurance, Font Production, Minisite, Software Version Control System",
+        "date": {
+            "start": "2023-06-16T00:00:00.000Z",
+            "end": "2023-09-16T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Ayana Sans",
+        "principle": "Ayana Hospitality",
+        "employer": "Aiyari Studio",
+        "category": "Freelance",
+        "role": "Font Engineer",
+        "scope": "QA, Production",
+        "date": {
+            "start": "2023-01-05T00:00:00.000Z",
+            "end": "2023-02-05T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Tech & Anxiety",
+        "principle": "Lexus",
+        "employer": "Convert Textured",
+        "category": "Freelance",
+        "role": "Web Development",
+        "scope": "Fullstack",
+        "date": {
+            "start": "2023-06-25T00:00:00.000Z",
+            "end": "2023-07-01T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Ayana Sans (Extended Family)",
+        "principle": "Ayana Hospitality",
+        "employer": "Aiyari Studio",
+        "category": "Freelance",
+        "role": "Font Engineer",
+        "scope": "QA, Production",
+        "date": {
+            "start": "2023-07-05T00:00:00.000Z",
+            "end": "2023-07-10T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "LS Sans Typeface",
+        "principle": "Luar Sekolah",
+        "employer": "Tegamitype Foundry",
+        "category": "Freelance",
+        "role": "Font Engineer",
+        "scope": "QA, Production",
+        "date": {
+            "start": "2023-07-08T00:00:00.000Z",
+            "end": "2023-07-22T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Kilau Digital Flobamora",
+        "principle": "Telkom Indonesia",
+        "employer": "PSH Digital",
+        "category": "Freelance",
+        "role": "Font Engineer",
+        "scope": "QA, Production",
+        "date": {
+            "start": "2020-07-08T00:00:00.000Z",
+            "end": "2020-07-22T00:00:00.000Z"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Typetools",
+        "principle": "Unforma Club",
+        "employer": "Unforma Club",
+        "category": "Personal",
+        "role": "Web Development, Font Production",
+        "scope": "Fullstack",
+        "date": {
+            "start": "2020-01-01T00:00:00.000Z",
+            "end": "now"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+        "project": "Marsnev Official Website",
+        "principle": "Marsnev Typefoundry",
+        "employer": "Marsnev Typefoundry",
+        "category": "Freelance",
+        "role": "Web Development",
+        "scope": "Fullstack, Administrator",
+        "date": {
+            "start": "2020-06-01T00:00:00.000Z",
+            "end": "now"
+        },
+        "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    }
+]
