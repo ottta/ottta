@@ -137,7 +137,7 @@
         "role": "Web Development, Font Production",
         "scope": "Fullstack",
         "date": {
-            "start": "2020-01-01T00:00:00.000Z",
+            "start": "2019-04-01T00:00:00.000Z",
             "end": "now"
         },
         "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
@@ -164,6 +164,19 @@
         "scope": "Fullstack Software & Font Developer",
         "date": {
             "start": "2021-01-01T00:00:00.000Z",
+            "end": "2022-12-30T00:00:00.000Z"
+        },
+        "description": "The fail business project"
+    },
+    {
+        "project": "Convert Textured",
+        "principle": "Convert Textured",
+        "employer": "Convert Textured",
+        "category": "Part Time",
+        "role": "Software Developer",
+        "scope": "Fullstack Software Developer, LED Programmer",
+        "date": {
+            "start": "2022-06-01T00:00:00.000Z",
             "end": "2022-12-30T00:00:00.000Z"
         },
         "description": "The fail business project"
