@@ -100,7 +100,8 @@ function Detail(props: Work) {
                     "text-xl",
                     "col-span-10 lg:col-span-8",
                     "lg:columns-2",
-                    "dark:text-neutral-300"
+                    "dark:text-neutral-300",
+                    "leading-normal"
                 )}
             />
         </li>
