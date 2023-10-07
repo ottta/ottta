@@ -151,10 +151,7 @@ export default function Timeline2() {
             <ul className={cn("py-8 lg:py-16", "flex flex-col", "gap-y-32 lg:gap-y-16")}>
                 {years.reverse().map((year, i) => (
                     <li key={i} className={cn("grid grid-cols-6 lg:grid-cols-12", "gap-x-2")}>
-                        <div
-                            className={cn("col-span-1 lg:col-span-2", "max-xl:hidden")}
-                            style={{ fontFeatureSettings: `"tnum"` }}
-                        >
+                        <div className={cn("col-span-1 lg:col-span-2", "max-xl:hidden")}>
                             <div
                                 className={cn(
                                     "text-2xl lg:text-4xl",
