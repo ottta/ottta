@@ -18,20 +18,13 @@ type InfoProps = {
 };
 function Info(props: InfoProps) {
     return (
-        <div
-            className={cn(
-                "grid grid-cols-4 lg:grid-cols-5",
-                "col-span-5",
-                "gap-x-2",
-                "max-xl:text-sm"
-            )}
-        >
+        <div className={cn("grid grid-cols-4 lg:grid-cols-5", "col-span-5", "gap-x-2")}>
             <div className={cn("col-span-1", "flex justify-between", "text-neutral-500")}>
                 <span>{props.label}</span>
                 <span>:</span>
             </div>
             <div
-                className={cn("col-span-3 lg:col-span-4")}
+                className={cn("col-span-3 lg:col-span-4", "dark:text-neutral-500")}
                 dangerouslySetInnerHTML={{ __html: props.value }}
             />
         </div>
@@ -48,7 +41,7 @@ function Detail(props: Work) {
                 <div>
                     <div
                         className={cn(
-                            "text-2xl lg:text-4xl",
+                            "text-xl lg:text-4xl",
                             "font-serif font-bold",
                             "leading-none"
                         )}
@@ -100,7 +93,6 @@ function Detail(props: Work) {
                     "text-xl",
                     "col-span-10 lg:col-span-8",
                     "lg:columns-2",
-                    "dark:text-neutral-300",
                     "leading-normal"
                 )}
             />
@@ -147,20 +139,20 @@ export default function Timeline2() {
                     "font-bold"
                 )}
             >
-                <div className={cn("col-span-1 lg:col-span-2")}>Year</div>
+                <div className={cn("col-span-1 lg:col-span-2", "max-xl:hidden")}>Year</div>
                 <div
-                    className={cn("flex items-center justify-between", "col-span-5 lg:col-span-10")}
+                    className={cn("flex items-center justify-between", "col-span-6 lg:col-span-10")}
                 >
                     <div>Experience</div>
                     <div>Sorter</div>
                 </div>
             </div>
 
-            <ul className={cn("py-8 lg:py-16", "flex flex-col", "gap-y-16")}>
+            <ul className={cn("py-8 lg:py-16", "flex flex-col", "gap-y-32 lg:gap-y-16")}>
                 {years.reverse().map((year, i) => (
                     <li key={i} className={cn("grid grid-cols-6 lg:grid-cols-12", "gap-x-2")}>
                         <div
-                            className={cn("col-span-1 lg:col-span-2")}
+                            className={cn("col-span-1 lg:col-span-2", "max-xl:hidden")}
                             style={{ fontFeatureSettings: `"tnum"` }}
                         >
                             <div
@@ -176,7 +168,11 @@ export default function Timeline2() {
                         </div>
 
                         <ul
-                            className={cn("col-span-5 lg:col-span-10", "flex flex-col", "gap-y-16")}
+                            className={cn(
+                                "col-span-6 lg:col-span-10",
+                                "flex flex-col",
+                                "gap-y-32 lg:gap-y-16"
+                            )}
                         >
                             {groupByYears[year].map((work, i) => (
                                 <Detail key={i} {...work} />

@@ -13,11 +13,6 @@ const config: Config = {
             fontFamily: {
                 sans: ["var(--font-sans)"],
                 serif: ["var(--font-serif)"]
-            },
-            colors: {
-                neutral: {
-                    950: "#121212"
-                }
             }
         }
     }

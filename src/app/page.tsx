@@ -5,7 +5,7 @@ import Timeline2 from "@/components/Timeline2";
 
 export default function Page() {
     return (
-        <main className={cn("min-h-screen", "w-full max-w-6xl", "mx-auto px-4 lg:px-8")}>
+        <main className={cn("min-h-screen", "w-full max-w-6xl", "mx-auto px-8")}>
             <div
                 className={cn(
                     "h-screen",
@@ -33,8 +33,8 @@ export default function Page() {
                 <p className={cn("text-3xl lg:text-4xl", "w-full max-w-2xl", "italic")}>
                     <q>
                         A Designer turned Software Developer. Now run <strong>Unforma Club</strong>,
-                        and develop typography products such a <strong>Truetype Supply:</strong> a
-                        software as a service for <strong>Type Designer &amp; Type Foundry</strong>.
+                        and develop typography products <strong>Truetype Supply:</strong> for{" "}
+                        <strong>Type Designers/Foundries</strong>.
                     </q>
                 </p>
             </div>

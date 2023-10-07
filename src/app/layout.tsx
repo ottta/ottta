@@ -26,13 +26,13 @@ const serif = localFont({
     variable: "--font-serif",
     src: [
         {
-            path: "../../public/fonts/Alegreya[wght].ttf",
-            weight: "400 900",
+            path: "../../public/fonts/Labrada[wght].woff2",
+            weight: "100 900",
             style: "normal"
         },
         {
-            path: "../../public/fonts/Alegreya-Italic[wght].ttf",
-            weight: "400 900",
+            path: "../../public/fonts/Labrada-Italic[wght].woff2",
+            weight: "100 900",
             style: "italic"
         }
     ]
