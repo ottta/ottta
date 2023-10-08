@@ -2,11 +2,12 @@
 
 import moment from "moment";
 import works from "@/database/works.json";
-import { cn } from "@/libs/utils";
+import { calculateDuration, cn } from "@/libs/utils";
 import { useMemo } from "react";
 
 function nthDate(date: string) {
-    return moment(date).format("MMM Do, YYYY");
+    const isValid = date !== "now";
+    return isValid ? moment(date).format("MMM Do, YYYY") : "Now";
     // .replace(/(\d)(st|nd|rd|th)/g, "$1<sup>$2</sup>");
 }
 
@@ -37,7 +38,7 @@ function Detail(props: Work) {
 
     return (
         <li>
-            <div className={cn("mb-6", "flex flex-col", "gap-y-6")}>
+            <div className={cn("mb-8", "flex flex-col", "gap-y-8")}>
                 <div>
                     <div
                         className={cn(
@@ -46,19 +47,7 @@ function Detail(props: Work) {
                             "leading-none"
                         )}
                     >
-                        <span
-                            dangerouslySetInnerHTML={{
-                                __html: nthDate(date.start)
-                            }}
-                        />
-                        <span>&nbsp;</span>
-                        <span>—</span>
-                        <span>&nbsp;</span>
-                        <span
-                            dangerouslySetInnerHTML={{
-                                __html: isPresent ? "Now" : nthDate(date.end)
-                            }}
-                        />
+                        {category}
                     </div>
                     <div
                         className={cn(
@@ -72,17 +61,24 @@ function Detail(props: Work) {
                 </div>
 
                 <div className={cn("grid lg:grid-cols-10", "lg:gap-x-6")}>
+                    <Info label="Start" value={nthDate(date.start)} />
+                    <Info label="End" value={nthDate(date.end)} />
+                    <Info
+                        label="Total"
+                        value={calculateDuration(date.start, !isPresent ? date.end : undefined)}
+                    />
+                    <Info
+                        label="Link"
+                        value={
+                            link
+                                ? `<a href="${link}" target="_blank" rel="nofollow noopener noreferrer">${link}</a>`
+                                : "-"
+                        }
+                    />
                     <Info label="Principle" value={principle} />
-                    <Info label="Employer" value={employer} />
-                    <Info label="Category" value={category} />
+                    <Info label="Employer" value={principle === employer ? "-" : employer} />
                     <Info label="Role" value={role} />
                     <Info label="Scope" value={scope} />
-                    {link && (
-                        <Info
-                            label="Link"
-                            value={`<a href="${link}" target="_blank" rel="nofollow noopener noreferrer" class="text-cyan-500 hover:underline">${link}</a>`}
-                        />
-                    )}
                 </div>
             </div>
 

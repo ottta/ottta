@@ -143,8 +143,8 @@
         "project": "Typetools",
         "principle": "Unforma Club",
         "employer": "Unforma Club",
-        "category": "Personal Project",
-        "role": "Software Developer",
+        "category": "Personal Project: Open Source",
+        "role": "Project Author",
         "scope": "Web Development, Font Production",
         "link": "https://fontproof.unforma.club",
         "date": {
@@ -256,13 +256,13 @@
         "principle": "Unforma Club",
         "employer": "Unforma Club",
         "category": "Personal Project",
-        "role": "Software Developer & UI/UX Designer",
+        "role": "Project Author",
         "scope": "Fullstack Software",
         "link": "https://truetype.supply",
         "date": {
             "start": "2022-10-24T00:00:00.000Z",
             "end": "now"
         },
-        "description": "I have seen problems with independent type designers/foundries publishing their products on the internet. They find it difficult to represent their products (fonts) in an appropriate way, such as presenting in detail what they font can do. If they only have a few fonts, of course it is easy to represent some details in the fonts manually, but it will be another problem if they have large amount of fonts. <br/><br class='lg:hidden' /> Therefore, I created <em>software as a service</em> that will do all the job automatically and significantly reduce their work time. <strong>Truetype Supply</strong> provides services for <em>e-commerce fonts</em>, <em>product case studies</em>, <em>automatic parse an opentype data</em>, and as a problem solver specific to <em>font publishing</em>. And last but not least, we strictly respect an <a href='https://learn.microsoft.com/en-us/typography/opentype/spec/' target='_blank' rel='nofollow noopener noreferrer' class='text-cyan-500 hover:underline'>Opentype Specifications</a>."
+        "description": "I have seen problems with independent type designers/foundries publishing their products on the internet. They find it difficult to represent their products (fonts) in an appropriate way, such as presenting in detail what they font can do. If they only have a few fonts, it is easy to represent some details in the fonts manually, but it will be another problem if they have large amount of fonts. <br/><br class='lg:hidden' /> Therefore, I created <em>software as a service</em> that will do all the job automatically and significantly reduce their work time. <strong>Truetype Supply</strong> provides services for <em>e-commerce fonts</em>, <em>product case studies</em>, <em>automatic parse an opentype data</em>, and as a problem solver specific to <em>font publishing</em>. And last but not least, we strictly respect an <a href='https://learn.microsoft.com/en-us/typography/opentype/spec/' target='_blank' rel='nofollow noopener noreferrer'>Opentype Specifications</a>."
     }
 ]
