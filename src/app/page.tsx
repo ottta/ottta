@@ -1,7 +1,6 @@
 import { cn } from "@/libs/utils";
-// import Experience from "@/components/Experience";
 import Typewriter from "@/components/Typewriter";
-import Timeline2 from "@/components/Timeline2";
+import Experience from "@/components/Experience";
 
 export default function Page() {
     return (
@@ -39,8 +38,7 @@ export default function Page() {
                 </p>
             </div>
 
-            <Timeline2 />
-            {/* <Experience /> */}
+            <Experience />
         </main>
     );
 }
