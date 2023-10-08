@@ -4,6 +4,8 @@ import type { PropsWithChildren } from "react";
 import localFont from "next/font/local";
 import Provider from "@/app/Provider";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const sans = localFont({
     display: "swap",
     variable: "--font-sans",
@@ -39,9 +41,7 @@ const serif = localFont({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL(
-        process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000"
-    ),
+    metadataBase: new URL(isProduction ? `https://ottta.vercel.app` : "http://localhost:3000"),
     alternates: {
         canonical: "/"
     },

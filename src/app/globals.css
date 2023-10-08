@@ -12,7 +12,7 @@ body {
 }
 
 a[target="_blank"] {
-    @apply text-cyan-500;
+    @apply text-blue-600 dark:text-blue-400;
     @apply hover:underline;
     @apply after:font-sans;
     @apply after:content-["\2197"];
