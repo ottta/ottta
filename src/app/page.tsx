@@ -18,23 +18,23 @@ export default function Page() {
                 <div>
                     <div className={cn("text-9xl", "font-bold")}>Hi,</div>
 
-                    <div
-                        className={cn(
-                            "text-3xl lg:text-5xl",
-                            "h-[33.33vh]",
-                            "overflow-hidden",
-                            "py-8"
-                        )}
-                    >
+                    <div className={cn("text-3xl lg:text-5xl", "overflow-hidden", "py-8")}>
                         <Typewriter />
                     </div>
                 </div>
 
-                <p className={cn("text-3xl lg:text-4xl", "w-full max-w-2xl", "italic")}>
+                <p
+                    className={cn(
+                        "text-3xl lg:text-4xl",
+                        "w-full max-w-2xl",
+                        "italic",
+                        "hyphens-auto"
+                    )}
+                >
                     <q>
                         A Designer turned Software Developer. Now run <strong>Unforma Club</strong>,
-                        and develop typography products <strong>Truetype Supply:</strong> for{" "}
-                        <strong>Type Designers/Foundries</strong>.
+                        and develop typography product <strong>Truetype Supply:</strong> for{" "}
+                        <strong>Type Designers &amp; Foundries</strong>.
                     </q>
                 </p>
             </div>

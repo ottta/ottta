@@ -93,7 +93,8 @@ function Detail(props: Work) {
                     "text-xl",
                     "col-span-10 lg:col-span-8",
                     "lg:columns-2",
-                    "leading-normal"
+                    "leading-normal",
+                    "hyphens-auto"
                 )}
             />
         </li>
