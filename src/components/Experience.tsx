@@ -133,29 +133,49 @@ export default function Experience() {
                 className={cn(
                     "sticky",
                     "top-0",
-                    "h-16",
                     "z-10",
                     "bg-neutral-50/90 dark:bg-neutral-950/90",
-                    "overflow-hidden",
-                    "border-b",
-                    "-mb-px",
-                    "grid grid-cols-6 lg:grid-cols-12",
-                    "gap-x-4",
-                    "items-center",
-                    "text-sm lg:text-2xl",
-                    "font-bold"
+                    "border-y"
                 )}
             >
-                <div className={cn("col-span-1 lg:col-span-2", "max-lg:hidden")}>Year</div>
                 <div
-                    className={cn("flex items-center justify-between", "col-span-6 lg:col-span-10")}
+                    className={cn(
+                        "h-16",
+                        "overflow-hidden",
+                        "-mb-px",
+                        "grid grid-cols-6 lg:grid-cols-12",
+                        "gap-x-4",
+                        "items-center",
+                        "text-sm lg:text-2xl",
+                        "font-bold",
+                        "w-full max-w-7xl",
+                        "mx-auto",
+                        "px-6 lg:px-12"
+                    )}
                 >
-                    <div>Experience</div>
-                    <div>Sorter</div>
+                    <div className={cn("col-span-1 lg:col-span-2", "max-lg:hidden")}>Year</div>
+                    <div
+                        className={cn(
+                            "flex items-center justify-between",
+                            "col-span-6 lg:col-span-10"
+                        )}
+                    >
+                        <div>Experience</div>
+                        <div>Sorter</div>
+                    </div>
                 </div>
             </div>
 
-            <ul className={cn("py-8 lg:py-16", "flex flex-col", "gap-y-32 lg:gap-y-16")}>
+            <ul
+                className={cn(
+                    "py-8 lg:py-16",
+                    "flex flex-col",
+                    "gap-y-32 lg:gap-y-16",
+                    "w-full max-w-7xl",
+                    "mx-auto",
+                    "px-6 lg:px-12"
+                )}
+            >
                 {years.reverse().map((year, i) => (
                     <li key={i} className={cn("grid grid-cols-6 lg:grid-cols-12", "gap-x-4")}>
                         <div className={cn("col-span-1 lg:col-span-2", "max-lg:hidden")}>
