@@ -1,8 +1,9 @@
 "use client";
 
+import type { CSSProperties } from "react";
+import { useEffect, useMemo, useState } from "react";
 import useDate from "@/hooks/use-date";
 import { cn } from "@/libs/utils";
-import { CSSProperties, useEffect, useMemo, useState } from "react";
 
 const tickMarks = Array(60).fill("");
 const tickNumbers = Array(12).fill("");
@@ -41,13 +42,12 @@ function TickMark() {
                         x2={isMainTick ? 21.5 : 22}
                         y1={0}
                         y2={0}
-                        // strokeWidth={isMainTick ? 0.3 : 0.25}
                         strokeWidth={0.25}
                         style={{ rotate: `${(i + 1) * 6}deg` }}
                         className={cn(
                             isMainTick
                                 ? "stroke-neutral-800 dark:stroke-neutral-200"
-                                : "stroke-neutral-600 dark:stroke-neutral-400"
+                                : "stroke-neutral-400 dark:stroke-neutral-600"
                         )}
                     />
                 );
@@ -61,10 +61,10 @@ function TickNumber() {
         <g
             name="tick-numbers"
             className={cn(
+                "fill-neutral-800 dark:fill-neutral-200",
                 "translate-x-[24px]",
                 "translate-y-[24px]",
                 "rotate-90",
-                "fill-neutral-800 dark:fill-neutral-200",
                 "font-bold",
                 "text-[0.175rem]"
             )}
@@ -73,8 +73,8 @@ function TickNumber() {
                 return (
                     <text
                         key={i}
-                        x={(18.5 * Math.cos((Math.PI * (i + 10) * 5) / 30)).toFixed(2)}
-                        y={(18.5 * Math.sin((Math.PI * (i + 10) * 5) / 30)).toFixed(2)}
+                        x={(19 * Math.cos((Math.PI * (i + 10) * 5) / 30)).toFixed(2)}
+                        y={(19 * Math.sin((Math.PI * (i + 10) * 5) / 30)).toFixed(2)}
                         strokeWidth={0}
                         alignmentBaseline="central"
                         dominantBaseline="central"
@@ -91,44 +91,36 @@ function TickNumber() {
 function Handles() {
     return (
         <g name="handles" className={cn("stroke-neutral-800 dark:stroke-neutral-200")}>
-            <line
+            <g
                 name="handle-hours"
-                x1="0"
-                y1="0"
-                x2="14"
-                y2="0"
-                strokeWidth={1.5}
                 className={cn(
-                    "hour-hand",
                     "translate-x-[24px] translate-y-[24px]",
-                    "rotate-[calc(var(--current-hours)*30deg)]"
+                    "rotate-[var(--angle-hour)]"
                 )}
-            />
-            <line
+            >
+                <line x1={0} x2={4.5} y1={0} y2={0} strokeWidth={0.3} />
+                <line x1={4.5} x2={14} y1={0} y2={0} strokeWidth={1.5} />
+            </g>
+            <g
                 name="handle-minutes"
-                x1="0"
-                y1="0"
-                x2="20"
-                y2="0"
-                strokeWidth={1.1}
                 className={cn(
                     "translate-x-[24px] translate-y-[24px]",
-                    "rotate-[calc(var(--current-minutes)*6deg)]"
+                    "rotate-[var(--angle-minute)]"
                 )}
-            />
-            <line
+            >
+                <line x1={0} x2={4.5} y1={0} y2={0} strokeWidth={0.3} />
+                <line x1={4.5} x2={20} y1={0} y2={0} strokeWidth={1.25} />
+            </g>
+            <g
                 name="handle-seconds"
-                x1="0"
-                y1="0"
-                x2="23"
-                y2="0"
-                strokeWidth={0.3}
                 className={cn(
                     "translate-x-[24px] translate-y-[24px]",
-                    "rotate-[calc(var(--current-seconds)*6deg)]",
+                    "rotate-[var(--angle-second)]",
                     "stroke-amber-400"
                 )}
-            />
+            >
+                <line x1={0} x2={23} y1={0} y2={0} strokeWidth={0.3} />
+            </g>
         </g>
     );
 }
@@ -155,7 +147,7 @@ function Pin() {
             cx={24}
             cy={24}
             r={1.5}
-            className={cn("fill-amber-400", "stroke-amber-400")}
+            className={cn("fill-amber-600", "stroke-amber-400")}
         />
     );
 }
@@ -165,10 +157,14 @@ export default function AnalogClock() {
     const { seconds, minutes, hours } = useDate();
 
     const timePresition = useMemo(() => {
+        const curHour = hours % 12;
+        const angleSecond = seconds * 6;
+        const angleMinute = minutes * 6 + seconds / 10;
+        const angleHours = curHour * 30 + angleMinute / 60;
         return {
-            ["--current-seconds"]: seconds,
-            ["--current-minutes"]: minutes,
-            ["--current-hours"]: hours % 12
+            ["--angle-second"]: `${angleSecond}deg`,
+            ["--angle-minute"]: `${angleMinute.toFixed(3)}deg`,
+            ["--angle-hour"]: `${angleHours.toFixed(3)}deg`
         } as CSSProperties;
     }, [seconds, minutes, hours]);
 
@@ -194,6 +190,7 @@ export default function AnalogClock() {
                 </svg>
             </div>
         );
+
     return (
         <div
             id="__analog-clock"

@@ -19,18 +19,3 @@ a[target="_blank"] {
     @apply after:align-text-top;
     @apply after:leading-none;
 }
-
-#__analog-clock .hour-hand {
-    animation: rotateHourHand calc(12 * 60 * 60s) linear infinite;
-    animation-delay: calc((var(--current-minutes) * -60 * 1s) + (var(--current-seconds) * -1 * 1s));
-}
-
-@keyframes rotateHourHand {
-    from {
-        transform: translate(24px, 24px) rotate(calc(var(--current-hours) * 30deg));
-    }
-
-    to {
-        transform: translate(24px, 24px) rotate(calc(var(--current-hours) * 30deg + 360deg));
-    }
-}
