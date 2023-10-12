@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 import localFont from "next/font/local";
 import Provider from "@/app/Provider";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import BarBottom from "@/components/BarBottom";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -82,7 +85,13 @@ export default function RootLayout(props: PropsWithChildren) {
     return (
         <html lang="en" suppressHydrationWarning className={`${sans.variable} ${serif.variable}`}>
             <body>
-                <Provider>{children}</Provider>
+                <Provider>
+                    {/* <PageBorder /> */}
+                    <Header />
+                    {children}
+                    <Footer />
+                    <BarBottom />
+                </Provider>
             </body>
         </html>
     );

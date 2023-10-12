@@ -25,7 +25,8 @@ function Info(props: InfoProps) {
                 "grid grid-cols-4 lg:grid-cols-5",
                 "col-span-5",
                 "gap-x-4",
-                "text-neutral-500"
+                "text-neutral-500",
+                "max-lg:text-sm"
             )}
         >
             <div className={cn("col-span-1", "flex justify-between")}>
@@ -45,25 +46,13 @@ function Detail(props: Work) {
     const isPresent = date.end === "now";
 
     return (
-        <li>
+        <li className={cn("p-4")}>
             <div className={cn("mb-8", "flex flex-col", "gap-y-8")}>
                 <div>
-                    <div
-                        className={cn(
-                            "text-xl lg:text-4xl",
-                            "font-serif font-bold",
-                            "leading-none"
-                        )}
-                    >
+                    <div className={cn("text-xl lg:text-4xl", "font-bold", "leading-none")}>
                         {category}
                     </div>
-                    <div
-                        className={cn(
-                            "text-4xl lg:text-6xl",
-                            "font-serif font-bold",
-                            "leading-none"
-                        )}
-                    >
+                    <div className={cn("text-4xl lg:text-6xl", "font-bold", "leading-none")}>
                         {project}
                     </div>
                 </div>
@@ -97,7 +86,7 @@ function Detail(props: Work) {
                     "font-serif",
                     "prose",
                     "prose-neutral dark:prose-invert",
-                    "prose-xl",
+                    "lg:prose-xl",
                     "w-full max-w-full",
                     "hyphens-auto",
                     "lg:columns-2"
@@ -132,76 +121,107 @@ export default function Experience() {
             <div
                 className={cn(
                     "sticky",
-                    "top-0",
+                    "top-[calc(4rem-1px)] lg:top-[calc(3rem-1px)]",
                     "z-10",
                     "bg-neutral-50/90 dark:bg-neutral-950/90",
-                    "border-y"
+                    "border-y",
+                    "px-3 lg:px-12",
+                    "-mb-px"
                 )}
             >
-                <div
-                    className={cn(
-                        "h-16",
-                        "overflow-hidden",
-                        "-mb-px",
-                        "grid grid-cols-6 lg:grid-cols-12",
-                        "gap-x-4",
-                        "items-center",
-                        "text-sm lg:text-2xl",
-                        "font-bold",
-                        "w-full max-w-7xl",
-                        "mx-auto",
-                        "px-6 lg:px-12"
-                    )}
-                >
-                    <div className={cn("col-span-1 lg:col-span-2", "max-lg:hidden")}>Year</div>
+                <div className={cn("w-full max-w-screen-3xl", "mx-auto", "border-x")}>
                     <div
                         className={cn(
-                            "flex items-center justify-between",
-                            "col-span-6 lg:col-span-10"
+                            "h-12",
+                            "overflow-hidden",
+                            "-mb-px",
+                            "grid grid-cols-6 lg:grid-cols-12",
+                            "gap-x-2",
+                            "items-center",
+                            // "text-sm lg:text-2xl",
+                            "font-bold",
+                            // "mx-auto",
+                            "px-4"
                         )}
                     >
-                        <div>Experience</div>
-                        <div>Sorter</div>
+                        <div className={cn("col-span-1 lg:col-span-2", "max-lg:hidden")}>Year</div>
+                        <div
+                            className={cn(
+                                "flex items-center justify-between",
+                                "col-span-6 lg:col-span-10"
+                            )}
+                        >
+                            <div>Experience</div>
+                            <div>Sorter</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <ul
-                className={cn(
-                    "py-8 lg:py-16",
-                    "flex flex-col",
-                    "gap-y-32 lg:gap-y-16",
-                    "w-full max-w-7xl",
-                    "mx-auto",
-                    "px-6 lg:px-12"
-                )}
-            >
+            <ul className={cn("flex flex-col", "gap-y-3 lg:gap-y-2")}>
                 {years.reverse().map((year, i) => (
-                    <li key={i} className={cn("grid grid-cols-6 lg:grid-cols-12", "gap-x-4")}>
-                        <div className={cn("col-span-1 lg:col-span-2", "max-lg:hidden")}>
-                            <div
-                                className={cn(
-                                    "text-2xl lg:text-4xl",
-                                    "font-serif font-bold",
-                                    "sticky top-20",
-                                    "leading-none"
-                                )}
-                            >
-                                {year}
-                            </div>
-                        </div>
-
-                        <ul
+                    <li
+                        key={i}
+                        className={cn(
+                            "border-y",
+                            "px-3 lg:px-12"
+                            // "bg-neutral-100 dark:bg-neutral-900"
+                        )}
+                    >
+                        <div
                             className={cn(
-                                "col-span-6 lg:col-span-10",
-                                "flex flex-col",
-                                "gap-y-32 lg:gap-y-16"
+                                "grid grid-cols-6 lg:grid-cols-12",
+                                "lg:gap-x-2",
+                                "w-full max-w-screen-3xl",
+                                "mx-auto",
+                                // "p-4",
+                                "border-x"
                             )}
                         >
-                            {groupByYears[year].map((work, i) => (
-                                <Detail key={i} {...work} />
-                            ))}
-                        </ul>
+                            <div
+                                className={cn(
+                                    "col-span-1 lg:col-span-2",
+                                    // "max-lg:hidden",
+                                    "max-lg:border-l lg:border-r",
+                                    "max-lg:order-2"
+                                )}
+                            >
+                                <div
+                                    className={cn(
+                                        "text-xl lg:text-4xl",
+                                        "font-serif font-bold",
+                                        "sticky top-28 lg:top-24",
+                                        "leading-none",
+                                        "p-4"
+                                    )}
+                                >
+                                    {year}
+                                </div>
+                            </div>
+
+                            <ul
+                                className={cn(
+                                    "col-span-5 lg:col-span-8",
+                                    "flex flex-col",
+                                    // "gap-y-32 lg:gap-y-16",
+                                    "divide-y",
+                                    "lg:border-x",
+                                    "max-lg:bg-neutral-900"
+                                )}
+                            >
+                                {groupByYears[year].map((work, i) => (
+                                    <Detail key={i} {...work} />
+                                ))}
+                            </ul>
+
+                            <div
+                                className={cn(
+                                    "col-span-6 lg:col-span-2",
+                                    "max-lg:hidden",
+                                    "lg:border-l"
+                                )}
+                            />
+                        </div>
                     </li>
                 ))}
             </ul>

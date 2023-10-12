@@ -22,7 +22,7 @@ a[target="_blank"] {
 
 #__analog-clock .hour-hand {
     animation: rotateHourHand calc(12 * 60 * 60s) linear infinite;
-    animation-delay: calc((var(--current-minutes) * -60 * 1s) + ((var(--current-seconds)) * -1 * 1s));
+    animation-delay: calc((var(--current-minutes) * -60 * 1s) + (var(--current-seconds) * -1 * 1s));
 }
 
 @keyframes rotateHourHand {

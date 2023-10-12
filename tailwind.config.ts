@@ -13,6 +13,9 @@ const config: Config = {
             fontFamily: {
                 sans: ["var(--font-sans)"],
                 serif: ["var(--font-serif)"]
+            },
+            screens: {
+                "3xl": "1920px"
             }
         }
     }
