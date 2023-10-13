@@ -15,7 +15,8 @@ const config: Config = {
                 serif: ["var(--font-serif)"]
             },
             screens: {
-                "3xl": "1920px"
+                "3xl": "1792px",
+                "4xl": "2048px"
             }
         }
     }

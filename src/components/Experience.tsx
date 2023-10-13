@@ -1,9 +1,9 @@
 "use client";
 
+import { useMemo } from "react";
 import moment from "moment";
 import works from "@/database/works.json";
 import { calculateDuration, cn } from "@/libs/utils";
-import { useMemo } from "react";
 
 function nthDate(date: string) {
     const isValid = date !== "now";
@@ -46,7 +46,7 @@ function Detail(props: Work) {
     const isPresent = date.end === "now";
 
     return (
-        <li className={cn("p-4")}>
+        <li className={cn("p-2 px-3 py-6 lg:p-4")}>
             <div className={cn("mb-8", "flex flex-col", "gap-y-8")}>
                 <div>
                     <div className={cn("text-xl lg:text-4xl", "font-bold", "leading-none")}>
@@ -86,7 +86,7 @@ function Detail(props: Work) {
                     "font-serif",
                     "prose",
                     "prose-neutral dark:prose-invert",
-                    "lg:prose-xl",
+                    "prose-lg lg:prose-xl",
                     "w-full max-w-full",
                     "hyphens-auto",
                     "lg:columns-2"
@@ -123,32 +123,31 @@ export default function Experience() {
                     "sticky",
                     "top-[calc(4rem-1px)] lg:top-[calc(3rem-1px)]",
                     "z-10",
-                    "bg-neutral-50/90 dark:bg-neutral-950/90",
+                    "bg-amber-100/90 dark:bg-neutral-950/90",
                     "border-y",
                     "px-3 lg:px-12",
                     "-mb-px"
                 )}
             >
-                <div className={cn("w-full max-w-screen-3xl", "mx-auto", "border-x")}>
+                <div className={cn("fluid", "border-x")}>
                     <div
                         className={cn(
                             "h-12",
                             "overflow-hidden",
                             "-mb-px",
                             "grid grid-cols-6 lg:grid-cols-12",
-                            "gap-x-2",
                             "items-center",
-                            // "text-sm lg:text-2xl",
-                            "font-bold",
-                            // "mx-auto",
-                            "px-4"
+                            "font-bold"
                         )}
                     >
-                        <div className={cn("col-span-1 lg:col-span-2", "max-lg:hidden")}>Year</div>
+                        <div className={cn("col-span-1 lg:col-span-2", "px-3 lg:px-4")}>
+                            <div>Year</div>
+                        </div>
                         <div
                             className={cn(
                                 "flex items-center justify-between",
-                                "col-span-6 lg:col-span-10"
+                                "col-span-5 lg:col-span-10",
+                                "px-3 lg:px-4"
                             )}
                         >
                             <div>Experience</div>
@@ -160,39 +159,26 @@ export default function Experience() {
 
             <ul className={cn("flex flex-col", "gap-y-3 lg:gap-y-2")}>
                 {years.reverse().map((year, i) => (
-                    <li
-                        key={i}
-                        className={cn(
-                            "border-y",
-                            "px-3 lg:px-12"
-                            // "bg-neutral-100 dark:bg-neutral-900"
-                        )}
-                    >
+                    <li key={i} className={cn("border-y", "px-3 lg:px-12")}>
                         <div
                             className={cn(
+                                "fluid",
                                 "grid grid-cols-6 lg:grid-cols-12",
-                                "lg:gap-x-2",
-                                "w-full max-w-screen-3xl",
                                 "mx-auto",
-                                // "p-4",
-                                "border-x"
+                                "border-x",
+                                "divide-x",
+                                "bg-neutral-100 dark:bg-neutral-900"
                             )}
                         >
-                            <div
-                                className={cn(
-                                    "col-span-1 lg:col-span-2",
-                                    // "max-lg:hidden",
-                                    "max-lg:border-l lg:border-r",
-                                    "max-lg:order-2"
-                                )}
-                            >
+                            <div className={cn("col-span-1 lg:col-span-2")}>
                                 <div
+                                    style={{ writingMode: "vertical-lr" }}
                                     className={cn(
-                                        "text-xl lg:text-4xl",
-                                        "font-serif font-bold",
+                                        "text-4xl",
+                                        "font-bold",
                                         "sticky top-28 lg:top-24",
                                         "leading-none",
-                                        "p-4"
+                                        "p-2 py-6 lg:py-4"
                                     )}
                                 >
                                     {year}
@@ -203,10 +189,7 @@ export default function Experience() {
                                 className={cn(
                                     "col-span-5 lg:col-span-8",
                                     "flex flex-col",
-                                    // "gap-y-32 lg:gap-y-16",
-                                    "divide-y",
-                                    "lg:border-x",
-                                    "max-lg:bg-neutral-900"
+                                    "divide-y"
                                 )}
                             >
                                 {groupByYears[year].map((work, i) => (
@@ -214,13 +197,7 @@ export default function Experience() {
                                 ))}
                             </ul>
 
-                            <div
-                                className={cn(
-                                    "col-span-6 lg:col-span-2",
-                                    "max-lg:hidden",
-                                    "lg:border-l"
-                                )}
-                            />
+                            <div className={cn("col-span-6 lg:col-span-2", "max-lg:hidden")} />
                         </div>
                     </li>
                 ))}

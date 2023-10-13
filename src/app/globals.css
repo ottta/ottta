@@ -4,11 +4,12 @@
 
 * {
     @apply border-neutral-300 dark:border-neutral-800;
+    @apply selection:bg-lime-200/50 selection:dark:bg-lime-400/20;
 }
 
 body {
     @apply bg-neutral-50 dark:bg-neutral-950;
-    @apply text-neutral-950 dark:text-neutral-50;
+    @apply text-neutral-950 dark:text-neutral-200;
 }
 
 a[target="_blank"] {
@@ -18,4 +19,16 @@ a[target="_blank"] {
     @apply after:content-["\2197"];
     @apply after:align-text-top;
     @apply after:leading-none;
+}
+
+.fluid,
+[data-layout='fluid'] {
+    @apply mx-auto;
+    @apply w-full;
+    /* @apply md:max-w-screen-sm; */
+    /* @apply lg:max-w-screen-md; */
+    /* @apply xl:max-w-screen-lg; */
+    /* @apply 2xl:max-w-screen-xl; */
+    @apply 3xl:max-w-screen-2xl;
+    @apply 4xl:max-w-screen-3xl;
 }

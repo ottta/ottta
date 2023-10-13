@@ -46,7 +46,7 @@ function TickMark() {
                         style={{ rotate: `${(i + 1) * 6}deg` }}
                         className={cn(
                             isMainTick
-                                ? "stroke-neutral-800 dark:stroke-neutral-200"
+                                ? "stroke-current"
                                 : "stroke-neutral-400 dark:stroke-neutral-600"
                         )}
                     />
@@ -61,7 +61,7 @@ function TickNumber() {
         <g
             name="tick-numbers"
             className={cn(
-                "fill-neutral-800 dark:fill-neutral-200",
+                "fill-current",
                 "translate-x-[24px]",
                 "translate-y-[24px]",
                 "rotate-90",
@@ -90,7 +90,7 @@ function TickNumber() {
 
 function Handles() {
     return (
-        <g name="handles" className={cn("stroke-neutral-800 dark:stroke-neutral-200")}>
+        <g name="handles" className={cn("stroke-current")}>
             <g
                 name="handle-hours"
                 className={cn(
@@ -99,7 +99,16 @@ function Handles() {
                 )}
             >
                 <line x1={0} x2={4.5} y1={0} y2={0} strokeWidth={0.3} />
-                <line x1={4.5} x2={14} y1={0} y2={0} strokeWidth={1.5} />
+                <rect
+                    width={12}
+                    height={2}
+                    x={4.5}
+                    y={-1}
+                    rx={1}
+                    ry={1}
+                    strokeWidth={0.3}
+                    fill="transparent"
+                />
             </g>
             <g
                 name="handle-minutes"
@@ -108,8 +117,18 @@ function Handles() {
                     "rotate-[var(--angle-minute)]"
                 )}
             >
-                <line x1={0} x2={4.5} y1={0} y2={0} strokeWidth={0.3} />
-                <line x1={4.5} x2={20} y1={0} y2={0} strokeWidth={1.25} />
+                <line x1={0} x2={4.7} y1={0} y2={0} strokeWidth={0.3} />
+                <rect
+                    width={16.7}
+                    height={1.7}
+                    x={4.7}
+                    y={-0.85}
+                    rx={0.85}
+                    ry={0.85}
+                    strokeWidth={0.3}
+                    fill="transparent"
+                />
+                <circle strokeWidth={0.3} cx={0} cy={0} r={1.3} className={cn("fill-current")} />
             </g>
             <g
                 name="handle-seconds"
@@ -119,7 +138,8 @@ function Handles() {
                     "stroke-amber-400"
                 )}
             >
-                <line x1={0} x2={23} y1={0} y2={0} strokeWidth={0.3} />
+                <line x1={-3} x2={23} y1={0} y2={0} strokeWidth={0.3} />
+                <circle strokeWidth={0.3} cx={0} cy={0} r={0.75} />
             </g>
         </g>
     );
@@ -132,10 +152,7 @@ function Frame() {
             cx={24}
             cy={24}
             r={23.8}
-            className={cn(
-                "stroke-neutral-800 dark:stroke-neutral-200",
-                "fill-neutral-100 dark:fill-neutral-900"
-            )}
+            className={cn("stroke-current", "fill-neutral-100 dark:fill-neutral-900")}
         />
     );
 }
@@ -146,7 +163,7 @@ function Pin() {
             strokeWidth={0.3}
             cx={24}
             cy={24}
-            r={1.5}
+            r={1.25}
             className={cn("fill-amber-600", "stroke-amber-400")}
         />
     );
@@ -160,7 +177,7 @@ export default function AnalogClock() {
         const curHour = hours % 12;
         const angleSecond = seconds * 6;
         const angleMinute = minutes * 6 + seconds / 10;
-        const angleHours = curHour * 30 + angleMinute / 60;
+        const angleHours = curHour * 30 + angleMinute / 12;
         return {
             ["--angle-second"]: `${angleSecond}deg`,
             ["--angle-minute"]: `${angleMinute.toFixed(3)}deg`,
@@ -172,15 +189,13 @@ export default function AnalogClock() {
 
     if (!mounted)
         return (
-            <div
-                className={cn("aspect-square w-full", "bg-neutral-200 dark:bg-neutral-900", "p-4")}
-            >
+            <div className={cn("aspect-square w-full", "p-4")}>
                 <svg
                     viewBox="0 0 48 48"
                     width="100%"
                     height="100%"
                     strokeLinecap="round"
-                    className={cn("-rotate-90", "stroke-neutral-100 dark:stroke-neutral-900")}
+                    className={cn("-rotate-90", "stroke-current")}
                 >
                     <Frame />
                     <Logo />
@@ -192,24 +207,20 @@ export default function AnalogClock() {
         );
 
     return (
-        <div
-            id="__analog-clock"
-            className={cn("aspect-square w-full", "bg-neutral-200 dark:bg-neutral-900", "p-4")}
-        >
+        <div id="__analog-clock" className={cn("aspect-square w-full", "p-4")}>
             <svg
                 viewBox="0 0 48 48"
                 width="100%"
                 height="100%"
                 strokeLinecap="round"
                 style={timePresition}
-                className={cn("-rotate-90", "stroke-neutral-100 dark:stroke-neutral-900")}
+                className={cn("-rotate-90", "stroke-curent")}
             >
                 <Frame />
                 <Logo />
                 <TickMark />
                 <TickNumber />
                 <Handles />
-                <Pin />
             </svg>
         </div>
     );

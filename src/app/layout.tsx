@@ -86,7 +86,6 @@ export default function RootLayout(props: PropsWithChildren) {
         <html lang="en" suppressHydrationWarning className={`${sans.variable} ${serif.variable}`}>
             <body>
                 <Provider>
-                    {/* <PageBorder /> */}
                     <Header />
                     {children}
                     <Footer />

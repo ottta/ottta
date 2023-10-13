@@ -43,7 +43,8 @@ export default function Typewriter() {
                     .typeString("<strong class='italic'>Truetype Supply</strong>")
                     .pauseFor(1000)
                     .deleteChars(20)
-                    .typeString("am <strong class='italic'>Taufik Oktama</strong>")
+                    .typeString("turn UI Design into Code.")
+                    // .typeString("am <strong class='italic'>Taufik Oktama</strong>")
                     .start();
             }}
         />

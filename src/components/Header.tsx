@@ -1,3 +1,4 @@
+import CrossWord from "@/components/CrossWord";
 import { cn } from "@/libs/utils";
 
 export default function Header() {
@@ -5,25 +6,24 @@ export default function Header() {
         <header
             className={cn(
                 "h-16 lg:h-12",
-                "border-b",
+                "border-y",
                 "sticky top-0",
                 "z-50",
                 "px-3 lg:px-12",
-                "bg-neutral-50 dark:bg-neutral-950"
+                "bg-neutral-50/90 dark:bg-neutral-950/90"
             )}
         >
             <div
                 className={cn(
+                    "fluid",
                     "h-full",
                     "flex items-center justify-between",
                     "border-x",
-                    "w-full max-w-screen-3xl",
-                    "mx-auto",
-                    "px-4"
+                    "px-3 lg:px-4"
                 )}
             >
-                <div className={cn("font-bold")}>Taufik Oktama</div>
-                <div>EN — ID</div>
+                <CrossWord sentence="+62 Studio" className="font-bold" />
+                <div>EN&nbsp;—&nbsp;ID</div>
             </div>
         </header>
     );

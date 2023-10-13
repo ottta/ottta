@@ -6,20 +6,29 @@ import AnalogClock from "@/components/AnalogClock";
 export default function Page() {
     return (
         <main className={cn("min-h-screen")}>
-            {/* <div className={cn("h-6 lg:h-12", "border-b", "-mb-px")} /> */}
             <div className={cn("px-3 lg:px-12")}>
                 <div
                     className={cn(
-                        "w-full max-w-screen-3xl",
+                        "fluid",
                         "mx-auto",
-                        "grid grid-cols-6 lg:grid-cols-12",
+                        "lg:grid grid-cols-6 lg:grid-cols-12",
                         "border-x",
-                        "grid-flow-dense"
+                        "grid-flow-dense",
+                        "bg-neutral-100 dark:bg-neutral-900"
                     )}
                 >
-                    <div className={cn("col-span-6 row-start-1", "-mb-px", "p-4", "border-b")}>
+                    <div
+                        className={cn(
+                            "col-span-6",
+                            "row-start-1 row-span-3",
+                            "-mb-px",
+                            "p-4",
+                            "border-b",
+                            "z-10"
+                        )}
+                    >
                         <div
-                            className={cn("text-3xl lg:text-5xl", "aspect-[2/0.5] lg:aspect-[2/1]")}
+                            className={cn("text-3xl lg:text-7xl", "aspect-[2/0.5] lg:aspect-[2/1]")}
                         >
                             <Typewriter />
                         </div>
@@ -29,36 +38,67 @@ export default function Page() {
                         style={{ fontFeatureSettings: `"pnum"` }}
                         className={cn(
                             "col-span-6",
-                            "row-start-3 lg:row-start-1",
-                            "row-span-1 lg:row-span-2",
+                            "row-start-1 lg:row-start-1",
+                            "row-span-4 lg:row-span-4",
                             "lg:border-l",
-                            "lg:-ml-px",
-                            // "flex items-center lg:items-start justify-center",
-                            "lg:h-[calc(100vh-6rem+1px)]",
-                            "bg-neutral-200 dark:bg-neutral-900",
-                            "max-lg:border-t"
+                            "flex items-center justify-center",
+                            "lg:h-[calc(100vh-6rem)]",
+                            "max-lg:border-t",
+                            "p-12"
                         )}
                     >
                         <AnalogClock />
                     </div>
 
-                    <div className={cn("col-span-6", "lg:row-start-2", "p-4")}>
-                        <p
+                    <div
+                        className={cn(
+                            "col-span-6",
+                            "row-start-4 row-span-1",
+                            "grid grid-cols-6",
+                            "lg:divide-x"
+                        )}
+                    >
+                        <div
                             className={cn(
-                                "text-3xl lg:text-2xl",
-                                "w-full",
-                                "italic",
-                                "hyphens-auto",
-                                "font-serif"
+                                "col-span-2",
+                                "p-4",
+                                "max-lg:hidden",
+                                "flex items-center"
                             )}
                         >
-                            <q>
-                                A Designer turned Software Developer. Now run{" "}
-                                <strong>Unforma Club</strong>, and develop typography product{" "}
-                                <strong>Truetype Supply:</strong> for{" "}
-                                <strong>Type Designers &amp; Foundries</strong>.
-                            </q>
-                        </p>
+                            <div
+                                className={cn(
+                                    "aspect-square w-full",
+                                    "border",
+                                    "rounded-full",
+                                    "bg-red-100"
+                                )}
+                            />
+                        </div>
+                        <div
+                            className={cn(
+                                "col-span-6 lg:col-span-4",
+                                "p-3 lg:p-4",
+                                "flex items-center"
+                            )}
+                        >
+                            <p
+                                className={cn(
+                                    "text-xl lg:text-3xl",
+                                    "w-full",
+                                    "italic",
+                                    "hyphens-auto",
+                                    "font-serif"
+                                )}
+                            >
+                                <q>
+                                    A Designer turned Software Developer. Now run{" "}
+                                    <strong>Unforma Club</strong>, and develop typography product{" "}
+                                    <strong>Truetype Supply:</strong> for{" "}
+                                    <strong>Type Designers &amp; Foundries</strong>.
+                                </q>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
