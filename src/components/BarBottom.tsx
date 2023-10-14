@@ -76,9 +76,9 @@ const links: CustomLink[] = [
 ];
 
 export default function BarBottom() {
-    const reg = new RegExp(/^((?!chrome|android).)*safari/i);
     const [isSafari, setIsSafari] = useState(false);
     useEffect(() => {
+        const reg = new RegExp(/^((?!chrome|android).)*safari/i);
         const userAgent = window && window?.navigator.userAgent;
         setIsSafari(reg.test(userAgent));
     }, []);

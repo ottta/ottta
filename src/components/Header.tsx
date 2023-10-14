@@ -5,9 +5,9 @@ import { cn } from "@/libs/utils";
 import NextLink from "next/link";
 
 export default function Header() {
-    const reg = new RegExp(/^((?!chrome|android).)*safari/i);
     const [isSafari, setIsSafari] = useState(false);
     useEffect(() => {
+        const reg = new RegExp(/^((?!chrome|android).)*safari/i);
         const userAgent = window && window?.navigator.userAgent;
         setIsSafari(reg.test(userAgent));
     }, []);
