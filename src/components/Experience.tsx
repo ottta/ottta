@@ -22,19 +22,26 @@ function Info(props: InfoProps) {
         <div
             className={cn(
                 "font-sans",
-                "grid grid-cols-4 lg:grid-cols-5",
+                "grid grid-cols-5 lg:grid-cols-3",
+                "items-baseline",
                 "col-span-5",
-                "gap-x-4",
                 "text-neutral-500",
-                "max-lg:text-sm"
+                "max-lg:text-sm",
+                "!leading-tight"
             )}
         >
-            <div className={cn("col-span-1", "flex justify-between")}>
+            <div
+                className={cn(
+                    "col-span-2 lg:col-span-1",
+                    "flex justify-between",
+                    "px-2 lg:px-4 lg:pr-0"
+                )}
+            >
                 <span>{props.label}</span>
                 <span>:</span>
             </div>
             <div
-                className={cn("col-span-3 lg:col-span-4")}
+                className={cn("col-span-3 lg:col-span-2", "px-2 lg:px-4")}
                 dangerouslySetInnerHTML={{ __html: props.value }}
             />
         </div>
@@ -46,10 +53,23 @@ function Detail(props: Work) {
     const isPresent = date.end === "now";
 
     return (
-        <li className={cn("p-2 px-3 py-6 lg:p-4")}>
+        <li className={cn("py-6 lg:py-4")}>
             <div className={cn("mb-8", "flex flex-col", "gap-y-8")}>
-                <div>
-                    <div className={cn("text-xl lg:text-4xl", "font-bold", "leading-none")}>
+                <div className={cn("px-2 lg:px-4")}>
+                    <div
+                        className={cn(
+                            "text-xl lg:text-2xl",
+                            // "font-bold",
+                            "leading-none",
+                            "bg-neutral-200 dark:bg-neutral-800",
+                            "inline-block",
+                            "rounded-full",
+                            "border",
+                            "px-3 lg:px-4 py-1",
+                            // "shadow-[0_0_1rem_-0.25rem] shadow-cyan-700 dark:shadow-cyan-300",
+                            "overflow-hidden"
+                        )}
+                    >
                         {category}
                     </div>
                     <div className={cn("text-4xl lg:text-6xl", "font-bold", "leading-none")}>
@@ -57,7 +77,7 @@ function Detail(props: Work) {
                     </div>
                 </div>
 
-                <div className={cn("grid lg:grid-cols-10", "lg:gap-x-4")}>
+                <div className={cn("grid lg:grid-cols-10", "lg:gap-x-0 gap-y-2")}>
                     <Info label="Start" value={nthDate(date.start)} />
                     <Info label="End" value={nthDate(date.end)} />
                     <Info
@@ -81,7 +101,7 @@ function Detail(props: Work) {
 
             <article
                 dangerouslySetInnerHTML={{ __html: description }}
-                style={{ columnGap: "1rem" }}
+                style={{ columnGap: "2rem" }}
                 className={cn(
                     "font-serif",
                     "prose",
@@ -89,7 +109,8 @@ function Detail(props: Work) {
                     "prose-lg lg:prose-xl",
                     "w-full max-w-full",
                     "hyphens-auto",
-                    "lg:columns-2"
+                    "lg:columns-2",
+                    "px-2 lg:px-4"
                 )}
             />
         </li>
@@ -124,9 +145,10 @@ export default function Experience() {
                     "top-[calc(4rem-1px)] lg:top-[calc(3rem-1px)]",
                     "z-10",
                     "bg-amber-100/90 dark:bg-neutral-950/90",
+                    "backdrop-blur-sm",
                     "border-y",
                     "px-3 lg:px-12",
-                    "-mb-px"
+                    "-mb-px -mt-px"
                 )}
             >
                 <div className={cn("fluid", "border-x")}>
@@ -140,41 +162,64 @@ export default function Experience() {
                             "font-bold"
                         )}
                     >
-                        <div className={cn("col-span-1 lg:col-span-2", "px-3 lg:px-4")}>
-                            <div>Year</div>
-                        </div>
                         <div
                             className={cn(
                                 "flex items-center justify-between",
-                                "col-span-5 lg:col-span-10",
+                                "col-span-5 lg:col-span-6",
                                 "px-3 lg:px-4"
                             )}
                         >
                             <div>Experience</div>
-                            <div>Sorter</div>
+                            {/* <div>Sorter</div> */}
+                        </div>
+                        <div
+                            className={cn(
+                                "col-span-1 lg:col-span-6",
+                                "px-3 lg:px-4",
+                                "max-lg:flex max-lg:items-center max-lg:justify-center"
+                            )}
+                        >
+                            <div>Year</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <ul className={cn("flex flex-col", "gap-y-3 lg:gap-y-2")}>
+            <ul className={cn("flex flex-col", "gap-y-3 lg:gap-y-2", "-mb-px")}>
                 {years.reverse().map((year, i) => (
                     <li key={i} className={cn("border-y", "px-3 lg:px-12")}>
                         <div
                             className={cn(
                                 "fluid",
                                 "grid grid-cols-6 lg:grid-cols-12",
-                                "mx-auto",
                                 "border-x",
                                 "divide-x",
                                 "bg-neutral-100 dark:bg-neutral-900"
                             )}
                         >
-                            <div className={cn("col-span-1 lg:col-span-2")}>
+                            <ul
+                                className={cn(
+                                    "col-span-5 lg:col-span-6",
+                                    "flex flex-col",
+                                    "divide-y"
+                                )}
+                            >
+                                {groupByYears[year].map((work, i) => (
+                                    <Detail key={i} {...work} />
+                                ))}
+                            </ul>
+
+                            <div
+                                className={cn(
+                                    "col-span-1 lg:col-span-3",
+                                    "bg-neutral-200 dark:bg-neutral-800",
+                                    "max-lg:inline-flex max-lg:items-start max-lg:justify-center"
+                                )}
+                            >
                                 <div
                                     style={{ writingMode: "vertical-lr" }}
                                     className={cn(
-                                        "text-4xl",
+                                        "text-4xl lg:text-6xl",
                                         "font-bold",
                                         "sticky top-28 lg:top-24",
                                         "leading-none",
@@ -185,19 +230,14 @@ export default function Experience() {
                                 </div>
                             </div>
 
-                            <ul
+                            <div
                                 className={cn(
-                                    "col-span-5 lg:col-span-8",
-                                    "flex flex-col",
-                                    "divide-y"
+                                    "col-span-6 lg:col-span-3",
+                                    "max-lg:hidden"
+                                    // "bg-neutral-300 dark:bg-neutral-950"
                                 )}
-                            >
-                                {groupByYears[year].map((work, i) => (
-                                    <Detail key={i} {...work} />
-                                ))}
-                            </ul>
-
-                            <div className={cn("col-span-6 lg:col-span-2", "max-lg:hidden")} />
+                                style={{ backgroundImage: "var(--bg-dotted)" }}
+                            />
                         </div>
                     </li>
                 ))}

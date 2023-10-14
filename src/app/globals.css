@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --bg-dotted: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABtJREFUGFdjZGBg+M/AwMDIAAVwBjYBsEoMFQBW5gIF0HSEnwAAAABJRU5ErkJggg==");
+}
+
 * {
     @apply border-neutral-300 dark:border-neutral-800;
     @apply selection:bg-lime-200/50 selection:dark:bg-lime-400/20;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     @apply bg-neutral-50 dark:bg-neutral-950;
     @apply text-neutral-950 dark:text-neutral-200;
+    @apply py-[calc(4rem-0px)] lg:py-[calc(3rem-0px)];
 }
 
 a[target="_blank"] {
@@ -21,14 +28,38 @@ a[target="_blank"] {
     @apply after:leading-none;
 }
 
+a {
+    @apply relative;
+}
+
+a[data-active] {
+    @apply overflow-hidden;
+    @apply after:bg-neutral-200 after:dark:bg-neutral-900;
+    @apply after:absolute;
+    @apply after:top-1/2 after:left-1/2;
+    @apply after:-translate-y-1/2 after:-translate-x-1/2;
+    @apply after:aspect-square after:w-full;
+    @apply after:transition-all after:duration-500 after:ease-out;
+    @apply after:-z-10;
+    @apply after:rounded-full;
+    @apply after:border after:border-neutral-500;
+    @apply after:opacity-0;
+    @apply after:scale-0;
+}
+
+a[data-active='true'] {
+    @apply after:opacity-60;
+    @apply after:scale-125;
+}
+
 .fluid,
 [data-layout='fluid'] {
     @apply mx-auto;
     @apply w-full;
-    /* @apply md:max-w-screen-sm; */
-    /* @apply lg:max-w-screen-md; */
-    /* @apply xl:max-w-screen-lg; */
-    /* @apply 2xl:max-w-screen-xl; */
+    /* @apply md:max-w-screen-sm;
+    @apply lg:max-w-screen-md;
+    @apply xl:max-w-screen-lg;
+    @apply 2xl:max-w-screen-xl; */
     @apply 3xl:max-w-screen-2xl;
     @apply 4xl:max-w-screen-3xl;
 }

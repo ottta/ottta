@@ -2,6 +2,7 @@
 
 import type { PropsWithChildren } from "react";
 import { ThemeProvider as ProviderTheme } from "next-themes";
+import ProviderGrid from "@/components/_context/ContextGrid";
 
 export default function Provider(props: PropsWithChildren) {
     const { children } = props;
@@ -13,7 +14,7 @@ export default function Provider(props: PropsWithChildren) {
             defaultTheme="system"
             themes={["dark", "light"]}
         >
-            {children}
+            <ProviderGrid>{children}</ProviderGrid>
         </ProviderTheme>
     );
 }

@@ -3,9 +3,11 @@ import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 import localFont from "next/font/local";
 import Provider from "@/app/Provider";
+import AppGrid from "@/components/AppGrid";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BarBottom from "@/components/BarBottom";
+import { cn } from "@/libs/utils";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -83,13 +85,16 @@ export const metadata: Metadata = {
 export default function RootLayout(props: PropsWithChildren) {
     const { children } = props;
     return (
-        <html lang="en" suppressHydrationWarning className={`${sans.variable} ${serif.variable}`}>
+        <html lang="en" suppressHydrationWarning className={cn(sans.variable, serif.variable)}>
             <body>
                 <Provider>
                     <Header />
-                    {children}
+                    <main className={cn("min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-6rem)]")}>
+                        {children}
+                    </main>
                     <Footer />
                     <BarBottom />
+                    <AppGrid />
                 </Provider>
             </body>
         </html>
