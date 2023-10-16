@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
+import { Bebas_Neue } from "next/font/google";
 import localFont from "next/font/local";
 import Provider from "@/app/Provider";
 import AppGrid from "@/components/AppGrid";
@@ -45,6 +46,13 @@ const serif = localFont({
     ]
 });
 
+const bebas = Bebas_Neue({
+    display: "swap",
+    subsets: ["latin"],
+    weight: "400",
+    variable: "--font-bebas"
+});
+
 export const metadata: Metadata = {
     metadataBase: new URL(isProduction ? `https://ottta.vercel.app` : "http://localhost:3000"),
     alternates: {
@@ -85,7 +93,11 @@ export const metadata: Metadata = {
 export default function RootLayout(props: PropsWithChildren) {
     const { children } = props;
     return (
-        <html lang="en" suppressHydrationWarning className={cn(sans.variable, serif.variable)}>
+        <html
+            lang="en"
+            suppressHydrationWarning
+            className={cn(sans.variable, serif.variable, bebas.variable)}
+        >
             <body>
                 <Provider>
                     <Header />

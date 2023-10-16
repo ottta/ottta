@@ -9,6 +9,7 @@ type Word = {
     };
 };
 
+const cell = 9;
 const words: Word[] = [
     { word: "teologic", direction: "vertical", start: { x: 3, y: 1 } },
     { word: "font", direction: "horizontal", start: { x: 2, y: 5 } },
@@ -32,8 +33,6 @@ const words: Word[] = [
 ];
 
 export default function CrossWord() {
-    const cell = 9;
-
     return (
         <svg
             viewBox="0 0 171 72"
@@ -46,7 +45,7 @@ export default function CrossWord() {
             )}
         >
             <g
-                strokeWidth={0.05}
+                strokeWidth={0.1}
                 className={cn(
                     // Comment this out to see negative space
                     // "fill-neutral-950 dark:fill-neutral-50",
@@ -145,7 +144,7 @@ export default function CrossWord() {
                             <g
                                 key={index}
                                 data-content={w.toUpperCase()}
-                                strokeWidth={0.05}
+                                strokeWidth={0.1}
                                 className={cn("stroke-neutral-300 dark:stroke-neutral-800")}
                             >
                                 <rect
