@@ -12,7 +12,8 @@ const config: Config = {
         extend: {
             fontFamily: {
                 sans: ["var(--font-sans)"],
-                serif: ["var(--font-serif)"]
+                serif: ["var(--font-serif)"],
+                bebas: ["var(--font-bebas)"]
             },
             screens: {
                 "3xl": "1792px",
