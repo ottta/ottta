@@ -185,7 +185,7 @@ export default function Experience() {
                 </div>
             </div>
 
-            <ul className={cn("flex flex-col", "gap-y-3 lg:gap-y-2", "-mb-px")}>
+            <ul className={cn("flex flex-col", "gap-y-3 lg:gap-y-4", "-mb-px")}>
                 {years.reverse().map((year, i) => (
                     <li key={i} className={cn("border-y", "px-3 lg:px-12")}>
                         <div
