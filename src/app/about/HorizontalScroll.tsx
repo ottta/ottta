@@ -47,10 +47,9 @@ function EndCapText() {
             className={cn(
                 "p-4",
                 "h-1/2",
-                // "aspect-[1/1]",
                 "bg-neutral-950 dark:bg-neutral-200",
                 "text-neutral-50 dark:text-neutral-950",
-                "font-bebas",
+                "font-mono uppercase",
                 "leading-none",
                 "flex items-center"
             )}
@@ -58,8 +57,8 @@ function EndCapText() {
             <ul className={cn("w-full")}>
                 {units.map((item, i) => (
                     <li key={i} className={cn("grid grid-cols-6", "items-center")}>
-                        <div className={cn("col-span-4", "text-8xl")}>{item.entity}</div>
-                        <div className={cn("col-span-2")}>
+                        <div className={cn("col-span-3", "text-8xl")}>{item.entity}</div>
+                        <div className={cn("col-span-3")}>
                             {item.values.map((item, i) => (
                                 <div
                                     key={i}

@@ -13,7 +13,7 @@ const config: Config = {
             fontFamily: {
                 sans: ["var(--font-sans)"],
                 serif: ["var(--font-serif)"],
-                bebas: ["var(--font-bebas)"]
+                mono: ["var(--font-mono)"]
             },
             screens: {
                 "3xl": "1792px",

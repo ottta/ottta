@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
-import { Bebas_Neue } from "next/font/google";
+import { Ubuntu_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Provider from "@/app/Provider";
 import AppGrid from "@/components/AppGrid";
@@ -46,11 +46,11 @@ const serif = localFont({
     ]
 });
 
-const bebas = Bebas_Neue({
+const ubuntu = Ubuntu_Mono({
     display: "swap",
     subsets: ["latin"],
-    weight: "400",
-    variable: "--font-bebas"
+    weight: ["400", "700"],
+    variable: "--font-mono"
 });
 
 export const metadata: Metadata = {
@@ -96,7 +96,7 @@ export default function RootLayout(props: PropsWithChildren) {
         <html
             lang="en"
             suppressHydrationWarning
-            className={cn(sans.variable, serif.variable, bebas.variable)}
+            className={cn(sans.variable, serif.variable, ubuntu.variable)}
         >
             <body>
                 <Provider>
