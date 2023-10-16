@@ -18,7 +18,7 @@ export default function HorizontalScroll() {
     const bgX = useTransform(scrollYProgress, [0.175, 0.8, 1], ["33.33%", "-33.33%", "-66.66%"]);
 
     return (
-        <div className={cn("border-y", "-my-px", "px-3 lg:px-12")}>
+        <div className={cn("border-y", "-my-px", "px-3 lg:px-12", "max-lg:hidden")}>
             <div
                 ref={targetRef}
                 data-layout="fluid"
