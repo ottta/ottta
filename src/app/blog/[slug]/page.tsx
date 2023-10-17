@@ -42,7 +42,10 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
     const data = blog.data[0];
     return {
         title: data.name || "Unknown",
-        description: data.description || "Unknown"
+        description: data.description || "Unknown",
+        alternates: {
+            canonical: `/blog/${data.slug || "unknown"}`
+        }
     };
 }
 
