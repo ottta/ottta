@@ -13,23 +13,33 @@ type BlogListProps = {
 export default function BlogList(props: BlogListProps) {
     const { items } = props;
     const pathname = usePathname();
+
+    const finalItems = items.concat();
     return (
         <div className={cn("sticky", "top-12", "p-4", "flex flex-col", "gap-y-4")}>
             <div className={cn("font-bold")}>Posts</div>
-            <ul>
-                {items.map((item, i) => {
+            <ul className={cn("leading-loose", "list-item")}>
+                {finalItems.map((item, i) => {
                     const href = `/blog/${item.slug}`;
                     const isActive = pathname === href;
+                    const index = i < 9 ? `0${i + 1}` : (i + 1).toString();
                     return (
-                        <li key={i}>
-                            <NextLink
-                                href={href}
-                                className={cn(
-                                    "line-clamp-1",
-                                    "text-neutral-500",
-                                    isActive && "text-neutral-950 dark:text-neutral-200 font-bold"
-                                )}
+                        <li
+                            key={i}
+                            className={cn(
+                                "flex",
+                                "gap-x-4",
+                                "text-neutral-400 dark:text-neutral-700",
+                                isActive && "text-neutral-950 dark:text-neutral-200 font-bold"
+                            )}
+                        >
+                            <div
+                                style={{ fontFeatureSettings: `"tnum"` }}
+                                className={cn("text-right", "w-5 aspect-square", "shrink-0")}
                             >
+                                {index}.
+                            </div>
+                            <NextLink href={href} className={cn("line-clamp-1")}>
                                 {item.name}
                             </NextLink>
                         </li>

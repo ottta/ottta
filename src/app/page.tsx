@@ -8,6 +8,7 @@ import moment from "moment";
 import works from "@/database/works.json";
 import slugify from "slugify";
 import GridContainer from "@/components/GridContainer";
+// import CrossIntro from "@/components/CrossIntro";
 
 type HCard = {
     href: string;
@@ -46,7 +47,10 @@ function HighlightCard(props: HCard) {
                             </li>
                         ))}
                     </ul>
-                    <div className={cn("text-4xl", "leading-none")}>{name}</div>
+                    <div
+                        dangerouslySetInnerHTML={{ __html: name }}
+                        className={cn("text-2xl lg:text-4xl", "leading-none")}
+                    />
                 </div>
                 <div className={cn("text-neutral-500")}>
                     <div className={cn("text-xs", "mb-1")}>{moment(date).format("LL")}</div>
@@ -63,10 +67,10 @@ function HighlightCard(props: HCard) {
 function HighlightCards(props: HCards) {
     const { basePath, items, title } = props;
     return (
-        <div className={cn("my-12")}>
+        <div className={cn("my-16 lg:my-12")}>
             <GridContainer>
-                <div className={cn("px-4", "h-12", "flex items-center")}>
-                    <div className={cn("text-2xl font-bold")}>{title}</div>
+                <div className={cn("px-4", "h-16 lg:h-12", "flex items-center")}>
+                    <div className={cn("text-3xl lg:text-2xl font-bold")}>{title}</div>
                 </div>
             </GridContainer>
 
@@ -87,9 +91,9 @@ function HighlightCards(props: HCards) {
                         <NextLink
                             href={basePath}
                             className={cn(
-                                "flex items-center justify-center",
-                                "text-4xl",
-                                "h-full",
+                                "flex items-center lg:justify-center",
+                                "text-xl",
+                                "h-16 lg:h-full",
                                 "p-4",
                                 "hover:bg-neutral-200 dark:hover:bg-neutral-900"
                             )}
@@ -114,6 +118,7 @@ export default async function Page() {
     });
     return (
         <>
+            {/* <CrossIntro /> */}
             <HorizontalScroll />
             <CrossWordMobile />
             <Hero />
@@ -143,7 +148,7 @@ export default async function Page() {
                             lower: true,
                             remove: /[*+~.()'"!:@]/g
                         })}`,
-                        name: item.project,
+                        name: `<strong>${item.principle}</strong> — ${item.project}`,
                         description: item.description,
                         tags: [item.category],
                         date: item.date.end === "now" ? new Date().toISOString() : item.date.end

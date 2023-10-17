@@ -9,6 +9,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BarBottom from "@/components/BarBottom";
 import { cn } from "@/libs/utils";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -106,6 +107,7 @@ export default function RootLayout(props: PropsWithChildren) {
                     </main>
                     <Footer />
                     <BarBottom />
+                    <ScrollToTop />
                     <AppGrid />
                 </Provider>
             </body>

@@ -37,10 +37,10 @@ export default function CrossWord() {
         <svg
             viewBox="0 0 171 72"
             className={cn(
-                "h-full",
+                "h-[calc(100%+1px)]",
                 "fill-neutral-50 dark:fill-neutral-950",
                 "relative",
-                "-mt-px -ml-px",
+                "-my-px -ml-px",
                 "max-lg:hidden"
             )}
         >

@@ -89,10 +89,10 @@ function Detail(props: Work) {
                         value={calculateDuration(date.start, !isPresent ? date.end : undefined)}
                     />
                     <Info
-                        label="Link"
+                        label="Live URL"
                         value={
                             link
-                                ? `<a href="${link}" target="_blank" rel="nofollow noopener noreferrer">${link}</a>`
+                                ? `<a href="${link}" target="_blank" rel="nofollow noopener noreferrer" class="line-clamp-1">${link}</a>`
                                 : "-"
                         }
                     />
@@ -110,7 +110,7 @@ function Detail(props: Work) {
                     "font-serif",
                     "prose",
                     "prose-neutral dark:prose-invert",
-                    "prose-lg lg:prose-xl",
+                    "prose-base lg:prose-xl",
                     "w-full max-w-full",
                     "hyphens-auto",
                     "lg:columns-2",
@@ -197,8 +197,8 @@ export default function Experience() {
                                 "fluid",
                                 "grid grid-cols-6 lg:grid-cols-12",
                                 "border-x",
-                                "divide-x",
-                                "bg-neutral-100 dark:bg-neutral-900"
+                                "divide-x"
+                                // "bg-neutral-100 dark:bg-neutral-900"
                             )}
                         >
                             <ul
@@ -237,8 +237,8 @@ export default function Experience() {
                             <div
                                 className={cn(
                                     "col-span-6 lg:col-span-3",
-                                    "max-lg:hidden"
-                                    // "bg-neutral-300 dark:bg-neutral-950"
+                                    "max-lg:hidden",
+                                    "bg-neutral-200 dark:bg-neutral-800"
                                 )}
                                 style={{ backgroundImage: "var(--bg-dotted)" }}
                             />

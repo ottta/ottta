@@ -38,11 +38,13 @@ export default function Header() {
                 <NextLink
                     href="/"
                     className={cn(
-                        "rounded-full",
-                        "border",
+                        // "rounded-full",
+                        // "border",
                         "flex items-center",
-                        "px-2",
-                        "bg-neutral-200 dark:bg-neutral-800"
+                        // "px-3 lg:px-2",
+                        // "bg-neutral-200 dark:bg-neutral-800",
+                        "text-3xl lg:text-2xl",
+                        "font-bold"
                     )}
                 >
                     Taufik Oktama

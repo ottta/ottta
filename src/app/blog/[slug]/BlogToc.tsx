@@ -25,7 +25,7 @@ function ItemToc(
                 data-level={level}
                 className={cn(
                     "line-clamp-1",
-                    "text-neutral-500",
+                    "text-neutral-400 dark:text-neutral-700",
                     isActive && "text-neutral-950 dark:text-neutral-200 font-bold",
                     "transition-all duration-300"
                 )}
@@ -44,7 +44,7 @@ export default function BlogToc(props: BlogTocProps) {
     return (
         <div className={cn("sticky", "top-12", "p-4", "flex flex-col", "gap-y-4")}>
             <div className={cn("font-bold")}>On this page</div>
-            <ul>
+            <ul className={cn("leading-loose")}>
                 {items.map((item, i) => (
                     <ItemToc key={i} activeToc={activeToc} {...item} />
                 ))}

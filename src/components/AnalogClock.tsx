@@ -152,7 +152,7 @@ function Frame() {
             cx={24}
             cy={24}
             r={23.8}
-            className={cn("stroke-current", "fill-neutral-100 dark:fill-neutral-900")}
+            className={cn("stroke-current", "fill-neutral-50 dark:fill-neutral-950")}
         />
     );
 }

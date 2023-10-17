@@ -131,25 +131,24 @@ export default function HorizontalScroll() {
         offset: ["start end", "end"]
     });
 
-    const horz = useTransform(scrollYProgress, [0.175, 1], ["0%", "-100%"]);
-    const vert = useTransform(scrollYProgress, [0.1, 0.5], ["33.33%", "-50%"]);
-    const bgX = useTransform(scrollYProgress, [0.175, 0.8, 1], ["33.33%", "-33.33%", "-66.66%"]);
+    const horz = useTransform(scrollYProgress, [0.33, 0.95], ["0%", "-100%"]);
+    const bgX = useTransform(scrollYProgress, [0.33, 1], ["33.33%", "-66.66%"]);
 
     return (
-        <div className={cn("border-y", "-my-px", "px-3 lg:px-12", "max-lg:hidden")}>
+        <div className={cn("border-y", "-mt-px", "px-3 lg:px-12", "max-lg:hidden")}>
             <div
                 ref={targetRef}
                 data-layout="fluid"
                 className={cn(
-                    "h-[calc(640vh-3rem)] lg:h-[calc(600vh-6rem)]",
+                    "h-[calc(640vh-3rem)] lg:h-[calc(300vh-6rem)]",
                     "border-x",
                     "relative"
                 )}
             >
                 <div
                     className={cn(
-                        "sticky top-16 lg:top-[calc(3rem-1px)]",
-                        "h-[calc(100vh-8rem)] lg:h-[calc(100vh+2px-6rem)]",
+                        "sticky top-16 lg:top-12",
+                        "h-[calc(100vh-8rem)] lg:h-[calc(100vh-6rem)]",
                         "flex",
                         "overflow-hidden",
                         "bg-neutral-50 dark:bg-neutral-950"
@@ -174,9 +173,21 @@ export default function HorizontalScroll() {
                             "h-full",
                             "flex items-center flex-nowrap",
                             "relative",
-                            "divide-x"
+                            "divide-x",
+                            "relative"
                         )}
                     >
+                        <div
+                            className={cn(
+                                "w-[calc(50vw-3rem)]",
+                                "h-full",
+                                "p-4",
+                                "relative",
+                                "flex items-end"
+                            )}
+                        >
+                            <div className={cn("text-9xl", "font-bold", "px-4")}>A1</div>
+                        </div>
                         <CrossWord />
                         <EndCap />
                     </motion.div>

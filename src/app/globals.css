@@ -73,13 +73,13 @@ a[data-active='true'] {
     @apply lg:max-w-screen-md;
     @apply xl:max-w-screen-lg;
     @apply 2xl:max-w-screen-xl; */
-    @apply 3xl:max-w-screen-2xl;
-    @apply 4xl:max-w-screen-3xl;
+    /* @apply 3xl:max-w-screen-2xl; */
+    /* @apply 4xl:max-w-screen-3xl; */
 }
 
 #__article {
     @apply prose;
-    @apply prose-xl;
+    @apply prose-base lg:prose-xl;
     @apply prose-neutral dark:prose-invert;
     @apply font-serif;
     @apply w-full lg:max-w-4xl;

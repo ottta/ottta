@@ -49,7 +49,9 @@ export default function BlogCard(props: BlogCardProps) {
                 )}
             >
                 <div className={cn("p-4", "h-full", "flex flex-col", "justify-between", "gap-y-4")}>
-                    <div className={cn("text-4xl")}>{name}</div>
+                    <div className={cn("text-2xl lg:text-4xl", "max-lg:font-bold", "leading-none")}>
+                        {name}
+                    </div>
                     <div className={cn("text-neutral-500")}>
                         <div
                             className={cn(
