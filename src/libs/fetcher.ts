@@ -22,7 +22,7 @@ type ITag = {
     slug: string;
 };
 
-type IToc = {
+export type IToc = {
     level: number;
     text: string;
     htmlId: string;

@@ -39,19 +39,33 @@ export default function BlogCard(props: BlogCardProps) {
                     "group",
                     "relative",
                     "border",
-                    "flex flex-col justify-between w-full h-full transition-all duration-300 ease-out overflow-hidden",
-                    "aspect-square",
-                    isFirst && "lg:aspect-[2/1]"
+                    "flex flex-col justify-between",
+                    "gap-y-4",
+                    "w-full h-full transition-all duration-300 ease-out overflow-hidden",
+                    "lg:aspect-square",
+                    isFirst && "lg:aspect-[2/1]",
                     // (isSecond || isThird || isFourth) && "aspect-[2/1]"
+                    "hover:bg-neutral-200 dark:hover:bg-neutral-900"
                 )}
             >
-                <div className={cn("p-4")}>
+                <div className={cn("p-4", "h-full", "flex flex-col", "justify-between", "gap-y-4")}>
                     <div className={cn("text-4xl")}>{name}</div>
-                    <div>{moment(createdAt).format("LL")}</div>
-                    <div>
-                        {minutes} {minutes <= 1 ? "minute" : "minutes"} read
+                    <div className={cn("text-neutral-500")}>
+                        <div
+                            className={cn(
+                                "flex items-center justify-between",
+                                "gap-x-4",
+                                "text-xs",
+                                "mb-4"
+                            )}
+                        >
+                            <div>{moment(createdAt).format("LL")}</div>
+                            <div>
+                                {minutes} {minutes <= 1 ? "minute" : "minutes"} read
+                            </div>
+                        </div>
+                        <p className={cn("hyphens-auto", "line-clamp-2")}>{description}</p>
                     </div>
-                    <p>{description}</p>
                 </div>
             </NextLink>
         </li>

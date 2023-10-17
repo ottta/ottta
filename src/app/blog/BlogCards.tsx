@@ -10,15 +10,15 @@ export default function BlogCards(props: BlogCardsProps) {
     const { products } = props;
     const finalProducts = products.concat(
         products,
-        products,
-        products,
-        products,
-        products,
-        products,
-        products,
-        products,
-        products,
         products
+        // products,
+        // products,
+        // products,
+        // products,
+        // products,
+        // products,
+        // products,
+        // products
     );
     return (
         <ul

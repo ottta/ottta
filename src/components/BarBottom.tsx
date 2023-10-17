@@ -70,6 +70,32 @@ const links: CustomLink[] = [
     }
 ];
 
+function BarLink(item: CustomLink) {
+    const pathname = usePathname();
+
+    const isActive =
+        item.link.href.toString() === "/"
+            ? pathname === item.link.href.toString()
+            : pathname.startsWith(item.link.href.toString());
+
+    return (
+        <li className={cn("col-span-2")}>
+            <NextLink
+                {...item.link}
+                data-active={isActive}
+                className={cn(
+                    "flex flex-col items-center justify-center",
+                    "h-full",
+                    isActive ? "text-current" : "text-neutral-400 dark:text-neutral-700"
+                )}
+            >
+                {item.icon}
+                <div className={cn("text-xs")}>{item.label}</div>
+            </NextLink>
+        </li>
+    );
+}
+
 export default function BarBottom() {
     const [isSafari, setIsSafari] = useState(false);
     useEffect(() => {
@@ -102,27 +128,9 @@ export default function BarBottom() {
                     "border-x"
                 )}
             >
-                {links.map((item, i) => {
-                    const isActive = pathname === item.link.href;
-                    return (
-                        <li key={i} className={cn("col-span-2")}>
-                            <NextLink
-                                {...item.link}
-                                data-active={isActive}
-                                className={cn(
-                                    "flex flex-col items-center justify-center",
-                                    "h-full",
-                                    isActive
-                                        ? "text-current"
-                                        : "text-neutral-400 dark:text-neutral-700"
-                                )}
-                            >
-                                {item.icon}
-                                <div className={cn("text-xs")}>{item.label}</div>
-                            </NextLink>
-                        </li>
-                    );
-                })}
+                {links.map((item, i) => (
+                    <BarLink key={i} {...item} />
+                ))}
             </ul>
 
             <div

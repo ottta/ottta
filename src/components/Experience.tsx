@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import moment from "moment";
 import works from "@/database/works.json";
 import { calculateDuration, cn } from "@/libs/utils";
+import slugify from "slugify";
 
 function nthDate(date: string) {
     const isValid = date !== "now";
@@ -53,7 +54,10 @@ function Detail(props: Work) {
     const isPresent = date.end === "now";
 
     return (
-        <li className={cn("py-6 lg:py-4")}>
+        <li
+            id={slugify(project, { lower: true, remove: /[*+~.()'"!:@]/g })}
+            className={cn("py-6 lg:py-4", "scroll-mt-[calc(6rem-1px)]")}
+        >
             <div className={cn("mb-8", "flex flex-col", "gap-y-8")}>
                 <div className={cn("px-2 lg:px-4")}>
                     <div
