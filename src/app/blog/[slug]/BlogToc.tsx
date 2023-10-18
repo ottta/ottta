@@ -26,7 +26,7 @@ function ItemToc(
                 className={cn(
                     "line-clamp-1",
                     "text-neutral-400 dark:text-neutral-700",
-                    isActive && "text-neutral-950 dark:text-neutral-200 font-bold",
+                    isActive && "text-neutral-950 dark:text-neutral-300 font-bold",
                     "transition-all duration-300"
                 )}
             >

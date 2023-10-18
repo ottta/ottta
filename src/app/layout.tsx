@@ -14,7 +14,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 const isProduction = process.env.NODE_ENV === "production";
 
 const sans = localFont({
-    display: "swap",
+    display: "block",
     variable: "--font-sans",
     src: [
         {
@@ -31,7 +31,7 @@ const sans = localFont({
 });
 
 const serif = localFont({
-    display: "swap",
+    display: "block",
     variable: "--font-serif",
     src: [
         {
@@ -48,7 +48,7 @@ const serif = localFont({
 });
 
 const ubuntu = Ubuntu_Mono({
-    display: "swap",
+    display: "block",
     subsets: ["latin"],
     weight: ["400", "700"],
     variable: "--font-mono"

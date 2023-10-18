@@ -47,7 +47,9 @@ export default function Header() {
                         "font-bold"
                     )}
                 >
-                    Taufik Oktama
+                    {/* Taufik Oktama */}
+                    {/* Otta */}
+                    .otta
                 </NextLink>
                 <button>
                     <svg

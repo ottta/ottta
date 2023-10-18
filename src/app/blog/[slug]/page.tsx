@@ -66,7 +66,8 @@ export default async function Page(props: PageProps) {
                         "p-4",
                         "flex flex-col",
                         "justify-between",
-                        "gap-y-12"
+                        "gap-y-12",
+                        "lg:aspect-square"
                         // "bg-neutral-200 dark:bg-neutral-900"
                     )}
                 >
@@ -108,7 +109,7 @@ export default async function Page(props: PageProps) {
                         </div>
                     </div>
                     <div className={cn("px-4 py-2", "shrink-0")}>
-                        <div className={cn("text-8xl", "font-bold", "leading-none")}>H1</div>
+                        <div className={cn("text-8xl", "font-bold", "leading-none")}>A1</div>
                     </div>
                 </div>
 
