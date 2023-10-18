@@ -5,6 +5,11 @@ import moment from "moment";
 import works from "@/database/works.json";
 import { calculateDuration, cn } from "@/libs/utils";
 import slugify from "slugify";
+import useTableOfContent from "@/hooks/use-table-content";
+
+function toSlug(name: string) {
+    return slugify(name, { lower: true, remove: /[+~.,()'"!:@]/g });
+}
 
 function nthDate(date: string) {
     const isValid = date !== "now";
@@ -54,10 +59,7 @@ function Detail(props: Work) {
     const isPresent = date.end === "now";
 
     return (
-        <li
-            id={slugify(project, { lower: true, remove: /[*+~.()'"!:@]/g })}
-            className={cn("py-6 lg:py-4", "scroll-mt-[calc(6rem-1px)]")}
-        >
+        <li id={toSlug(project)} className={cn("py-6 lg:py-4", "scroll-mt-[calc(6rem-1px)]")}>
             <div className={cn("mb-8", "flex flex-col", "gap-y-8")}>
                 <div className={cn("px-2 lg:px-4")}>
                     <div
@@ -141,6 +143,14 @@ export default function Experience() {
 
     const years = Object.keys(groupByYears);
 
+    useTableOfContent(
+        works.map((item) => ({
+            level: 1,
+            text: item.project,
+            htmlId: toSlug(item.project)
+        }))
+    );
+
     return (
         <>
             <div
@@ -189,7 +199,10 @@ export default function Experience() {
                 </div>
             </div>
 
-            <ul className={cn("flex flex-col", "gap-y-3 lg:gap-y-4", "-mb-px")}>
+            <ul
+                id="__list-experience"
+                className={cn("flex flex-col", "gap-y-3 lg:gap-y-4", "-mb-px")}
+            >
                 {years.reverse().map((year, i) => (
                     <li key={i} className={cn("border-y", "px-3 lg:px-12")}>
                         <div
@@ -216,7 +229,7 @@ export default function Experience() {
                             <div
                                 className={cn(
                                     "col-span-1 lg:col-span-3",
-                                    "bg-neutral-200 dark:bg-neutral-800",
+                                    "bg-neutral-100 dark:bg-neutral-900",
                                     "max-lg:inline-flex max-lg:items-start max-lg:justify-center"
                                 )}
                             >
@@ -235,12 +248,12 @@ export default function Experience() {
                             </div>
 
                             <div
+                                style={{ backgroundImage: "var(--bg-dotted)" }}
                                 className={cn(
                                     "col-span-6 lg:col-span-3",
                                     "max-lg:hidden",
-                                    "bg-neutral-200 dark:bg-neutral-800"
+                                    "bg-neutral-100 dark:bg-neutral-900"
                                 )}
-                                style={{ backgroundImage: "var(--bg-dotted)" }}
                             />
                         </div>
                     </li>

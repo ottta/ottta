@@ -27,7 +27,6 @@ export default function Footer() {
                     "max-lg:divide-y lg:divide-x"
                 )}
             >
-                <div className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")} />
                 <ul className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")}>
                     {socialMedia.map((item, i) => (
                         <li key={i}>
@@ -41,6 +40,7 @@ export default function Footer() {
                         </li>
                     ))}
                 </ul>
+                <div className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")} />
                 <div className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")} />
                 <div className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")} />
             </div>

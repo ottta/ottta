@@ -119,3 +119,12 @@ a[data-active='true'] {
     @apply px-1 py-1;
     @apply rounded;
 }
+
+#__article [data-intersect='true'] {
+    @apply underline;
+}
+
+#__list-experience [data-intersect='true'] {
+    @apply bg-neutral-200 dark:bg-neutral-800;
+    @apply transition-[background-color] duration-300;
+}

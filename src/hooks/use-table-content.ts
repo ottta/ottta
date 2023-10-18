@@ -28,25 +28,29 @@ export default function useTableOfContent(tocs: IToc[]) {
             }
         };
 
+        handleScroll();
+
         document.addEventListener("scroll", handleScroll);
         return () => document.removeEventListener("scroll", handleScroll);
     }, [tocs]);
 
-    // useEffect(() => {
-    //     if (!active) return;
-    //     const el = document.getElementById(active);
-    //     if (!el) return;
+    useEffect(() => {
+        if (!active) return;
+        const el = document.getElementById(active);
+        if (!el) return;
 
-    //     if (active === el.id) {
-    //         // el.classList.add("bg-blue-500");
-    //         el.style.color = "red";
-    //     }
+        if (active === el.id) {
+            // el.classList.add("bg-blue-500");
+            // el.style.backgroundColor = "red";
+            el.setAttribute("data-intersect", "true");
+        }
 
-    //     return () => {
-    //         // el.classList.remove("bg-blue-500");
-    //         el.style.color = "initial";
-    //     };
-    // }, [active]);
+        return () => {
+            // el.classList.remove("bg-blue-500");
+            // el.style.backgroundColor = "initial";
+            el.setAttribute("data-intersect", "false");
+        };
+    }, [active]);
 
     return active;
 }

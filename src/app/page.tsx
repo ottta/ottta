@@ -27,19 +27,19 @@ type HCards = {
 function HighlightCard(props: HCard) {
     const { href, name, tags, description, date } = props;
     return (
-        <li className={cn("col-span-6 lg:col-span-3", "lg:aspect-square")}>
+        <li className={cn("col-span-6 lg:col-span-3", "lg:aspect-square", "group")}>
             <NextLink
                 href={href}
                 className={cn(
                     "flex flex-col justify-between",
                     "gap-y-2",
                     "h-full",
-                    "p-4",
+                    "py-4 lg:p-4",
                     "overflow-hidden",
-                    "hover:bg-neutral-200 dark:hover:bg-neutral-900"
+                    "lg:hover:bg-neutral-200 lg:dark:hover:bg-neutral-900"
                 )}
             >
-                <div>
+                <div className={cn("max-lg:mb-6")}>
                     <ul className={cn("flex items-center gap-x-1", "mb-2")}>
                         {tags.map((item, i) => (
                             <li key={i} className={cn("border", "rounded-full", "px-2", "text-xs")}>
@@ -69,7 +69,7 @@ function HighlightCards(props: HCards) {
     return (
         <div className={cn("my-16 lg:my-12")}>
             <GridContainer>
-                <div className={cn("px-4", "h-16 lg:h-12", "flex items-center")}>
+                <div className={cn("px-4", "h-16 lg:h-12", "flex items-center", "-mb-px")}>
                     <div className={cn("text-3xl lg:text-2xl font-bold")}>{title}</div>
                 </div>
             </GridContainer>
@@ -80,7 +80,8 @@ function HighlightCards(props: HCards) {
                         "col-span-6 lg:col-span-12",
                         "w-full",
                         "grid grid-cols-6 lg:grid-cols-12",
-                        "max-lg:divide-y lg:divide-x"
+                        "max-lg:divide-y lg:divide-x",
+                        "max-lg:px-4"
                     )}
                 >
                     {items.map((item, i) => (
@@ -94,7 +95,7 @@ function HighlightCards(props: HCards) {
                                 "flex items-center lg:justify-center",
                                 "text-xl",
                                 "h-16 lg:h-full",
-                                "p-4",
+                                "lg:p-4",
                                 "hover:bg-neutral-200 dark:hover:bg-neutral-900"
                             )}
                         >

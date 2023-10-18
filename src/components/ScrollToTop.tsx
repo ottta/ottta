@@ -5,16 +5,18 @@ import { useScroll, motion, useTransform } from "framer-motion";
 
 export default function ScrollToTop() {
     const { scrollYProgress } = useScroll();
-    const opacity = useTransform(scrollYProgress, [0.88, 0.9], [0, 1]);
+    const opacity = useTransform(scrollYProgress, [0.8, 0.9], [0, 1]);
+    const y = useTransform(scrollYProgress, [0.8, 0.9], ["100%", "0%"]);
     return (
         <motion.div
-            style={{ opacity }}
+            style={{ opacity, y }}
+            transition={{ type: "tween" }}
             className={cn(
                 "fixed",
                 "bottom-16 lg:bottom-12",
                 "left-3 lg:left-12",
                 "right-3 lg:right-12",
-                "z-50",
+                "z-10",
                 "grid grid-cols-4 lg:grid-cols-12",
                 "pointer-events-none",
                 "touch-none"
