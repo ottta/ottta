@@ -80,7 +80,7 @@ a[data-active='true'] {
 
 #__article {
     @apply prose;
-    @apply prose-base lg:prose-xl;
+    @apply prose-lg lg:prose-xl;
     @apply prose-neutral dark:prose-invert;
     @apply font-serif;
     @apply w-full lg:max-w-4xl;
