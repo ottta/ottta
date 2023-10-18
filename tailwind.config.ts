@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 const config: Config = {
     darkMode: ["class", "[data-theme='dark']"],
@@ -20,9 +21,7 @@ const config: Config = {
                 "4xl": "2048px"
             },
             colors: {
-                neutral: {
-                    950: "#0d0d0d"
-                }
+                neutral: colors.stone
             },
             typography: ({ theme }: any) => ({
                 neutral: {
@@ -38,7 +37,7 @@ const config: Config = {
                         "--tw-prose-invert-body": theme("colors.neutral.300"),
                         "--tw-prose-invert-headings": theme("colors.neutral.300"),
                         "--tw-prose-invert-links": theme("colors.pink.600"),
-                        "--tw-prose-invert-bold": theme("colors.neutral.200"),
+                        "--tw-prose-invert-bold": theme("colors.neutral.300"),
                         "--tw-prose-invert-hr": theme("colors.neutral.800"),
                         "--tw-prose-invert-quote-borders": theme("colors.neutral.800"),
                         "--tw-prose-invert-quotes": theme("colors.neutral.300"),
