@@ -28,7 +28,7 @@ const config: Config = {
                     css: {
                         "--tw-prose-body": theme("colors.neutral.950"),
                         "--tw-prose-headings": theme("colors.neutral.950"),
-                        "--tw-prose-links": theme("colors.pink.500"),
+                        "--tw-prose-links": theme("colors.rose.500"),
                         "--tw-prose-bold": theme("colors.neutral.950"),
                         "--tw-prose-hr": theme("colors.neutral.300"),
                         "--tw-prose-quote-borders": theme("colors.neutral.300"),
@@ -36,7 +36,7 @@ const config: Config = {
                         "--tw-prose-code": theme("colors.neutral.950"),
                         "--tw-prose-invert-body": theme("colors.neutral.300"),
                         "--tw-prose-invert-headings": theme("colors.neutral.300"),
-                        "--tw-prose-invert-links": theme("colors.pink.600"),
+                        "--tw-prose-invert-links": theme("colors.rose.600"),
                         "--tw-prose-invert-bold": theme("colors.neutral.300"),
                         "--tw-prose-invert-hr": theme("colors.neutral.800"),
                         "--tw-prose-invert-quote-borders": theme("colors.neutral.800"),

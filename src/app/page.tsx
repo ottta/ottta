@@ -49,7 +49,11 @@ function HighlightCard(props: HCard) {
                     </ul>
                     <div
                         dangerouslySetInnerHTML={{ __html: name }}
-                        className={cn("text-2xl lg:text-4xl", "leading-none")}
+                        className={cn(
+                            "text-2xl lg:text-4xl",
+                            "leading-none",
+                            "line-clamp-1 lg:line-clamp-2"
+                        )}
                     />
                 </div>
                 <div className={cn("text-neutral-500")}>
@@ -67,10 +71,10 @@ function HighlightCard(props: HCard) {
 function HighlightCards(props: HCards) {
     const { basePath, items, title } = props;
     return (
-        <div className={cn("my-16 lg:my-12")}>
+        <div className={cn("my-12 lg:my-10")}>
             <GridContainer>
-                <div className={cn("px-4", "h-16 lg:h-12", "flex items-center", "-mb-px")}>
-                    <div className={cn("text-3xl lg:text-2xl font-bold")}>{title}</div>
+                <div className={cn("px-4", "h-12 lg:h-10", "flex items-center", "-mb-px")}>
+                    <div className={cn("text-2xl lg:text-xl font-bold")}>{title}</div>
                 </div>
             </GridContainer>
 

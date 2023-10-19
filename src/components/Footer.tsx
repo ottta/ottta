@@ -15,7 +15,7 @@ const socialMedia: CustomLink[] = [
 export default function Footer() {
     return (
         <footer
-            className={cn("px-3 lg:px-12", "border-y", "-mb-px", "bg-red-100 dark:bg-neutral-950")}
+            className={cn("px-3 lg:px-12", "border-y", "-mb-px", "bg-rose-100 dark:bg-neutral-950")}
         >
             <div
                 data-layout="fluid"

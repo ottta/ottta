@@ -29,10 +29,11 @@ export default function Hero() {
                         <div className={cn("col-span-2 lg:col-span-3", "p-4", "flex items-center")}>
                             <div
                                 className={cn(
+                                    "text-rose-500 dark:text-rose-600",
+                                    "bg-rose-300 dark:bg-rose-800",
                                     "aspect-square w-full",
-                                    "border",
+                                    "border border-current",
                                     "rounded-full",
-                                    "bg-red-100",
                                     "overflow-hidden"
                                     // "grayscale"
                                 )}
@@ -66,15 +67,8 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    <div className={cn("p-4")}>
-                        <div
-                            className={cn(
-                                "text-3xl lg:text-7xl"
-                                // "aspect-square lg:aspect-[2/1]"
-                            )}
-                        >
-                            <Typewriter />
-                        </div>
+                    <div className={cn("p-4", "text-3xl lg:text-6xl")}>
+                        <Typewriter />
                     </div>
                 </div>
 

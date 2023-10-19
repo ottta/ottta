@@ -69,8 +69,8 @@ export const metadata: Metadata = {
     referrer: "origin-when-cross-origin",
     category: "Portfolio",
     themeColor: [
-        { media: "(prefers-color-scheme: light)", color: "#fafafa" },
-        { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" }
+        { media: "(prefers-color-scheme: light)", color: "#e7e5e4" },
+        { media: "(prefers-color-scheme: dark)", color: "#d9f99d" }
     ],
     authors: [{ name: "Taufik Oktama", url: "https://unforma.club/oktama-taufik" }],
     creator: "Taufik Oktama",

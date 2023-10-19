@@ -64,14 +64,15 @@ function Detail(props: Work) {
                 <div className={cn("px-2 lg:px-4")}>
                     <div
                         className={cn(
-                            "text-xl lg:text-2xl",
+                            // "text-lg lg:text-sm",
                             // "font-bold",
                             "leading-none",
-                            "bg-neutral-200 dark:bg-neutral-800",
+                            "bg-rose-200 dark:bg-rose-800",
+                            "border-rose-500 dark:border-rose-600",
                             "inline-block",
                             "rounded-full",
                             "border",
-                            "px-3 lg:px-4 py-1",
+                            "px-2 lg:px-2 py-1",
                             // "shadow-[0_0_1rem_-0.25rem] shadow-cyan-700 dark:shadow-cyan-300",
                             "overflow-hidden"
                         )}
@@ -112,10 +113,10 @@ function Detail(props: Work) {
                     "font-serif",
                     "prose",
                     "prose-neutral dark:prose-invert",
-                    "prose-base lg:prose-xl",
+                    "prose-lg lg:prose-xl",
                     "w-full max-w-full",
                     "hyphens-auto",
-                    "lg:columns-2",
+                    // "lg:columns-2",
                     "px-2 lg:px-4"
                 )}
             />
@@ -158,7 +159,7 @@ export default function Experience() {
                     "sticky",
                     "top-[calc(4rem-1px)] lg:top-[calc(3rem-1px)]",
                     "z-10",
-                    "bg-neutral-50/90 dark:bg-neutral-900",
+                    "bg-neutral-50/90 dark:bg-neutral-950/90",
                     "backdrop-blur-sm",
                     "border-y",
                     "px-3 lg:px-12",
@@ -168,7 +169,7 @@ export default function Experience() {
                 <div className={cn("fluid", "border-x")}>
                     <div
                         className={cn(
-                            "h-12",
+                            "h-12 lg:h-10",
                             "overflow-hidden",
                             "-mb-px",
                             "grid grid-cols-6 lg:grid-cols-12",
@@ -229,7 +230,7 @@ export default function Experience() {
                             <div
                                 className={cn(
                                     "col-span-1 lg:col-span-3",
-                                    "bg-neutral-100 dark:bg-neutral-900",
+                                    "lg:bg-neutral-100 lg:dark:bg-neutral-900",
                                     "max-lg:inline-flex max-lg:items-start max-lg:justify-center"
                                 )}
                             >

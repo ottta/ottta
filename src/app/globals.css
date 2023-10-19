@@ -8,7 +8,7 @@
 
 * {
     @apply border-neutral-300 dark:border-neutral-800;
-    @apply selection:bg-pink-200/50 selection:dark:bg-pink-400/20;
+    @apply selection:bg-rose-300/50 selection:dark:bg-rose-700/20;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -34,7 +34,7 @@ body {
 
 a[target="_blank"] {
     /* @apply text-blue-600 dark:text-blue-400; */
-    @apply text-pink-400 dark:text-pink-600;
+    @apply text-rose-500 dark:text-rose-600;
     @apply hover:underline;
     @apply after:font-sans;
     @apply after:content-["\2197"];
@@ -103,6 +103,7 @@ a[data-active='true'] {
 }
 
 #__list-experience [data-intersect='true'] {
-    @apply bg-neutral-200 dark:bg-neutral-800;
+    /* @apply bg-neutral-200 dark:bg-neutral-800; */
+    @apply bg-neutral-100 dark:bg-neutral-900;
     @apply transition-[background-color] duration-300;
 }
