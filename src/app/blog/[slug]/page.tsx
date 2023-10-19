@@ -57,7 +57,7 @@ export default async function Page(props: PageProps) {
     if (!blog.success || blog.data.length <= 0) notFound();
     const { content, description, name, createdAt, updatedAt } = blog.data[0];
     return (
-        <div className={cn("flex flex-col", "gap-y-12")}>
+        <>
             <GridContainer
                 className={cn(
                     "lg:divide-x",
@@ -130,6 +130,8 @@ export default async function Page(props: PageProps) {
                 </div>
             </GridContainer>
 
+            <GridContainer className={cn("h-12 lg:h-10")} />
+
             <GridContainer className={cn("lg:divide-x", "lg:min-h-[66.66vh]")}>
                 <div
                     className={cn(
@@ -142,7 +144,7 @@ export default async function Page(props: PageProps) {
                     <article
                         id="__article"
                         dangerouslySetInnerHTML={{ __html: content.html }}
-                        className={cn("p-3 lg:p-4", "max-lg:mx-auto")}
+                        className={cn("p-3 pt-32 lg:p-4 lg:pt-16", "max-lg:mx-auto")}
                     />
                 </div>
 
@@ -171,6 +173,6 @@ export default async function Page(props: PageProps) {
                     </div>
                 </div>
             </GridContainer>
-        </div>
+        </>
     );
 }

@@ -11,7 +11,7 @@ export default function TOCList(props: BlogTocProps) {
 
     if (items.length <= 0) return <div>No TOCs</div>;
     return (
-        <ul className={cn("leading-loose", "divide-y", "border-y", "-my-px")}>
+        <ul className={cn("leading-[3] lg:leading-loose", "divide-y", "border-y", "-my-px")}>
             {items.map((item, i) => (
                 <TOCItem key={i} activeToc={activeToc} {...item} />
             ))}

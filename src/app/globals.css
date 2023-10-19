@@ -86,7 +86,7 @@ a[data-active='true'] {
     /* @apply prose-p:text-xl lg:prose-p:text-2xl; */
     /* @apply prose-p:leading-normal prose-p:hyphens-auto; */
     @apply prose-blockquote:border-l prose-blockquote:px-3 prose-blockquote:lg:px-4 prose-blockquote:font-serif;
-    @apply prose-headings:font-sans prose-headings:scroll-mt-24 prose-headings:lg:scroll-mt-16;
+    @apply prose-headings:font-sans prose-headings:scroll-mt-32 prose-headings:lg:scroll-mt-16;
     @apply prose-code:p-1 prose-code:rounded prose-code:bg-neutral-200 dark:prose-code:bg-neutral-800;
 
     @apply prose-img:max-lg:max-w-[calc(100%+1.5rem)] prose-img:lg:max-w-[calc(100%+2rem)] prose-img:max-lg:-mx-3 prose-img:lg:-mx-4 prose-img:border-y;
