@@ -63,11 +63,12 @@ export default async function Page(props: PageProps) {
                     className={cn(
                         "max-lg:order-2",
                         "col-span-6",
-                        "p-4",
+                        "p-3 lg:p-4",
                         "flex flex-col",
                         "justify-between",
                         "gap-y-12",
-                        "lg:aspect-square"
+                        "lg:aspect-square",
+                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900"
                         // "bg-neutral-200 dark:bg-neutral-900"
                     )}
                 >
@@ -78,15 +79,9 @@ export default async function Page(props: PageProps) {
                     />
                 </div>
 
-                <div
-                    className={cn(
-                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900",
-                        "col-span-6 lg:col-span-3",
-                        "flex flex-col justify-between"
-                    )}
-                >
+                <div className={cn("col-span-6 lg:col-span-3", "flex flex-col justify-between")}>
                     <div className={cn("relative", "h-full")}>
-                        <div className={cn("p-4", "sticky top-12")}>
+                        <div className={cn("p-3 lg:p-4", "sticky top-12")}>
                             <NextLink
                                 href="/blog"
                                 className={cn(
@@ -116,12 +111,11 @@ export default async function Page(props: PageProps) {
                 <div
                     className={cn(
                         "max-lg:border-b",
-                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900",
                         "col-span-6 lg:col-span-3",
                         "flex flex-col justify-between"
                     )}
                 >
-                    <div className={cn("p-4", "sticky top-12")}>
+                    <div className={cn("p-3 lg:p-4", "sticky top-12")}>
                         <div className={cn("leading-tight")}>
                             <div className={cn("text-neutral-500", "font-bold", "mb-4")}>
                                 Update at
@@ -149,15 +143,17 @@ export default async function Page(props: PageProps) {
                     <article
                         id="__article"
                         dangerouslySetInnerHTML={{ __html: content.html }}
-                        className={cn("p-4", "max-lg:mx-auto")}
+                        className={cn("p-3 lg:p-4", "max-lg:mx-auto")}
                     />
                 </div>
 
                 <div
                     className={cn(
                         "max-lg:order-1",
-                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900",
-                        "col-span-6 lg:col-span-3"
+                        // "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900",
+                        "col-span-6 lg:col-span-3",
+                        "max-lg:sticky max-lg:top-16",
+                        "max-lg:z-10"
                         // "bg-neutral-100 dark:bg-neutral-900",
                         // "!border-neutral-950"
                     )}

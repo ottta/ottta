@@ -36,10 +36,11 @@ export default function ScrollToTop() {
                     className={cn(
                         "w-16 lg:w-12",
                         "aspect-square",
-                        "border !border-fuchsia-400 dark:!border-fuchsia-600",
+                        "text-pink-500 dark:text-pink-600",
+                        "border border-current",
                         "rounded-full",
                         "flex items-center justify-center",
-                        "bg-fuchsia-300 dark:bg-fuchsia-800",
+                        "bg-pink-300 dark:bg-pink-800",
                         "pointer-events-auto",
                         "touch-auto",
                         "shadow"

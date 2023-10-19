@@ -158,7 +158,7 @@ export default function Experience() {
                     "sticky",
                     "top-[calc(4rem-1px)] lg:top-[calc(3rem-1px)]",
                     "z-10",
-                    "bg-amber-100/90 dark:bg-neutral-950/90",
+                    "bg-neutral-50/90 dark:bg-neutral-900",
                     "backdrop-blur-sm",
                     "border-y",
                     "px-3 lg:px-12",
