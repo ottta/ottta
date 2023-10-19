@@ -27,9 +27,9 @@ export default function BlogCards(props: BlogCardsProps) {
                 "col-span-12",
                 "grid grid-cols-6 lg:grid-cols-12",
                 "grid-flow-dense",
-                "gap-1",
+                "gap-3 lg:gap-4",
                 "overflow-hidden",
-                "p-1"
+                "p-3 lg:p-4"
             )}
         >
             {finalProducts.map((item, i) => (

@@ -27,7 +27,7 @@ function Info(props: InfoProps) {
     return (
         <div
             className={cn(
-                "font-sans",
+                "font-text",
                 "grid grid-cols-5 lg:grid-cols-3",
                 "items-baseline",
                 "col-span-5",
@@ -110,13 +110,13 @@ function Detail(props: Work) {
                 dangerouslySetInnerHTML={{ __html: description }}
                 style={{ columnGap: "2rem" }}
                 className={cn(
-                    "font-serif",
+                    "font-text",
                     "prose",
                     "prose-neutral dark:prose-invert",
-                    "prose-lg lg:prose-xl",
+                    "prose-base lg:prose-lg",
                     "w-full max-w-full",
                     "hyphens-auto",
-                    // "lg:columns-2",
+                    "lg:columns-2",
                     "px-2 lg:px-4"
                 )}
             />

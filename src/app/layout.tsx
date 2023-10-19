@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
+import { headers } from "next/headers";
 import { Ubuntu_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Provider from "@/app/Provider";
@@ -47,10 +48,28 @@ const serif = localFont({
     ]
 });
 
+const text = localFont({
+    display: "block",
+    variable: "--font-text",
+    src: [
+        {
+            path: "../../public/fonts/WorkSans[wght].ttf",
+            weight: "100 900",
+            style: "normal"
+        },
+        {
+            path: "../../public/fonts/WorkSans-Italic[wght].ttf",
+            weight: "100 900",
+            style: "italic"
+        }
+    ]
+});
+
 const ubuntu = Ubuntu_Mono({
     display: "block",
     subsets: ["latin"],
     weight: ["400", "700"],
+    style: ["italic", "normal"],
     variable: "--font-mono"
 });
 
@@ -70,7 +89,7 @@ export const metadata: Metadata = {
     category: "Portfolio",
     themeColor: [
         { media: "(prefers-color-scheme: light)", color: "#e7e5e4" },
-        { media: "(prefers-color-scheme: dark)", color: "#d9f99d" }
+        { media: "(prefers-color-scheme: dark)", color: "#fb923c" }
     ],
     authors: [{ name: "Taufik Oktama", url: "https://unforma.club/oktama-taufik" }],
     creator: "Taufik Oktama",
@@ -93,14 +112,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props: PropsWithChildren) {
     const { children } = props;
+    const headerList = headers();
+    const agent = headerList.get("user-agent");
+
     return (
         <html
             lang="en"
             suppressHydrationWarning
-            className={cn(sans.variable, serif.variable, ubuntu.variable)}
+            className={cn(sans.variable, serif.variable, ubuntu.variable, text.variable)}
         >
             <body>
-                <Provider>
+                <Provider agent={agent}>
                     <Header />
                     <main className={cn("min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-6rem)]")}>
                         {children}

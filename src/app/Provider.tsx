@@ -3,10 +3,12 @@
 import type { PropsWithChildren } from "react";
 import { ThemeProvider as ProviderTheme } from "next-themes";
 import ProviderGrid from "@/components/_context/ContextGrid";
+import ProviderAgent from "@/components/_context/ContextAgent";
 
-export default function Provider(props: PropsWithChildren) {
-    const { children } = props;
+type ProviderProps = PropsWithChildren & { agent: string | null };
 
+export default function Provider(props: ProviderProps) {
+    const { children, agent } = props;
     return (
         <ProviderTheme
             enableSystem
@@ -14,7 +16,9 @@ export default function Provider(props: PropsWithChildren) {
             defaultTheme="system"
             themes={["dark", "light"]}
         >
-            <ProviderGrid>{children}</ProviderGrid>
+            <ProviderAgent agent={agent}>
+                <ProviderGrid>{children}</ProviderGrid>
+            </ProviderAgent>
         </ProviderTheme>
     );
 }

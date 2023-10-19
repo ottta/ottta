@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import colors from "tailwindcss/colors";
 
 const config: Config = {
     darkMode: ["class", "[data-theme='dark']"],
@@ -14,14 +13,12 @@ const config: Config = {
             fontFamily: {
                 sans: ["var(--font-sans)"],
                 serif: ["var(--font-serif)"],
-                mono: ["var(--font-mono)"]
+                mono: ["var(--font-mono)"],
+                text: ["var(--font-text)"]
             },
             screens: {
                 "3xl": "1792px",
                 "4xl": "2048px"
-            },
-            colors: {
-                neutral: colors.stone
             },
             typography: ({ theme }: any) => ({
                 neutral: {
@@ -34,14 +31,14 @@ const config: Config = {
                         "--tw-prose-quote-borders": theme("colors.neutral.300"),
                         "--tw-prose-quotes": theme("colors.neutral.950"),
                         "--tw-prose-code": theme("colors.neutral.950"),
-                        "--tw-prose-invert-body": theme("colors.neutral.300"),
+                        "--tw-prose-invert-body": theme("colors.neutral.400"),
                         "--tw-prose-invert-headings": theme("colors.neutral.300"),
                         "--tw-prose-invert-links": theme("colors.rose.600"),
                         "--tw-prose-invert-bold": theme("colors.neutral.300"),
                         "--tw-prose-invert-hr": theme("colors.neutral.800"),
                         "--tw-prose-invert-quote-borders": theme("colors.neutral.800"),
-                        "--tw-prose-invert-quotes": theme("colors.neutral.300"),
-                        "--tw-prose-invert-code": theme("colors.neutral.300")
+                        "--tw-prose-invert-quotes": theme("colors.neutral.400"),
+                        "--tw-prose-invert-code": theme("colors.neutral.400")
                     }
                 }
             })

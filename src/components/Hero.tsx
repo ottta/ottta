@@ -12,21 +12,37 @@ export default function Hero() {
                     "lg:grid grid-cols-6 lg:grid-cols-12",
                     "border-x",
                     "grid-flow-dense",
-                    // "max-lg:min-h-[calc(100vh-8rem)] overflow-hidden",
                     "max-lg:divide-y lg:divide-x"
                 )}
             >
                 <div
                     className={cn(
                         "col-span-6",
-                        "grid auto-rows-fr",
-                        "divide-y",
-                        "justify-between",
-                        "max-lg:min-h-[calc(50vh-4rem)]"
+                        "grid lg:auto-rows-fr",
+                        "lg:divide-y",
+                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900"
                     )}
                 >
+                    <div
+                        className={cn(
+                            "p-4",
+                            "text-5xl lg:text-6xl",
+                            "max-lg:aspect-[3/1]",
+                            "max-lg:text-center"
+                            // "max-lg:bg-rose-500 max-lg:dark:bg-rose-600"
+                        )}
+                    >
+                        <Typewriter />
+                    </div>
                     <div className={cn("grid grid-cols-6", "lg:divide-x")}>
-                        <div className={cn("col-span-2 lg:col-span-3", "p-4", "flex items-center")}>
+                        <div
+                            className={cn(
+                                "max-lg:hidden",
+                                "col-span-3",
+                                "p-4",
+                                "flex items-center"
+                            )}
+                        >
                             <div
                                 className={cn(
                                     "text-rose-500 dark:text-rose-600",
@@ -35,26 +51,24 @@ export default function Hero() {
                                     "border border-current",
                                     "rounded-full",
                                     "overflow-hidden"
-                                    // "grayscale"
                                 )}
-                            >
-                                {/* <NextImage alt="Taufik Oktama" src={profilePhoto} /> */}
-                            </div>
+                            />
                         </div>
                         <div
                             className={cn(
-                                "col-span-4 lg:col-span-3",
+                                "col-span-6 lg:col-span-3",
                                 "p-3 lg:p-4",
                                 "flex items-center"
                             )}
                         >
                             <p
                                 className={cn(
-                                    "text-md lg:text-3xl",
+                                    "text-2xl lg:text-3xl",
                                     "w-full",
                                     "italic",
                                     "hyphens-auto",
-                                    "font-serif"
+                                    "font-serif",
+                                    "max-lg:text-center"
                                 )}
                             >
                                 <q>
@@ -66,10 +80,6 @@ export default function Hero() {
                             </p>
                         </div>
                     </div>
-
-                    <div className={cn("p-4", "text-3xl lg:text-6xl")}>
-                        <Typewriter />
-                    </div>
                 </div>
 
                 <div
@@ -78,7 +88,7 @@ export default function Hero() {
                         "col-span-6",
                         "flex items-center justify-center",
                         "lg:min-h-[calc(100vh-6rem)]",
-                        "p-12"
+                        "lg:p-12"
                     )}
                 >
                     <AnalogClock />
@@ -87,39 +97,3 @@ export default function Hero() {
         </div>
     );
 }
-
-// const variants = {
-//     start: {
-//         d: "M16 46, H32, V32, H46, V16, H32, V2, H16, V16, H2, V32, H16, Z"
-//     },
-//     end: {
-//         d: "M16 46, H46, V46, H46, V2, H46, V2, H2, V2, H2, V32, H16, Z"
-//     }
-// };
-
-// return (
-//     <div className={cn("px-3 lg:px-12")}>
-//         <div
-//             data-layout="fluid"
-//             className={cn(
-//                 "h-[calc(100vh-6rem+1px)]",
-//                 "border-b border-x",
-//                 "flex items-center justify-start"
-//             )}
-//         >
-//             <motion.svg
-//                 viewBox="0 0 48 48"
-//                 width={480}
-//                 height={480}
-//                 // className={cn("border")}
-//                 stroke="black"
-//                 fill="transparent"
-//                 strokeWidth={0.3}
-//                 initial="start"
-//                 whileHover="end"
-//             >
-//                 <motion.path variants={variants} />
-//             </motion.svg>
-//         </div>
-//     </div>
-// );

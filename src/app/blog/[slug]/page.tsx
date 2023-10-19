@@ -2,11 +2,11 @@ import NextLink from "next/link";
 import { notFound } from "next/navigation";
 import { getProducts } from "@/libs/fetcher";
 import { cn } from "@/libs/utils";
-import BlogToc from "@/app/blog/[slug]/BlogToc";
 import BlogList from "@/app/blog/[slug]/BlogList";
 import GridContainer from "@/components/GridContainer";
 import { Metadata } from "next";
 import moment from "moment";
+import BlogToc from "@/components/Blogs/BlogToc";
 
 type PageProps = {
     params: {
@@ -58,17 +58,22 @@ export default async function Page(props: PageProps) {
     const { content, description, name, createdAt, updatedAt } = blog.data[0];
     return (
         <div className={cn("flex flex-col", "gap-y-12")}>
-            <GridContainer className={cn("lg:divide-x", "lg:min-h-[66.66vh]")}>
+            <GridContainer
+                className={cn(
+                    "lg:divide-x",
+                    "lg:min-h-[66.66vh]",
+                    "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900"
+                )}
+            >
                 <div
                     className={cn(
                         "max-lg:order-2",
                         "col-span-6",
-                        "p-3 lg:p-4",
+                        "p-3 py-8 lg:p-4",
                         "flex flex-col",
                         "justify-between",
                         "gap-y-12",
-                        "lg:aspect-square",
-                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900"
+                        "lg:aspect-square"
                         // "bg-neutral-200 dark:bg-neutral-900"
                     )}
                 >
@@ -79,14 +84,17 @@ export default async function Page(props: PageProps) {
                     />
                 </div>
 
-                <div className={cn("col-span-6 lg:col-span-3", "flex flex-col justify-between")}>
+                <div
+                    className={cn("max-lg:border-b", "col-span-3", "flex flex-col justify-between")}
+                >
                     <div className={cn("relative", "h-full")}>
                         <div className={cn("p-3 lg:p-4", "sticky top-12")}>
                             <NextLink
                                 href="/blog"
                                 className={cn(
-                                    "border rounded-full",
-                                    "bg-neutral-200 dark:bg-neutral-900",
+                                    "text-rose-500 dark:text-rose-600",
+                                    "border border-current rounded-full",
+                                    "bg-rose-200 dark:bg-rose-900",
                                     "flex items-center justify-center",
                                     "w-12 aspect-square"
                                 )}
@@ -108,22 +116,14 @@ export default async function Page(props: PageProps) {
                     </div>
                 </div>
 
-                <div
-                    className={cn(
-                        "max-lg:border-b",
-                        "col-span-6 lg:col-span-3",
-                        "flex flex-col justify-between"
-                    )}
-                >
+                <div className={cn("max-lg:border-b", "col-span-3", "flex flex-col justify-end")}>
                     <div className={cn("p-3 lg:p-4", "sticky top-12")}>
-                        <div className={cn("leading-tight")}>
-                            <div className={cn("text-neutral-500", "font-bold", "mb-4")}>
-                                Update at
-                            </div>
+                        <div className={cn("leading-tight", "max-lg:text-xs")}>
+                            <div className={cn("text-neutral-500", "font-bold")}>Update at</div>
                             <div>
                                 {moment(updatedAt).format("MMMM Do, YYYY")}
-                                <br />
-                                {moment(updatedAt).format("hh:ss a")}
+                                {/* <br />
+                                {moment(updatedAt).format("hh:ss a")} */}
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,6 @@ export default async function Page(props: PageProps) {
                         "col-span-6",
                         "max-lg:border-y",
                         "overflow-hidden"
-                        // "bg-neutral-200 dark:bg-neutral-800"
                     )}
                 >
                     <article
@@ -150,12 +149,9 @@ export default async function Page(props: PageProps) {
                 <div
                     className={cn(
                         "max-lg:order-1",
-                        // "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900",
                         "col-span-6 lg:col-span-3",
                         "max-lg:sticky max-lg:top-16",
                         "max-lg:z-10"
-                        // "bg-neutral-100 dark:bg-neutral-900",
-                        // "!border-neutral-950"
                     )}
                 >
                     <BlogToc items={content.toc} />
@@ -164,10 +160,9 @@ export default async function Page(props: PageProps) {
                 <div
                     className={cn(
                         "max-lg:order-3",
-                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900",
+                        "max-lg:bg-amber-200 max-lg:dark:bg-neutral-900",
                         "col-span-6 lg:col-span-3",
                         "flex flex-col justify-between"
-                        // "bg-neutral-200 dark:bg-neutral-800"
                     )}
                 >
                     <BlogList items={blogs.data} />

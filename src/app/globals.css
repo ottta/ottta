@@ -80,18 +80,19 @@ a[data-active='true'] {
 
 #__article {
     @apply prose;
-    @apply prose-lg lg:prose-xl;
+    @apply prose-base lg:prose-lg;
     @apply prose-neutral dark:prose-invert;
     /* @apply prose-h1:text-6xl; */
     /* @apply prose-p:text-xl lg:prose-p:text-2xl; */
-    @apply prose-p:leading-normal prose-p:hyphens-auto;
-    @apply prose-blockquote:border-l prose-blockquote:px-3 prose-blockquote:lg:px-4;
+    /* @apply prose-p:leading-normal prose-p:hyphens-auto; */
+    @apply prose-blockquote:border-l prose-blockquote:px-3 prose-blockquote:lg:px-4 prose-blockquote:font-serif;
     @apply prose-headings:font-sans prose-headings:scroll-mt-24 prose-headings:lg:scroll-mt-16;
     @apply prose-code:p-1 prose-code:rounded prose-code:bg-neutral-200 dark:prose-code:bg-neutral-800;
 
     @apply prose-img:max-lg:max-w-[calc(100%+1.5rem)] prose-img:lg:max-w-[calc(100%+2rem)] prose-img:max-lg:-mx-3 prose-img:lg:-mx-4 prose-img:border-y;
 
-    @apply font-serif;
+    @apply hyphens-auto;
+    @apply font-text;
     @apply w-full max-w-none;
     @apply overflow-visible;
 }

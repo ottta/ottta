@@ -1,6 +1,4 @@
 import NextLink from "next/link";
-import HorizontalScroll from "@/app/about/HorizontalScroll";
-import CrossWordMobile from "@/components/CrossWordMobile";
 import Hero from "@/components/Hero";
 import { getProducts } from "@/libs/fetcher";
 import { cn } from "@/libs/utils";
@@ -8,7 +6,7 @@ import moment from "moment";
 import works from "@/database/works.json";
 import slugify from "slugify";
 import GridContainer from "@/components/GridContainer";
-// import CrossIntro from "@/components/CrossIntro";
+import HeroIndex from "@/components/HeroIndex";
 
 type HCard = {
     href: string;
@@ -57,11 +55,13 @@ function HighlightCard(props: HCard) {
                     />
                 </div>
                 <div className={cn("text-neutral-500")}>
-                    <div className={cn("text-xs", "mb-1")}>{moment(date).format("LL")}</div>
+                    <div className={cn("text-xs", "mb-1", "font-text")}>
+                        {moment(date).format("LL")}
+                    </div>
                     <div
                         dangerouslySetInnerHTML={{ __html: description }}
-                        className={cn("line-clamp-2", "font-serif", "hyphens-auto")}
-                    ></div>
+                        className={cn("line-clamp-2", "font-text", "hyphens-auto")}
+                    />
                 </div>
             </NextLink>
         </li>
@@ -73,7 +73,15 @@ function HighlightCards(props: HCards) {
     return (
         <div className={cn("my-12 lg:my-10")}>
             <GridContainer>
-                <div className={cn("px-4", "h-12 lg:h-10", "flex items-center", "-mb-px")}>
+                <div
+                    className={cn(
+                        "col-span-6 lg:col-span-12",
+                        "px-4",
+                        "h-12 lg:h-10",
+                        "flex items-center",
+                        "-mb-px"
+                    )}
+                >
                     <div className={cn("text-2xl lg:text-xl font-bold")}>{title}</div>
                 </div>
             </GridContainer>
@@ -85,7 +93,8 @@ function HighlightCards(props: HCards) {
                         "w-full",
                         "grid grid-cols-6 lg:grid-cols-12",
                         "max-lg:divide-y lg:divide-x",
-                        "max-lg:px-4"
+                        "max-lg:px-4",
+                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900"
                     )}
                 >
                     {items.map((item, i) => (
@@ -123,9 +132,7 @@ export default async function Page() {
     });
     return (
         <>
-            {/* <CrossIntro /> */}
-            <HorizontalScroll />
-            <CrossWordMobile />
+            <HeroIndex />
             <Hero />
 
             {products.success && products.data.length >= 1 && (

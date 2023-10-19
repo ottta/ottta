@@ -223,7 +223,7 @@ export default function CrossWordMobile() {
                 </div>
             </GridContainer>
 
-            <GridContainer className={cn("h-16")} />
+            <GridContainer className={cn("h-12")} />
         </div>
     );
 }

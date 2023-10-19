@@ -1,9 +1,10 @@
 "use client";
 
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import NextLink, { LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/libs/utils";
+import useAgent from "@/hooks/use-agent";
 
 type CustomLink = {
     label: string;
@@ -55,7 +56,7 @@ const links: CustomLink[] = [
         )
     },
     {
-        label: "About",
+        label: "Profile",
         link: { href: "/about" },
         icon: (
             <svg
@@ -97,14 +98,7 @@ function BarLink(item: CustomLink) {
 }
 
 export default function BarBottom() {
-    const [isSafari, setIsSafari] = useState(false);
-    useEffect(() => {
-        const reg = new RegExp(/^((?!chrome|android).)*safari/i);
-        const userAgent = window && window?.navigator.userAgent;
-        setIsSafari(reg.test(userAgent));
-    }, []);
-
-    const pathname = usePathname();
+    const { isMobile, isSafari } = useAgent();
 
     return (
         <div
@@ -119,71 +113,73 @@ export default function BarBottom() {
                 "backdrop-blur-sm"
             )}
         >
-            <ul
-                className={cn(
-                    "lg:hidden",
-                    "grid grid-flow-col auto-cols-fr",
-                    "h-full",
-                    "divide-x",
-                    "border-x"
-                )}
-            >
-                {links.map((item, i) => (
-                    <BarLink key={i} {...item} />
-                ))}
-            </ul>
-
-            <div
-                className={cn(
-                    "fluid",
-                    "border-x",
-                    "h-full",
-                    "flex items-center justify-between",
-                    "px-3 lg:px-4",
-                    "max-lg:hidden"
-                )}
-            >
-                <div
+            {isMobile ? (
+                <ul
                     className={cn(
-                        "rounded-full",
-                        "border",
-                        "flex items-center",
-                        "gap-x-1",
-                        "pr-2 pl-1",
-                        "bg-neutral-200 dark:bg-neutral-800"
+                        "lg:hidden",
+                        "grid grid-flow-col auto-cols-fr",
+                        "h-full",
+                        "divide-x",
+                        "border-x"
                     )}
                 >
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960"
-                        height="1rem"
-                        width="1rem"
-                        fill="currentColor"
-                    >
-                        <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z" />
-                    </svg>
-                    <div>Leeds, UK</div>
-                </div>
-
-                <ul className={cn("flex items-center", "gap-1")}>
                     {links.map((item, i) => (
-                        <li key={i}>
-                            <NextLink
-                                {...item.link}
-                                className={cn(
-                                    "rounded-full",
-                                    "border",
-                                    "flex items-center",
-                                    "px-2",
-                                    "bg-neutral-200 dark:bg-neutral-800"
-                                )}
-                            >
-                                {item.label}
-                            </NextLink>
-                        </li>
+                        <BarLink key={i} {...item} />
                     ))}
                 </ul>
-            </div>
+            ) : (
+                <div
+                    className={cn(
+                        "fluid",
+                        "border-x",
+                        "h-full",
+                        "flex items-center justify-between",
+                        "px-3 lg:px-4",
+                        "max-lg:hidden"
+                    )}
+                >
+                    <div
+                        className={cn(
+                            "rounded-full",
+                            "border",
+                            "flex items-center",
+                            "gap-x-1",
+                            "pr-2 pl-1",
+                            "bg-neutral-200 dark:bg-neutral-800"
+                        )}
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 -960 960 960"
+                            height="1rem"
+                            width="1rem"
+                            fill="currentColor"
+                        >
+                            <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z" />
+                        </svg>
+                        <div>Leeds, UK</div>
+                    </div>
+
+                    <ul className={cn("flex items-center", "gap-1")}>
+                        {links.map((item, i) => (
+                            <li key={i}>
+                                <NextLink
+                                    {...item.link}
+                                    className={cn(
+                                        "rounded-full",
+                                        "border",
+                                        "flex items-center",
+                                        "px-2",
+                                        "bg-neutral-200 dark:bg-neutral-800"
+                                    )}
+                                >
+                                    {item.label}
+                                </NextLink>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 }
