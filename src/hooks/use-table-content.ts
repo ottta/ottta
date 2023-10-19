@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { IToc } from "@/libs/fetcher";
 
 const isInViewport = (el: HTMLElement) => {
@@ -34,20 +34,16 @@ export default function useTableOfContent(tocs: IToc[]) {
         return () => document.removeEventListener("scroll", handleScroll);
     }, [tocs]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!active) return;
         const el = document.getElementById(active);
         if (!el) return;
 
         if (active === el.id) {
-            // el.classList.add("bg-blue-500");
-            // el.style.backgroundColor = "red";
             el.setAttribute("data-intersect", "true");
         }
 
         return () => {
-            // el.classList.remove("bg-blue-500");
-            // el.style.backgroundColor = "initial";
             el.setAttribute("data-intersect", "false");
         };
     }, [active]);
