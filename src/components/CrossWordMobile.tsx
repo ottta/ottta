@@ -222,8 +222,6 @@ export default function CrossWordMobile() {
                     </svg>
                 </div>
             </GridContainer>
-
-            <GridContainer className={cn("h-12")} />
         </div>
     );
 }

@@ -62,23 +62,31 @@ function Detail(props: Work) {
         <li id={toSlug(project)} className={cn("py-6 lg:py-4", "scroll-mt-[calc(6rem-1px)]")}>
             <div className={cn("mb-8", "flex flex-col", "gap-y-8")}>
                 <div className={cn("px-2 lg:px-4")}>
-                    <div
-                        className={cn(
-                            // "text-lg lg:text-sm",
-                            // "font-bold",
-                            "leading-none",
-                            "bg-rose-200 dark:bg-rose-800",
-                            "border-rose-500 dark:border-rose-600",
-                            "inline-block",
-                            "rounded-full",
-                            "border",
-                            "px-2 lg:px-2 py-1",
-                            // "shadow-[0_0_1rem_-0.25rem] shadow-cyan-700 dark:shadow-cyan-300",
-                            "overflow-hidden"
-                        )}
-                    >
-                        {category}
-                    </div>
+                    <ul className={cn("flex gap-x-2", "mb-2")}>
+                        {[...category.split(":"), role].map((item, i) => (
+                            <li
+                                key={i}
+                                className={cn(
+                                    // "text-lg lg:text-sm",
+                                    // "font-bold",
+                                    "leading-none",
+                                    "bg-rose-200 dark:bg-rose-800",
+                                    "border-rose-500 dark:border-rose-600",
+                                    "inline-block",
+                                    "rounded-full",
+                                    "border",
+                                    "px-2 lg:px-2 py-1",
+                                    // "shadow-[0_0_1rem_-0.25rem] shadow-cyan-700 dark:shadow-cyan-300",
+                                    "overflow-hidden",
+                                    "whitespace-nowrap",
+                                    "text-ellipsis",
+                                    i === 0 && "shrink-0"
+                                )}
+                            >
+                                {item}
+                            </li>
+                        ))}
+                    </ul>
                     <div className={cn("text-4xl lg:text-6xl", "font-bold", "leading-none")}>
                         {project}
                     </div>
@@ -116,7 +124,7 @@ function Detail(props: Work) {
                     "prose-base lg:prose-lg",
                     "w-full max-w-full",
                     "hyphens-auto",
-                    "lg:columns-2",
+                    // "lg:columns-2",
                     "px-2 lg:px-4"
                 )}
             />

@@ -1,5 +1,5 @@
 import { cn } from "@/libs/utils";
-import Typewriter from "@/components/Typewriter";
+// import Typewriter from "@/components/Typewriter";
 import AnalogClock from "@/components/AnalogClock";
 
 export default function Hero() {
@@ -13,36 +13,43 @@ export default function Hero() {
                     "border-x",
                     "grid-flow-dense",
                     "max-lg:divide-y lg:divide-x"
+                    // "bg-neutral-200 max-lg:dark:bg-neutral-600"
+                    // "text-neutral-300"
                 )}
             >
-                <div
-                    className={cn(
-                        "col-span-6",
-                        "grid lg:auto-rows-fr",
-                        "lg:divide-y",
-                        "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900"
-                    )}
-                >
+                <div className={cn("col-span-6", "grid lg:auto-rows-fr", "divide-y")}>
                     <div
+                        // style={{ backgroundImage: "var(--bg-dotted)" }}
                         className={cn(
                             "p-4",
-                            "text-5xl lg:text-6xl",
-                            "max-lg:aspect-[3/1]",
-                            "max-lg:text-center"
+                            "text-2xl lg:text-6xl",
+                            "max-lg:aspect-[2/1]",
+                            "max-lg:text-center",
+                            "max-lg:hidden"
                             // "max-lg:bg-rose-500 max-lg:dark:bg-rose-600"
                         )}
                     >
-                        <Typewriter />
+                        {/* <Typewriter /> */}
                     </div>
-                    <div className={cn("grid grid-cols-6", "lg:divide-x")}>
+                    <div
+                        className={cn(
+                            "grid grid-cols-6",
+                            "lg:divide-x",
+                            "hyphens-auto",
+                            "uppercase"
+                        )}
+                    >
                         <div
                             className={cn(
-                                "max-lg:hidden",
-                                "col-span-3",
+                                // "max-lg:hidden",
+                                "col-span-6 lg:col-span-3",
                                 "p-4",
-                                "flex items-center"
+                                "flex items-start",
+                                "lg:flex-col",
+                                "gap-y-4"
                             )}
                         >
+                            <div className={cn("text-4xl lg:text-3xl")}>Polymath Material.</div>
                             <div
                                 className={cn(
                                     "text-rose-500 dark:text-rose-600",
@@ -50,33 +57,46 @@ export default function Hero() {
                                     "aspect-square w-full",
                                     "border border-current",
                                     "rounded-full",
-                                    "overflow-hidden"
+                                    "overflow-hidden",
+                                    "flex items-center justify-center"
                                 )}
-                            />
+                            >
+                                <div
+                                    className={cn(
+                                        "w-1/4 aspect-square",
+                                        "bg-neutral-50 dark:bg-neutral-950",
+                                        "rounded-full",
+                                        "text-rose-500 dark:text-rose-600",
+                                        "border border-current"
+                                    )}
+                                />
+                            </div>
                         </div>
                         <div
                             className={cn(
                                 "col-span-6 lg:col-span-3",
                                 "p-3 lg:p-4",
-                                "flex items-center"
+                                "flex items-start"
                             )}
                         >
                             <p
+                                // style={{ fontVariationSettings: `"wdth" 90` }}
                                 className={cn(
-                                    "text-2xl lg:text-3xl",
+                                    "text-xl lg:text-3xl",
                                     "w-full",
-                                    "italic",
-                                    "hyphens-auto",
-                                    "font-serif",
-                                    "max-lg:text-center"
+                                    // "italic",
+                                    "hyphens-auto"
+                                    // "font-light",
+                                    // "py-8",
+                                    // "max-lg:text-center"
                                 )}
                             >
-                                <q>
-                                    A Designer turned Software Developer. Now run{" "}
-                                    <strong>Unforma Club</strong>, and develop typography product{" "}
-                                    <strong>Truetype Supply:</strong> for{" "}
-                                    <strong>Type Designers &amp; Foundries</strong>.
-                                </q>
+                                {/* <q> */}A Designer turned Software Developer. Now run{" "}
+                                <strong>Unforma Club</strong>, and develop typography product{" "}
+                                <strong>Truetype Supply</strong>.
+                                {/* <strong>Truetype Supply:</strong> for{" "}
+                                    <strong>Type Designers &amp; Foundries</strong>. */}
+                                {/* </q> */}
                             </p>
                         </div>
                     </div>
@@ -87,7 +107,7 @@ export default function Hero() {
                     className={cn(
                         "col-span-6",
                         "flex items-center justify-center",
-                        "lg:min-h-[calc(100vh-6rem)]",
+                        // "lg:min-h-[calc(100vh-6rem)]",
                         "lg:p-12"
                     )}
                 >

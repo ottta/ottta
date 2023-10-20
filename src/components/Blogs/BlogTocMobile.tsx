@@ -16,7 +16,9 @@ function TOCIndicator(props: BlogTocProps) {
     if (!active) return <></>;
     const selected = items.find((item) => item.htmlId === active);
     if (!selected) return <></>;
-    return <span className={cn("line-clamp-1", "text-left")}>{selected.text.trim()}</span>;
+    return (
+        <span className={cn("line-clamp-1", "text-left", "font-text")}>{selected.text.trim()}</span>
+    );
 }
 
 export default function BlogTocMobile(props: BlogTocProps) {

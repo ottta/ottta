@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 import { headers } from "next/headers";
-import { Ubuntu_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import Provider from "@/app/Provider";
 import AppGrid from "@/components/AppGrid";
@@ -53,22 +53,22 @@ const text = localFont({
     variable: "--font-text",
     src: [
         {
-            path: "../../public/fonts/WorkSans[wght].ttf",
-            weight: "100 900",
+            path: "../../public/fonts/OpenSans[wdth,wght].ttf",
+            weight: "300 800",
             style: "normal"
         },
         {
-            path: "../../public/fonts/WorkSans-Italic[wght].ttf",
-            weight: "100 900",
+            path: "../../public/fonts/OpenSans-Italic[wdth,wght].ttf",
+            weight: "300 800",
             style: "italic"
         }
     ]
 });
 
-const ubuntu = Ubuntu_Mono({
+const mono = JetBrains_Mono({
     display: "block",
-    subsets: ["latin"],
-    weight: ["400", "700"],
+    subsets: ["latin", "latin-ext"],
+    weight: "variable",
     style: ["italic", "normal"],
     variable: "--font-mono"
 });
@@ -119,7 +119,7 @@ export default function RootLayout(props: PropsWithChildren) {
         <html
             lang="en"
             suppressHydrationWarning
-            className={cn(sans.variable, serif.variable, ubuntu.variable, text.variable)}
+            className={cn(sans.variable, serif.variable, mono.variable, text.variable)}
         >
             <body>
                 <Provider agent={agent}>

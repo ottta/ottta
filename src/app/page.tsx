@@ -133,6 +133,7 @@ export default async function Page() {
     return (
         <>
             <HeroIndex />
+            <GridContainer className={cn("h-12 lg:h-10")} />
             <Hero />
 
             {products.success && products.data.length >= 1 && (

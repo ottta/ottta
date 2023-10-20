@@ -41,8 +41,36 @@ function EndCap() {
                             {isFirst && <ContainerInfo />}
                             {!isFirst && (
                                 <>
-                                    <div className={cn("h-1/2")} />
-                                    <div className={cn("h-1/2")} />
+                                    <div className={cn("h-1/2")}>
+                                        {isThird && (
+                                            <div
+                                                className={cn(
+                                                    "border",
+                                                    "rounded-full",
+                                                    "w-full aspect-square"
+                                                )}
+                                            />
+                                        )}
+                                    </div>
+                                    <div
+                                        className={cn(
+                                            "h-1/2",
+                                            "bg-cover bg-center",
+                                            // "grayscale",
+                                            "text-red-500",
+                                            "backdrop:grayscale",
+                                            "p-4",
+                                            "text-4xl",
+                                            "font-bold"
+                                        )}
+                                        style={{
+                                            backgroundImage: isThird
+                                                ? "url(/images/reservoir.jpg)"
+                                                : "none"
+                                        }}
+                                    >
+                                        {isThird && <>FFF</>}
+                                    </div>
                                 </>
                             )}
                         </li>

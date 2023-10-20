@@ -18,7 +18,16 @@ export default function BlogList(props: BlogListProps) {
     return (
         <div className={cn("sticky", "top-12", "p-3 lg:p-4", "flex flex-col", "gap-y-4")}>
             <div className={cn("font-bold")}>Posts</div>
-            <ul className={cn("leading-loose", "divide-y", "border-y", "-my-px")}>
+            <ul
+                className={cn(
+                    "leading-loose",
+                    "divide-y",
+                    "border-y",
+                    "-my-px",
+                    "max-lg:divide-amber-500 max-lg:border-amber-500",
+                    "dark:max-lg:divide-neutral-800 dark:max-lg:border-neutral-800"
+                )}
+            >
                 {finalItems.map((item, i) => {
                     const href = `/blog/${item.slug}`;
                     const isActive = pathname === href;

@@ -10,23 +10,35 @@ const tickNumbers = Array(12).fill("");
 
 function Logo() {
     return (
-        <text
-            alignmentBaseline="central"
-            dominantBaseline="central"
-            textAnchor="middle"
-            x={24}
-            y={-36}
-            strokeWidth={0}
-            className={cn(
-                "rotate-90",
-                "text-[0.15rem]",
-                "fill-amber-400",
-                "uppercase",
-                "font-bold"
-            )}
-        >
-            Truetype
-        </text>
+        <g className={cn("font-text")}>
+            <text
+                alignmentBaseline="hanging"
+                textAnchor="middle"
+                x={24}
+                y={-34}
+                strokeWidth={0}
+                className={cn(
+                    "rotate-90",
+                    "text-[0.15rem]",
+                    "fill-amber-400",
+                    "font-black",
+                    "uppercase"
+                )}
+            >
+                {/* Truetype */}
+                otta
+            </text>
+            <text
+                alignmentBaseline="hanging"
+                textAnchor="middle"
+                x={24}
+                y={-31.5}
+                strokeWidth={0}
+                className={cn("rotate-90", "text-[0.05rem]", "fill-current")}
+            >
+                Truetype Supply
+            </text>
+        </g>
     );
 }
 
@@ -39,7 +51,7 @@ function TickMark() {
                     <line
                         key={i}
                         x1={23}
-                        x2={isMainTick ? 21.5 : 22}
+                        x2={isMainTick ? 21.5 : 21.75}
                         y1={0}
                         y2={0}
                         strokeWidth={0.25}
@@ -65,7 +77,8 @@ function TickNumber() {
                 "translate-x-[24px]",
                 "translate-y-[24px]",
                 "rotate-90",
-                "font-bold",
+                "font-black",
+                "font-text",
                 "text-[0.175rem]"
             )}
         >
@@ -148,11 +161,14 @@ function Handles() {
 function Frame() {
     return (
         <circle
-            strokeWidth={0.3}
+            strokeWidth={0}
             cx={24}
             cy={24}
             r={23.8}
-            className={cn("stroke-current", "fill-neutral-50 dark:fill-neutral-950")}
+            className={cn(
+                "stroke-neutral-300 dark:stroke-neutral-800",
+                "fill-neutral-50 dark:fill-neutral-950"
+            )}
         />
     );
 }
@@ -194,7 +210,7 @@ export default function AnalogClock() {
                     viewBox="0 0 48 48"
                     width="100%"
                     height="100%"
-                    strokeLinecap="round"
+                    // strokeLinecap="round"
                     className={cn("-rotate-90", "stroke-current")}
                 >
                     <Frame />
@@ -212,7 +228,7 @@ export default function AnalogClock() {
                 viewBox="0 0 48 48"
                 width="100%"
                 height="100%"
-                strokeLinecap="round"
+                // strokeLinecap="round"
                 style={timePresition}
                 className={cn("-rotate-90", "stroke-curent")}
             >
