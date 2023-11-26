@@ -1,5 +1,5 @@
 ### Hello Nerds 🤓
 
-I make digital products based on design and technology. Fun with IoT's, Robotics, and CNC technologies. And so on...
+A Designer turned Software Developer. Now run Unforma Club, and develop typography product Truetype Supply: for Type Designers & Foundries.
 
-![image](https://github.com/ottta/ottta/blob/master/dino.gif)
+![image](/dino.gif)

@@ -1,119 +1,122 @@
 import { cn } from "@/libs/utils";
+
 // import Typewriter from "@/components/Typewriter";
 import AnalogClock from "@/components/AnalogClock";
 
 export default function Hero() {
-    return (
-        <div className={cn("px-3 lg:px-12", "border-y", "-mt-px")}>
+  return (
+    <div className={cn("px-3 lg:px-12", "border-y", "-mt-px")}>
+      <div
+        className={cn(
+          "fluid",
+          "mx-auto",
+          "lg:grid grid-cols-6 lg:grid-cols-12",
+          "border-x",
+          "grid-flow-dense",
+          "max-lg:divide-y lg:divide-x"
+          // "bg-neutral-200 max-lg:dark:bg-neutral-600"
+          // "text-neutral-300"
+        )}
+      >
+        <div className={cn("col-span-6", "grid lg:auto-rows-fr", "divide-y")}>
+          <div
+            // style={{ backgroundImage: "var(--bg-dotted)" }}
+            className={cn(
+              "p-4",
+              "text-2xl lg:text-6xl",
+              "max-lg:aspect-[2/1]",
+              "max-lg:text-center",
+              "max-lg:hidden"
+              // "max-lg:bg-rose-500 max-lg:dark:bg-rose-600"
+            )}
+          >
+            {/* <Typewriter /> */}
+          </div>
+          <div
+            className={cn(
+              "grid grid-cols-6",
+              "lg:divide-x",
+              "hyphens-auto",
+              "uppercase"
+            )}
+          >
             <div
-                className={cn(
-                    "fluid",
-                    "mx-auto",
-                    "lg:grid grid-cols-6 lg:grid-cols-12",
-                    "border-x",
-                    "grid-flow-dense",
-                    "max-lg:divide-y lg:divide-x"
-                    // "bg-neutral-200 max-lg:dark:bg-neutral-600"
-                    // "text-neutral-300"
-                )}
+              className={cn(
+                // "max-lg:hidden",
+                "col-span-6 lg:col-span-3",
+                "p-4",
+                "flex items-start",
+                "lg:flex-col",
+                "gap-y-4"
+              )}
             >
-                <div className={cn("col-span-6", "grid lg:auto-rows-fr", "divide-y")}>
-                    <div
-                        // style={{ backgroundImage: "var(--bg-dotted)" }}
-                        className={cn(
-                            "p-4",
-                            "text-2xl lg:text-6xl",
-                            "max-lg:aspect-[2/1]",
-                            "max-lg:text-center",
-                            "max-lg:hidden"
-                            // "max-lg:bg-rose-500 max-lg:dark:bg-rose-600"
-                        )}
-                    >
-                        {/* <Typewriter /> */}
-                    </div>
-                    <div
-                        className={cn(
-                            "grid grid-cols-6",
-                            "lg:divide-x",
-                            "hyphens-auto",
-                            "uppercase"
-                        )}
-                    >
-                        <div
-                            className={cn(
-                                // "max-lg:hidden",
-                                "col-span-6 lg:col-span-3",
-                                "p-4",
-                                "flex items-start",
-                                "lg:flex-col",
-                                "gap-y-4"
-                            )}
-                        >
-                            <div className={cn("text-4xl lg:text-3xl")}>Polymath Material.</div>
-                            <div
-                                className={cn(
-                                    "text-rose-500 dark:text-rose-600",
-                                    "bg-rose-300 dark:bg-rose-800",
-                                    "aspect-square w-full",
-                                    "border border-current",
-                                    "rounded-full",
-                                    "overflow-hidden",
-                                    "flex items-center justify-center"
-                                )}
-                            >
-                                <div
-                                    className={cn(
-                                        "w-1/4 aspect-square",
-                                        "bg-neutral-50 dark:bg-neutral-950",
-                                        "rounded-full",
-                                        "text-rose-500 dark:text-rose-600",
-                                        "border border-current"
-                                    )}
-                                />
-                            </div>
-                        </div>
-                        <div
-                            className={cn(
-                                "col-span-6 lg:col-span-3",
-                                "p-3 lg:p-4",
-                                "flex items-start"
-                            )}
-                        >
-                            <p
-                                // style={{ fontVariationSettings: `"wdth" 90` }}
-                                className={cn(
-                                    "text-xl lg:text-3xl",
-                                    "w-full",
-                                    // "italic",
-                                    "hyphens-auto"
-                                    // "font-light",
-                                    // "py-8",
-                                    // "max-lg:text-center"
-                                )}
-                            >
-                                {/* <q> */}A Designer turned Software Developer. Now run{" "}
-                                <strong>Unforma Club</strong>, and develop typography product{" "}
-                                <strong>Truetype Supply</strong>.
-                                {/* <strong>Truetype Supply:</strong> for{" "}
-                                    <strong>Type Designers &amp; Foundries</strong>. */}
-                                {/* </q> */}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+              <div className={cn("text-4xl lg:text-3xl")}>
+                Polymath Material.
+              </div>
+              <div
+                className={cn(
+                  "text-rose-500 dark:text-rose-600",
+                  "bg-rose-300 dark:bg-rose-800",
+                  "aspect-square w-full",
+                  "border border-current",
+                  "rounded-full",
+                  "overflow-hidden",
+                  "flex items-center justify-center"
+                )}
+              >
                 <div
-                    style={{ fontFeatureSettings: `"pnum"` }}
-                    className={cn(
-                        "col-span-6",
-                        "flex items-center justify-center",
-                        // "lg:min-h-[calc(100vh-6rem)]",
-                        "lg:p-12"
-                    )}
-                >
-                    <AnalogClock />
-                </div>
+                  className={cn(
+                    "w-1/4 aspect-square",
+                    "bg-neutral-50 dark:bg-neutral-950",
+                    "rounded-full",
+                    "text-rose-500 dark:text-rose-600",
+                    "border border-current"
+                  )}
+                />
+              </div>
             </div>
+            <div
+              className={cn(
+                "col-span-6 lg:col-span-3",
+                "p-3 lg:p-4",
+                "flex items-start"
+              )}
+            >
+              <p
+                // style={{ fontVariationSettings: `"wdth" 90` }}
+                className={cn(
+                  "text-xl lg:text-3xl",
+                  "w-full",
+                  // "italic",
+                  "hyphens-auto"
+                  // "font-light",
+                  // "py-8",
+                  // "max-lg:text-center"
+                )}
+              >
+                {/* <q> */}A Designer turned Software Developer. Now run{" "}
+                <strong>Unforma Club</strong>, and develop typography product{" "}
+                <strong>Truetype Supply</strong>.
+                {/* <strong>Truetype Supply:</strong> for{" "}
+                                    <strong>Type Designers &amp; Foundries</strong>. */}
+                {/* </q> */}
+              </p>
+            </div>
+          </div>
         </div>
-    );
+
+        <div
+          style={{ fontFeatureSettings: `"pnum"` }}
+          className={cn(
+            "col-span-6",
+            "flex items-center justify-center",
+            // "lg:min-h-[calc(100vh-6rem)]",
+            "lg:p-12"
+          )}
+        >
+          <AnalogClock />
+        </div>
+      </div>
+    </div>
+  );
 }
