@@ -1,11 +1,10 @@
 import "./globals.css";
 
 import { type Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import { headers } from "next/headers";
 import { type PropsWithChildren } from "react";
 
+import { mono, sans, serif, text } from "@/libs/fonts";
 import { cn } from "@/libs/utils";
 
 import Provider from "@/app/Provider";
@@ -17,65 +16,6 @@ import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const isProduction = process.env.NODE_ENV === "production";
-
-const sans = localFont({
-  display: "block",
-  variable: "--font-sans",
-  src: [
-    {
-      path: "../../public/fonts/Georama[wdth,wght].ttf",
-      weight: "100 900",
-      style: "normal"
-    },
-    {
-      path: "../../public/fonts/Georama-Italic[wdth,wght].ttf",
-      weight: "100 900",
-      style: "italic"
-    }
-  ]
-});
-
-const serif = localFont({
-  display: "block",
-  variable: "--font-serif",
-  src: [
-    {
-      path: "../../public/fonts/Labrada[wght].woff2",
-      weight: "100 900",
-      style: "normal"
-    },
-    {
-      path: "../../public/fonts/Labrada-Italic[wght].woff2",
-      weight: "100 900",
-      style: "italic"
-    }
-  ]
-});
-
-const text = localFont({
-  display: "block",
-  variable: "--font-text",
-  src: [
-    {
-      path: "../../public/fonts/OpenSans[wdth,wght].ttf",
-      weight: "300 800",
-      style: "normal"
-    },
-    {
-      path: "../../public/fonts/OpenSans-Italic[wdth,wght].ttf",
-      weight: "300 800",
-      style: "italic"
-    }
-  ]
-});
-
-const mono = JetBrains_Mono({
-  display: "block",
-  subsets: ["latin", "latin-ext"],
-  weight: "variable",
-  style: ["italic", "normal"],
-  variable: "--font-mono"
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
