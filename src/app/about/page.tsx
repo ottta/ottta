@@ -1,5 +1,10 @@
-import HorizontalScroll from "@/app/about/HorizontalScroll";
+import BadgeLinkedIn from "@/components/Badge/BadgeLinkedIn";
+import GridContainer from "@/components/GridContainer";
 
 export default function Page() {
-  return <HorizontalScroll />;
+  return (
+    <GridContainer>
+      <BadgeLinkedIn />
+    </GridContainer>
+  );
 }
