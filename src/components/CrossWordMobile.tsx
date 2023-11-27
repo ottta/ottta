@@ -192,7 +192,7 @@ export default function CrossWordMobile() {
                         textAnchor="middle"
                         stroke="none"
                         fill="currentColor"
-                        className={cn("uppercase")}
+                        className={cn("uppercase", "font-bold")}
                       >
                         {w}
                       </text>

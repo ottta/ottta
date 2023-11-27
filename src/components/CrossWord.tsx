@@ -167,7 +167,7 @@ export default function CrossWord() {
                   textAnchor="middle"
                   stroke="none"
                   fill="currentColor"
-                  className={cn("uppercase", "font-light")}
+                  className={cn("uppercase", "font-bold")}
                 >
                   {w}
                 </text>

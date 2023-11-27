@@ -172,7 +172,7 @@ function Handles() {
 function Frame() {
   return (
     <circle
-      strokeWidth={0}
+      strokeWidth={0.3}
       cx={24}
       cy={24}
       r={23.8}

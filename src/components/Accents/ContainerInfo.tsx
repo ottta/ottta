@@ -42,7 +42,7 @@ export function ContainerInfo() {
       className={cn(
         "p-4",
         "h-1/2",
-        "bg-neutral-950 dark:bg-neutral-200",
+        "bg-emerald-500 dark:bg-emerald-200",
         "text-neutral-50 dark:text-neutral-950",
         "font-mono uppercase",
         "leading-none",

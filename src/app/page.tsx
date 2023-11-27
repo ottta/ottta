@@ -11,6 +11,7 @@ import { cn } from "@/libs/utils";
 import GridContainer from "@/components/GridContainer";
 import Hero from "@/components/Hero";
 import HeroIndex from "@/components/HeroIndex";
+import Separator from "@/components/Utils/Separator";
 
 type HCard = {
   href: string;
@@ -38,7 +39,7 @@ function HighlightCard(props: HCard) {
           "h-full",
           "py-4 lg:p-4",
           "overflow-hidden",
-          "lg:hover:bg-neutral-200 lg:dark:hover:bg-neutral-900"
+          "lg:hover:bg-neutral-300 lg:dark:hover:bg-neutral-800"
         )}
       >
         <div className={cn("max-lg:mb-6")}>
@@ -78,18 +79,18 @@ function HighlightCard(props: HCard) {
 function HighlightCards(props: HCards) {
   const { basePath, items, title } = props;
   return (
-    <div className={cn("my-12 lg:my-10")}>
+    <div className={cn("bg-neutral-100 dark:bg-neutral-900")}>
       <GridContainer>
         <div
           className={cn(
             "col-span-6 lg:col-span-12",
             "px-4",
-            "h-12 lg:h-10",
+            "h-16 lg:h-12",
             "flex items-center",
             "-mb-px"
           )}
         >
-          <div className={cn("text-2xl lg:text-xl font-bold")}>{title}</div>
+          <div className={cn("text-2xl font-bold")}>{title}</div>
         </div>
       </GridContainer>
 
@@ -116,7 +117,7 @@ function HighlightCards(props: HCards) {
                 "text-xl",
                 "h-16 lg:h-full",
                 "lg:p-4",
-                "hover:bg-neutral-200 dark:hover:bg-neutral-900"
+                "hover:bg-neutral-200 dark:hover:bg-neutral-800"
               )}
             >
               Show All
@@ -140,8 +141,9 @@ export default async function Page() {
   return (
     <>
       <HeroIndex />
-      <GridContainer className={cn("h-12 lg:h-10")} />
+      <Separator />
       <Hero />
+      <Separator />
 
       {products.success && products.data.length >= 1 && (
         <HighlightCards
@@ -156,6 +158,8 @@ export default async function Page() {
           }))}
         />
       )}
+
+      <Separator />
 
       <HighlightCards
         title="Works"
@@ -175,6 +179,8 @@ export default async function Page() {
               item.date.end === "now" ? new Date().toISOString() : item.date.end
           }))}
       />
+
+      <Separator />
     </>
   );
 }

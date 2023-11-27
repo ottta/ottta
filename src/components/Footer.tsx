@@ -25,8 +25,8 @@ export default function Footer() {
       className={cn(
         "px-3 lg:px-12",
         "border-y",
-        "-mb-px",
-        "bg-rose-100 dark:bg-neutral-950"
+        // "-mt-px",
+        "bg-rose-100 dark:bg-emerald-900"
       )}
     >
       <div

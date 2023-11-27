@@ -10,6 +10,7 @@ import BlogList from "@/app/blog/[slug]/BlogList";
 
 import BlogToc from "@/components/Blogs/BlogToc";
 import GridContainer from "@/components/GridContainer";
+import Separator from "@/components/Utils/Separator";
 
 type PageProps = {
   params: {
@@ -61,6 +62,8 @@ export default async function Page(props: PageProps) {
   const { content, description, name, createdAt, updatedAt } = blog.data[0];
   return (
     <>
+      <Separator />
+
       <GridContainer
         className={cn(
           "lg:divide-x",
@@ -151,7 +154,7 @@ export default async function Page(props: PageProps) {
         </div>
       </GridContainer>
 
-      <GridContainer className={cn("h-12 lg:h-10")} />
+      <Separator />
 
       <GridContainer className={cn("lg:divide-x", "lg:min-h-[66.66vh]")}>
         <div
@@ -196,6 +199,8 @@ export default async function Page(props: PageProps) {
           </div>
         </div>
       </GridContainer>
+
+      <Separator />
     </>
   );
 }

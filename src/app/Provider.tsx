@@ -16,7 +16,6 @@ export default function Provider(props: ProviderProps) {
       disableTransitionOnChange
       defaultTheme="system"
       themes={["dark", "light"]}
-      // forcedTheme="dark"
     >
       <ProviderAgent agent={agent}>
         <ProviderGrid>{children}</ProviderGrid>

@@ -1,9 +1,10 @@
 "use client";
 
+import Separator from "./Utils/Separator";
 import slugify from "slugify";
 
 import moment from "moment";
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 
 import works from "@/database/works.json";
 
@@ -233,64 +234,65 @@ export default function Experience() {
         </div>
       </div>
 
-      <ul
-        id="__list-experience"
-        className={cn("flex flex-col", "gap-y-3 lg:gap-y-4", "-mb-px")}
-      >
+      <ul id="__list-experience" className={cn("flex flex-col", "-mb-px")}>
         {years.reverse().map((year, i) => (
-          <li key={i} className={cn("border-y", "px-3 lg:px-12")}>
-            <div
-              className={cn(
-                "fluid",
-                "grid grid-cols-6 lg:grid-cols-12",
-                "border-x",
-                "divide-x"
-                // "bg-neutral-100 dark:bg-neutral-900"
-              )}
-            >
-              <ul
-                className={cn(
-                  "col-span-5 lg:col-span-6",
-                  "flex flex-col",
-                  "divide-y"
-                )}
-              >
-                {groupByYears[year].map((work, i) => (
-                  <Detail key={i} {...work} />
-                ))}
-              </ul>
-
+          <Fragment key={i}>
+            <li key={i} className={cn("border-y", "px-3 lg:px-12")}>
               <div
                 className={cn(
-                  "col-span-1 lg:col-span-3",
-                  "lg:bg-neutral-100 lg:dark:bg-neutral-900",
-                  "max-lg:inline-flex max-lg:items-start max-lg:justify-center"
+                  "fluid",
+                  "grid grid-cols-6 lg:grid-cols-12",
+                  "border-x",
+                  "divide-x"
+                  // "bg-neutral-100 dark:bg-neutral-900"
                 )}
               >
-                <div
-                  style={{ writingMode: "vertical-lr" }}
+                <ul
                   className={cn(
-                    "text-4xl lg:text-6xl",
-                    "font-bold",
-                    "sticky top-28 lg:top-24",
-                    "leading-none",
-                    "p-2 py-6 lg:py-4"
+                    "col-span-5 lg:col-span-6",
+                    "flex flex-col",
+                    "divide-y"
                   )}
                 >
-                  {year}
-                </div>
-              </div>
+                  {groupByYears[year].map((work, i) => (
+                    <Detail key={i} {...work} />
+                  ))}
+                </ul>
 
-              <div
-                style={{ backgroundImage: "var(--bg-dotted)" }}
-                className={cn(
-                  "col-span-6 lg:col-span-3",
-                  "max-lg:hidden",
-                  "bg-neutral-100 dark:bg-neutral-900"
-                )}
-              />
-            </div>
-          </li>
+                <div
+                  className={cn(
+                    "col-span-1 lg:col-span-3",
+                    "lg:bg-neutral-100 lg:dark:bg-neutral-900",
+                    "max-lg:inline-flex max-lg:items-start max-lg:justify-center"
+                  )}
+                >
+                  <div
+                    style={{ writingMode: "vertical-lr" }}
+                    className={cn(
+                      "text-4xl lg:text-6xl",
+                      "font-bold",
+                      "sticky top-28 lg:top-24",
+                      "leading-none",
+                      "p-2 py-6 lg:py-4"
+                    )}
+                  >
+                    {year}
+                  </div>
+                </div>
+
+                <div
+                  style={{ backgroundImage: "var(--bg-dotted)" }}
+                  className={cn(
+                    "col-span-6 lg:col-span-3",
+                    "max-lg:hidden",
+                    "bg-neutral-100 dark:bg-neutral-900"
+                  )}
+                />
+              </div>
+            </li>
+
+            <Separator />
+          </Fragment>
         ))}
       </ul>
     </>

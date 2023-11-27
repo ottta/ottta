@@ -14,6 +14,7 @@ import BarBottom from "@/components/BarBottom";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
+import Separator from "@/components/Utils/Separator";
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -81,6 +82,7 @@ export default function RootLayout(props: PropsWithChildren) {
             {children}
           </main>
           <Footer />
+          <Separator />
           <BarBottom />
           <ScrollToTop />
           <AppGrid />

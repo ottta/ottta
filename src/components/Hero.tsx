@@ -5,7 +5,14 @@ import AnalogClock from "@/components/AnalogClock";
 
 export default function Hero() {
   return (
-    <div className={cn("px-3 lg:px-12", "border-y", "-mt-px")}>
+    <div
+      className={cn(
+        "px-3 lg:px-12",
+        "border-y",
+        "-mt-px",
+        "bg-neutral-100 dark:bg-neutral-900"
+      )}
+    >
       <div
         className={cn(
           "fluid",

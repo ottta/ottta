@@ -17,7 +17,7 @@ function EndCap() {
         "w-[calc(100vw-1.5rem)] lg:w-[calc(100vw-6rem)]",
         "top-0 right-px",
         "translate-x-full",
-        "bg-neutral-50 dark:bg-neutral-950",
+        "bg-neutral-100 dark:bg-neutral-900",
         "grid grid-cols-12",
         "divide-x"
       )}
@@ -113,7 +113,7 @@ export default function HorizontalScroll() {
             "h-[calc(100vh-8rem)] lg:h-[calc(100vh-6rem)]",
             "flex",
             "overflow-hidden",
-            "bg-neutral-50 dark:bg-neutral-950"
+            "bg-neutral-100 dark:bg-neutral-900"
           )}
         >
           <motion.div
@@ -148,7 +148,8 @@ export default function HorizontalScroll() {
                 "h-full",
                 "p-4",
                 "relative",
-                "flex items-end"
+                "flex items-end",
+                "bg-neutral-100 dark:bg-neutral-900"
               )}
             >
               <div className={cn("text-9xl", "font-bold", "px-4")}>A1</div>
