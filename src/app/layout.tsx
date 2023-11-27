@@ -1,10 +1,10 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import { type Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import { headers } from "next/headers";
-import type { PropsWithChildren } from "react";
+import { type PropsWithChildren } from "react";
 
 import { cn } from "@/libs/utils";
 
@@ -79,7 +79,7 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    isProduction ? `https://ottta.vercel.app` : "http://localhost:3000"
+    isProduction ? `https://otta.unforma.club` : "http://localhost:3000"
   ),
   alternates: {
     canonical: "/"
@@ -93,10 +93,6 @@ export const metadata: Metadata = {
   applicationName: "Taufik's Portfolio",
   referrer: "origin-when-cross-origin",
   category: "Portfolio",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#e7e5e4" },
-    { media: "(prefers-color-scheme: dark)", color: "#fb923c" }
-  ],
   authors: [
     { name: "Taufik Oktama", url: "https://unforma.club/oktama-taufik" }
   ],
