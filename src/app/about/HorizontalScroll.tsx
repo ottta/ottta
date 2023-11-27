@@ -34,6 +34,7 @@ function EndCap() {
               className={cn(
                 "-ml-px",
                 "overflow-hidden",
+                "relative",
                 isFirst && "col-span-6",
                 isSecond && "col-span-3",
                 isThird && "col-span-3",
@@ -43,13 +44,16 @@ function EndCap() {
               {isFirst && <ContainerInfo />}
               {!isFirst && (
                 <>
-                  <div className={cn("h-1/2")}>
+                  <div className={cn("h-1/2", "relative")}>
                     {isThird && (
                       <div
                         className={cn(
                           "border",
                           "rounded-full",
-                          "w-full aspect-square"
+                          "w-full aspect-square",
+                          "absolute",
+                          "top-1/2 left-1/2",
+                          "-translate-x-1/2 -translate-y-1/2"
                         )}
                       />
                     )}
@@ -58,7 +62,6 @@ function EndCap() {
                     className={cn(
                       "h-1/2",
                       "bg-cover bg-center",
-                      // "grayscale",
                       "text-red-500",
                       "backdrop:grayscale",
                       "p-4",
