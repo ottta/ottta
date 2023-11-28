@@ -48,7 +48,7 @@ export type IProduct = {
 export type ResponseProducts = TTSResponse<IProduct[]>;
 export type ResponseProduct = TTSResponse<IProduct>;
 
-const apiUri = process.env.TTS_API_URL! || "http://localhost:3000";
+const apiUri = process.env.TTS_API_URL!;
 const orgId = process.env.TTS_ORG_ID!;
 const appId = process.env.TTS_APP_ID!;
 
