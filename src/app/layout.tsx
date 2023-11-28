@@ -9,11 +9,11 @@ import { cn } from "@/libs/utils";
 
 import Provider from "@/app/Provider";
 
-import AppGrid from "@/components/AppGrid";
-import BarBottom from "@/components/BarBottom";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
+import AppGrid from "@/components/Utils/AppGrid";
+import BarBottom from "@/components/Utils/BarBottom";
+import Footer from "@/components/Utils/Footer";
+import Header from "@/components/Utils/Header";
+import ScrollToTop from "@/components/Utils/ScrollToTop";
 import Separator from "@/components/Utils/Separator";
 
 const isProduction = process.env.NODE_ENV === "production";

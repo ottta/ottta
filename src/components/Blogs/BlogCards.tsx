@@ -1,7 +1,7 @@
 import { IProduct } from "@/libs/fetcher";
 import { cn } from "@/libs/utils";
 
-import BlogCard from "@/app/blog/BlogCard";
+import BlogCard from "@/components/Blogs/BlogCard";
 
 type BlogCardsProps = {
   products: IProduct[];

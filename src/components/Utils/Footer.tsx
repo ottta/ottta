@@ -2,7 +2,7 @@ import NextLink, { LinkProps } from "next/link";
 
 import { cn } from "@/libs/utils";
 
-import BadgeLinkedIn from "@/components/Badge/BadgeLinkedIn";
+import BadgeLinkedIn from "@/components/Utils/BadgeLinkedIn";
 
 type CustomLink = {
   label: string;

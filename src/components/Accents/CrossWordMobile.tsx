@@ -1,6 +1,6 @@
 import { cn } from "@/libs/utils";
 
-import GridContainer from "@/components/GridContainer";
+import GridContainer from "@/components/Utils/GridContainer";
 
 type Word = {
   word: string;

@@ -1,6 +1,6 @@
 "use client";
 
-import GridContainer from "../GridContainer";
+import GridContainer from "./GridContainer";
 
 import { cn } from "@/libs/utils";
 

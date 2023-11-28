@@ -1,8 +1,7 @@
 import { getProducts } from "@/libs/fetcher";
 
-import BlogCards from "@/app/blog/BlogCards";
-
-import GridContainer from "@/components/GridContainer";
+import BlogCards from "@/components/Blogs/BlogCards";
+import GridContainer from "@/components/Utils/GridContainer";
 import Separator from "@/components/Utils/Separator";
 
 export default async function Page() {

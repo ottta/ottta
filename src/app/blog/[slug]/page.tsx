@@ -6,10 +6,9 @@ import { notFound } from "next/navigation";
 import { getProducts } from "@/libs/fetcher";
 import { cn } from "@/libs/utils";
 
-import BlogList from "@/app/blog/[slug]/BlogList";
-
+import BlogList from "@/components/Blogs/BlogList";
 import BlogToc from "@/components/Blogs/BlogToc";
-import GridContainer from "@/components/GridContainer";
+import GridContainer from "@/components/Utils/GridContainer";
 import Separator from "@/components/Utils/Separator";
 
 type PageProps = {

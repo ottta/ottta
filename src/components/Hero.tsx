@@ -1,7 +1,7 @@
 import { cn } from "@/libs/utils";
 
 // import Typewriter from "@/components/Typewriter";
-import AnalogClock from "@/components/AnalogClock";
+import AnalogClock from "@/components/Accents/AnalogClock";
 
 export default function Hero() {
   return (

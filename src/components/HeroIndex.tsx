@@ -1,9 +1,8 @@
 import { headers } from "next/headers";
 import { UAParser } from "ua-parser-js";
 
-import HorizontalScroll from "@/app/about/HorizontalScroll";
-
-import CrossWordMobile from "@/components/CrossWordMobile";
+import CrossWordMobile from "@/components/Accents/CrossWordMobile";
+import HorizontalScroll from "@/components/Accents/HorizontalScroll";
 
 export default function HeroIndex() {
   const headerList = headers();

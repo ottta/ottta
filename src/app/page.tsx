@@ -8,9 +8,9 @@ import works from "@/database/works.json";
 import { getProducts } from "@/libs/fetcher";
 import { cn } from "@/libs/utils";
 
-import GridContainer from "@/components/GridContainer";
 import Hero from "@/components/Hero";
 import HeroIndex from "@/components/HeroIndex";
+import GridContainer from "@/components/Utils/GridContainer";
 import Separator from "@/components/Utils/Separator";
 
 type HCard = {

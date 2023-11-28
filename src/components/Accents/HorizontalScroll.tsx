@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { cn } from "@/libs/utils";
 
 import { ContainerInfo } from "@/components/Accents/ContainerInfo";
-import CrossWord from "@/components/CrossWord";
+import CrossWord from "@/components/Accents/CrossWord";
 
 function EndCap() {
   return (

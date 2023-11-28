@@ -1,5 +1,5 @@
-import BadgeLinkedIn from "@/components/Badge/BadgeLinkedIn";
-import GridContainer from "@/components/GridContainer";
+import BadgeLinkedIn from "@/components/Utils/BadgeLinkedIn";
+import GridContainer from "@/components/Utils/GridContainer";
 
 export default function Page() {
   return (
