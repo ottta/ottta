@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-sans)"],
+        sans: ["var(--font-text)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
         text: ["var(--font-text)"]
