@@ -2,27 +2,43 @@
 
 import GridContainer from "./GridContainer";
 
+import { DetailedHTMLProps, HTMLAttributes } from "react";
+
 import { cn } from "@/libs/utils";
 
 import useAgent from "@/hooks/use-agent";
 
-export default function Separator() {
+interface SeparatorProps
+  extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+
+export default function Separator(props: SeparatorProps) {
   const { isMobile } = useAgent();
-  const arr = isMobile ? 6 : 12;
+  const arr = isMobile ? 8 : 12;
   return (
-    <GridContainer
+    <div
       className={cn(
-        "h-16 lg:h-12",
-        "divide-x",
-        "whitespace-nowrap",
-        "overflow-hidden"
+        "border-y",
+        "px-3 lg:px-12",
+        "-my-px",
+        "bg-red-4000",
+        props.className
       )}
     >
-      {Array(arr)
-        .fill("")
-        .map((_, i) => (
-          <div key={i} />
-        ))}
-    </GridContainer>
+      <ul
+        className={cn(
+          "border-x",
+          "grid grid-cols-8 lg:grid-cols-12",
+          "h-12 lg:h-4",
+          "divide-x",
+          "whitespace-nowrap overflow-hidden"
+        )}
+      >
+        {Array(arr)
+          .fill("")
+          .map((_, i) => (
+            <li key={i} />
+          ))}
+      </ul>
+    </div>
   );
 }

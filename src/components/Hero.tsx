@@ -10,7 +10,7 @@ export default function Hero() {
         "px-3 lg:px-12",
         "border-y",
         "-mt-px",
-        "bg-neutral-100 dark:bg-neutral-900"
+        "bg-neutral-50 dark:bg-neutral-950"
       )}
     >
       <div
@@ -43,8 +43,8 @@ export default function Hero() {
             className={cn(
               "grid grid-cols-6",
               "lg:divide-x",
-              "hyphens-auto",
-              "uppercase"
+              "hyphens-auto"
+              // "uppercase"
             )}
           >
             <div

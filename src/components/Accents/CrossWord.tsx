@@ -38,7 +38,7 @@ export default function CrossWord() {
       viewBox="0 0 171 72"
       className={cn(
         "h-[calc(100%+1px)]",
-        "fill-neutral-50 dark:fill-neutral-950",
+        "fill-neutral-200 dark:fill-neutral-900",
         "relative",
         "-my-px -ml-px",
         "max-lg:hidden"

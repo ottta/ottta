@@ -8,9 +8,12 @@ import works from "@/database/works.json";
 import { getProducts } from "@/libs/fetcher";
 import { cn } from "@/libs/utils";
 
+import ParallaxAircraft from "@/components/Accents/ParallaxAircraft";
+import Description from "@/components/Description";
 import Hero from "@/components/Hero";
 import HeroIndex from "@/components/HeroIndex";
 import GridContainer from "@/components/Utils/GridContainer";
+import HorizontalScroller from "@/components/Utils/HorizontalScroller";
 import Separator from "@/components/Utils/Separator";
 
 type HCard = {
@@ -140,9 +143,38 @@ export default async function Page() {
   });
   return (
     <>
+      <ParallaxAircraft />
       <HeroIndex />
       <Separator />
+      <Description />
+
+      <HorizontalScroller>
+        <div
+          className={cn(
+            "h-full",
+            "w-[50vw]",
+            "bg-neutral-50",
+            "p-3 lg:p-12",
+            "overflow-hidden"
+          )}
+        >
+          <div
+            className={cn(
+              "text-[11rem] lg:text-[20rem]",
+              "font-black",
+              "leading-none"
+            )}
+          >
+            F4
+          </div>
+        </div>
+        <div className={cn("h-full", "w-[66.66vw]", "bg-neutral-200")} />
+        <div className={cn("h-full", "w-[88.88vw]", "bg-neutral-400")} />
+        <div className={cn("bg-neutral-600")} />
+      </HorizontalScroller>
+
       <Hero />
+
       <Separator />
 
       {products.success && products.data.length >= 1 && (
