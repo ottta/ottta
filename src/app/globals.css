@@ -27,7 +27,7 @@ html {
 body {
   @apply bg-neutral-50 dark:bg-neutral-950;
   @apply text-neutral-950 dark:text-neutral-300;
-  @apply py-[calc(4rem-0px)] lg:py-[calc(3rem-0px)];
+  /* @apply py-[calc(4rem-0px)] lg:py-[calc(3rem-0px)]; */
 
   font-feature-settings: "onum", "pnum";
 }

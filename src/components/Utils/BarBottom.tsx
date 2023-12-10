@@ -16,7 +16,7 @@ type CustomLink = {
 
 const links: CustomLink[] = [
   {
-    label: "Home",
+    label: "Index",
     link: { href: "/" },
     icon: (
       <svg
@@ -106,13 +106,13 @@ export default function BarBottom() {
     <div
       className={cn(
         "h-16 lg:h-12",
-        "border-t",
-        isSafari && "lg:border-b",
+        // "border-t",
+        // isSafari && "lg:border-b",
         "fixed bottom-0 right-0 left-0",
-        "bg-neutral-50/90 dark:bg-neutral-950/90",
+        // "bg-neutral-50/90 dark:bg-neutral-950/90",
         "z-50",
-        "px-3 lg:px-12",
-        "backdrop-blur-sm"
+        "px-3 lg:px-12"
+        // "backdrop-blur-sm"
       )}
     >
       {isMobile ? (
@@ -140,14 +140,34 @@ export default function BarBottom() {
             "max-lg:hidden"
           )}
         >
+          <ul className={cn("flex items-center", "gap-4")}>
+            {links.map((item, i) => (
+              <li key={i}>
+                <NextLink
+                  {...item.link}
+                  className={cn(
+                    // "rounded-full",
+                    // "border",
+                    "flex items-center",
+                    // "px-2",
+                    // "bg-neutral-200 dark:bg-neutral-800"
+                    "hover:underline"
+                  )}
+                >
+                  {item.label}
+                </NextLink>
+              </li>
+            ))}
+          </ul>
+
           <div
             className={cn(
-              "rounded-full",
-              "border",
+              // "rounded-full",
+              // "border",
               "flex items-center",
               "gap-x-1",
-              "pr-2 pl-1",
-              "bg-neutral-200 dark:bg-neutral-800"
+              "pr-2 pl-1"
+              // "bg-neutral-200 dark:bg-neutral-800"
             )}
           >
             <svg
@@ -161,25 +181,6 @@ export default function BarBottom() {
             </svg>
             <div>Leeds, United Kingdom</div>
           </div>
-
-          <ul className={cn("flex items-center", "gap-1")}>
-            {links.map((item, i) => (
-              <li key={i}>
-                <NextLink
-                  {...item.link}
-                  className={cn(
-                    "rounded-full",
-                    "border",
-                    "flex items-center",
-                    "px-2",
-                    "bg-neutral-200 dark:bg-neutral-800"
-                  )}
-                >
-                  {item.label}
-                </NextLink>
-              </li>
-            ))}
-          </ul>
         </div>
       )}
     </div>

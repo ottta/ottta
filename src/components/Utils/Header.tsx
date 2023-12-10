@@ -13,13 +13,13 @@ export default function Header() {
     <header
       className={cn(
         "h-16 lg:h-12",
-        "border-y",
-        !isSafari && "lg:border-t-0",
+        // "border-y",
+        // !isSafari && "lg:border-t-0",
         "fixed top-0 right-0 left-0",
         "z-50",
-        "px-3 lg:px-12",
-        "bg-neutral-50/90 dark:bg-neutral-950/90",
-        "backdrop-blur-sm"
+        "px-3 lg:px-12"
+        // "bg-neutral-50/90 dark:bg-neutral-950/90",
+        // "backdrop-blur-sm"
       )}
     >
       <div
@@ -35,11 +35,13 @@ export default function Header() {
           href="/"
           className={cn(
             "flex items-center",
-            "text-3xl lg:text-2xl",
+            // "text-3xl lg:text-sm",
             "font-bold"
+            // "uppercase"
           )}
         >
-          .otta
+          {/* otta */}
+          {/* Taufik Oktama */}
         </NextLink>
         <button name="Share">
           <svg

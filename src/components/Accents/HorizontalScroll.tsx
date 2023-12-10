@@ -13,11 +13,11 @@ function EndCap() {
     <ul
       className={cn(
         "absolute",
-        "h-[calc(100vh-6rem+1px)]",
+        "h-[calc(100vh-0rem+0px)]",
         "w-[calc(100vw-1.5rem)] lg:w-[calc(100vw-6rem)]",
         "top-0 right-px",
         "translate-x-full",
-        "bg-neutral-100 dark:bg-neutral-900",
+        "bg-neutral-200 dark:bg-neutral-900",
         "grid grid-cols-12",
         "divide-x"
       )}
@@ -66,7 +66,8 @@ function EndCap() {
                       "backdrop:grayscale",
                       "p-4",
                       "text-4xl",
-                      "font-bold"
+                      "font-bold",
+                      "grayscale"
                     )}
                     style={{
                       backgroundImage: isThird
@@ -97,23 +98,23 @@ export default function HorizontalScroll() {
   const bgX = useTransform(scrollYProgress, [0.33, 1], ["33.33%", "-66.66%"]);
 
   return (
-    <div className={cn("border-y", "-mt-px", "px-3 lg:px-12", "max-lg:hidden")}>
-      <div
-        ref={targetRef}
-        data-layout="fluid"
-        className={cn(
-          "h-[calc(640vh-3rem)] lg:h-[calc(300vh-6rem)]",
-          "border-x",
-          "relative"
-        )}
-      >
+    <div
+      className={cn(
+        "border-y",
+        "-mt-px",
+        "px-3 lg:px-12",
+        "max-lg:hidden",
+        "bg-neutral-200 dark:bg-neutral-900"
+      )}
+    >
+      <div ref={targetRef} className={cn("h-[300vh]", "border-x", "relative")}>
         <div
           className={cn(
-            "sticky top-16 lg:top-12",
-            "h-[calc(100vh-8rem)] lg:h-[calc(100vh-6rem)]",
+            "sticky top-0 lg:top-0",
+            "h-screen",
             "flex",
             "overflow-hidden",
-            "bg-neutral-100 dark:bg-neutral-900"
+            "bg-neutral-200 dark:bg-neutral-900"
           )}
         >
           <motion.div
@@ -144,15 +145,28 @@ export default function HorizontalScroll() {
           >
             <div
               className={cn(
-                "w-[calc(50vw-3rem)]",
+                "w-[calc(100vw-6rem)]",
                 "h-full",
                 "p-4",
                 "relative",
                 "flex items-end",
-                "bg-neutral-100 dark:bg-neutral-900"
+                "bg-neutral-200 dark:bg-neutral-900"
               )}
             >
-              <div className={cn("text-9xl", "font-bold", "px-4")}>A1</div>
+              <div
+                style={{ fontVariationSettings: `"wdth" 75` }}
+                className={cn(
+                  "text-[20rem]",
+                  "font-black",
+                  "leading-none",
+                  "px-4",
+                  "absolute",
+                  "bottom-0",
+                  "right-0"
+                )}
+              >
+                A1
+              </div>
             </div>
             <CrossWord />
             <EndCap />

@@ -10,9 +10,9 @@ import { cn } from "@/libs/utils";
 import Provider from "@/app/Provider";
 
 import AppGrid from "@/components/Utils/AppGrid";
-import BarBottom from "@/components/Utils/BarBottom";
+// import BarBottom from "@/components/Utils/BarBottom";
 import Footer from "@/components/Utils/Footer";
-import Header from "@/components/Utils/Header";
+// import Header from "@/components/Utils/Header";
 import ScrollToTop from "@/components/Utils/ScrollToTop";
 import Separator from "@/components/Utils/Separator";
 
@@ -73,17 +73,18 @@ export default function RootLayout(props: PropsWithChildren) {
     >
       <body>
         <Provider agent={agent}>
-          <Header />
+          {/* <Header /> */}
           <main
             className={cn(
-              "min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-6rem)]"
+              // "min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-6rem)]"
+              "min-h-screen"
             )}
           >
             {children}
           </main>
           <Footer />
           <Separator />
-          <BarBottom />
+          {/* <BarBottom /> */}
           <ScrollToTop />
           <AppGrid />
         </Provider>

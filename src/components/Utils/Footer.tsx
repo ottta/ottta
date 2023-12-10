@@ -26,7 +26,8 @@ export default function Footer() {
         "px-3 lg:px-12",
         "border-y",
         // "-mt-px",
-        "bg-rose-100 dark:bg-emerald-900"
+        // "bg-rose-100 dark:bg-emerald-900"
+        "bg-emerald-500 dark:bg-emerald-200"
       )}
     >
       <div
