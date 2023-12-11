@@ -1,6 +1,6 @@
 "use client";
 
-import landscape from "../../../public/images/astronout-1.png";
+import landscape from "../../../public/images/astronout-1@2400.png";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import NextImage from "next/image";
@@ -31,8 +31,8 @@ export default function ParallaxAircraft() {
         "w-screen",
         "overflow-hidden",
         "border-b",
-        "bg-gradient-to-b",
-        "from-neutral-300 dark:from-neutral-800",
+        "bg-gradient-to-t",
+        "from-neutral-200 dark:from-neutral-900",
         "to-transparent"
       )}
     >

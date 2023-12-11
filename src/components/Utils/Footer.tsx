@@ -19,6 +19,12 @@ const socialMedia: CustomLink[] = [
   { label: "Email", link: { href: "mailto:ot@unforma.club" } }
 ];
 
+const mainMenu: CustomLink[] = [
+  { label: "Index", link: { href: "/" } },
+  { label: "Blog", link: { href: "/blog" } },
+  { label: "Work", link: { href: "/work" } }
+];
+
 export default function Footer() {
   return (
     <footer
@@ -40,7 +46,13 @@ export default function Footer() {
         <div className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")}>
           <BadgeLinkedIn />
         </div>
-        <div className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")} />
+        <ul className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")}>
+          {mainMenu.map((item, i) => (
+            <li key={i}>
+              <NextLink {...item.link}>{item.label}</NextLink>
+            </li>
+          ))}
+        </ul>
         <div className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")} />
         <ul className={cn("col-span-6 lg:col-span-3", "p-3 lg:p-4")}>
           {socialMedia.map((item, i) => (

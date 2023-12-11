@@ -1,6 +1,9 @@
 "use client";
 
+import gajah from "../../../public/images/gajah-small.png";
+
 import { motion, useScroll, useTransform } from "framer-motion";
+import NextImage from "next/image";
 import { useRef } from "react";
 
 import { cn } from "@/libs/utils";
@@ -119,8 +122,8 @@ export default function HorizontalScroll() {
         >
           <motion.div
             style={{
-              x: bgX,
-              backgroundImage: `url("/images/gajah-small.png")`
+              x: bgX
+              // backgroundImage: `url("/images/gajah-small.png")`
             }}
             className={cn(
               "absolute",
@@ -131,7 +134,15 @@ export default function HorizontalScroll() {
               "bg-center",
               "bg-no-repeat"
             )}
-          />
+          >
+            <NextImage
+              alt="gajah"
+              src={gajah}
+              priority
+              fill
+              className={cn("object-contain", "object-center")}
+            />
+          </motion.div>
 
           <motion.div
             style={{ x: horz }}

@@ -18,28 +18,32 @@ export default function Description() {
         "!border-transparent"
       )}
     >
-      <div
-        className={cn("col-start-1 lg:col-start-7", "col-span-6 lg:col-span-5")}
-      >
+      <div className={cn("col-span-6")}>
         <div
           style={{ fontStretch: "condensed" }}
           className={cn(
-            "text-5xl",
+            "text-8xl",
             "font-black",
             "leading-none",
-            "mb-8",
             "sticky",
             "top-0",
             "z-10",
             "bg-neutral-50 dark:bg-neutral-950",
-            "h-20",
+            // "h-16",
             "flex",
             "items-center"
           )}
         >
           Prologue
         </div>
-
+      </div>
+      <div
+        className={cn(
+          "col-start-1 lg:col-start-7",
+          "col-span-6 lg:col-span-5",
+          "py-4"
+        )}
+      >
         <article
           dangerouslySetInnerHTML={{ __html: LIPSUM.join("") }}
           className={cn(

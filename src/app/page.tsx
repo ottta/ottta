@@ -144,17 +144,41 @@ export default async function Page() {
   return (
     <>
       <ParallaxAircraft />
+      <Separator />
       <HeroIndex />
       <Separator />
       <Description />
+      <Separator />
 
       <HorizontalScroller>
         <div
           className={cn(
             "h-full",
-            "w-[50vw]",
-            "bg-neutral-50",
-            "p-3 lg:p-12",
+            "w-[33.33vw]",
+            "bg-neutral-600",
+            "dark:bg-neutral-500"
+          )}
+        />
+        <div
+          className={cn(
+            "h-full",
+            "w-[66.66vw]",
+            "bg-neutral-400",
+            "dark:bg-neutral-700"
+          )}
+        />
+        <div
+          className={cn(
+            "h-full",
+            "w-[88.88vw]",
+            "bg-neutral-200",
+            "dark:bg-neutral-900"
+          )}
+        />
+        <div
+          className={cn(
+            "bg-neutral-50 dark:bg-neutral-950",
+            "px-3 lg:px-10",
             "overflow-hidden"
           )}
         >
@@ -168,10 +192,9 @@ export default async function Page() {
             F4
           </div>
         </div>
-        <div className={cn("h-full", "w-[66.66vw]", "bg-neutral-200")} />
-        <div className={cn("h-full", "w-[88.88vw]", "bg-neutral-400")} />
-        <div className={cn("bg-neutral-600")} />
       </HorizontalScroller>
+
+      <Separator />
 
       <Hero />
 
