@@ -27,7 +27,7 @@ function ModalChild(props: ModalChildProps) {
 }
 
 export default function Header() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const refHeader = useRef(null);
   useOnClickOutside(refHeader, () => open && setOpen(false));
