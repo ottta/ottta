@@ -188,27 +188,36 @@ export default function Experience() {
 
   return (
     <>
+      {/* <Separator className={cn("!h-12")} /> */}
+
       <div
         className={cn(
           "sticky",
-          "top-[calc(4rem-1px)] lg:top-[calc(3rem-1px)]",
+          // "top-[calc(4rem-1px)] lg:top-[calc(3rem-1px)]",
+          "top-0",
           "z-10",
           "bg-neutral-50/90 dark:bg-neutral-950/90",
           "backdrop-blur-sm",
-          "border-y",
-          "px-3 lg:px-12",
-          "-mb-px -mt-px"
+          "border-b",
+          // "px-3 lg:px-12",
+          "-mb-px -mt-px",
+          "h-24",
+          "flex",
+          "flex-col",
+          "justify-end"
         )}
       >
-        <div className={cn("fluid", "border-x")}>
+        <Separator className={cn("!h-12")} />
+        <div className={cn("fluid", "px-3 lg:px-12")}>
           <div
             className={cn(
-              "h-12 lg:h-10",
+              "h-12",
               "overflow-hidden",
               "-mb-px",
               "grid grid-cols-6 lg:grid-cols-12",
               "items-center",
-              "font-bold"
+              "font-bold",
+              "border-x"
             )}
           >
             <div

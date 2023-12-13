@@ -25,7 +25,7 @@ export default function HorizontalScroller(props: HorizontalScrollerProps) {
   return (
     <div
       ref={targetRef}
-      className={cn("h-[300vh]", "border-y")}
+      className={cn("h-[200vh] lg:h-[300vh]", "border-y")}
       data-dir={direction}
     >
       <div

@@ -58,10 +58,10 @@ export default async function Page(props: PageProps) {
   const blogs = await allProducts();
 
   if (!blog.success || blog.data.length <= 0) notFound();
-  const { content, description, name, createdAt, updatedAt } = blog.data[0];
+  const { content, description, name, updatedAt } = blog.data[0];
   return (
     <>
-      <Separator />
+      <Separator className={cn("!h-12")} />
 
       <GridContainer
         className={cn(

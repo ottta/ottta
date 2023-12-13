@@ -8,12 +8,13 @@ import works from "@/database/works.json";
 import { getProducts } from "@/libs/fetcher";
 import { cn } from "@/libs/utils";
 
-import ParallaxAircraft from "@/components/Accents/ParallaxAircraft";
+import ParallaxAstronaut from "@/components/Accents/ParallaxAstronaut";
 import Description from "@/components/Description";
 import Hero from "@/components/Hero";
 import HeroIndex from "@/components/HeroIndex";
 import GridContainer from "@/components/Utils/GridContainer";
 import HorizontalScroller from "@/components/Utils/HorizontalScroller";
+import NameCard from "@/components/Utils/NameCard";
 import Separator from "@/components/Utils/Separator";
 
 type HCard = {
@@ -33,7 +34,7 @@ type HCards = {
 function HighlightCard(props: HCard) {
   const { href, name, tags, description, date } = props;
   return (
-    <li className={cn("col-span-6 lg:col-span-3", "lg:aspect-square", "group")}>
+    <li className={cn("col-span-8 lg:col-span-3", "lg:aspect-square", "group")}>
       <NextLink
         href={href}
         className={cn(
@@ -86,7 +87,7 @@ function HighlightCards(props: HCards) {
       <GridContainer>
         <div
           className={cn(
-            "col-span-6 lg:col-span-12",
+            "col-span-8 lg:col-span-12",
             "px-4",
             "h-16 lg:h-12",
             "flex items-center",
@@ -100,9 +101,9 @@ function HighlightCards(props: HCards) {
       <GridContainer>
         <ul
           className={cn(
-            "col-span-6 lg:col-span-12",
+            "col-span-8 lg:col-span-12",
             "w-full",
-            "grid grid-cols-6 lg:grid-cols-12",
+            "grid grid-cols-8 lg:grid-cols-12",
             "max-lg:divide-y lg:divide-x",
             "max-lg:px-4",
             "max-lg:bg-neutral-200 max-lg:dark:bg-neutral-900"
@@ -112,7 +113,7 @@ function HighlightCards(props: HCards) {
             <HighlightCard key={i} {...item} />
           ))}
 
-          <li className={cn("col-span-6 lg:col-span-3", "lg:aspect-square")}>
+          <li className={cn("col-span-8 lg:col-span-3", "lg:aspect-square")}>
             <NextLink
               href={basePath}
               className={cn(
@@ -143,18 +144,19 @@ export default async function Page() {
   });
   return (
     <>
-      <ParallaxAircraft />
+      <ParallaxAstronaut />
+      <Description />
       <Separator />
       <HeroIndex />
       <Separator />
-      <Description />
+      <Hero />
       <Separator />
 
       <HorizontalScroller>
         <div
           className={cn(
             "h-full",
-            "w-[33.33vw]",
+            "w-[50vw]",
             "bg-neutral-600",
             "dark:bg-neutral-500"
           )}
@@ -162,7 +164,7 @@ export default async function Page() {
         <div
           className={cn(
             "h-full",
-            "w-[66.66vw]",
+            "w-[33.33vw]",
             "bg-neutral-400",
             "dark:bg-neutral-700"
           )}
@@ -170,7 +172,7 @@ export default async function Page() {
         <div
           className={cn(
             "h-full",
-            "w-[88.88vw]",
+            "w-[16.66vw]",
             "bg-neutral-200",
             "dark:bg-neutral-900"
           )}
@@ -179,7 +181,8 @@ export default async function Page() {
           className={cn(
             "bg-neutral-50 dark:bg-neutral-950",
             "px-3 lg:px-10",
-            "overflow-hidden"
+            "overflow-hidden",
+            "max-lg:pt-16"
           )}
         >
           <div
@@ -193,26 +196,6 @@ export default async function Page() {
           </div>
         </div>
       </HorizontalScroller>
-
-      <Separator />
-
-      <Hero />
-
-      <Separator />
-
-      {products.success && products.data.length >= 1 && (
-        <HighlightCards
-          title="Posts"
-          basePath="/blog"
-          items={products.data.map((item) => ({
-            href: `/blog/${item.slug}`,
-            name: item.name,
-            description: item.description,
-            tags: item.tags.map((t) => t.name),
-            date: item.createdAt
-          }))}
-        />
-      )}
 
       <Separator />
 
@@ -234,6 +217,22 @@ export default async function Page() {
               item.date.end === "now" ? new Date().toISOString() : item.date.end
           }))}
       />
+
+      <Separator />
+
+      {products.success && products.data.length >= 1 && (
+        <HighlightCards
+          title="Posts"
+          basePath="/blog"
+          items={products.data.map((item) => ({
+            href: `/blog/${item.slug}`,
+            name: item.name,
+            description: item.description,
+            tags: item.tags.map((t) => t.name),
+            date: item.createdAt
+          }))}
+        />
+      )}
 
       <Separator />
     </>

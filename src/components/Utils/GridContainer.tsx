@@ -12,7 +12,7 @@ export default function GridContainer(props: GridContainerProps) {
       <div data-layout="fluid" className={cn("border-x")}>
         <div
           {...rest}
-          className={cn("grid grid-cols-6 lg:grid-cols-12", rest.className)}
+          className={cn("grid grid-cols-8 lg:grid-cols-12", rest.className)}
         >
           {children}
         </div>

@@ -26,7 +26,7 @@ export default function Description() {
             "font-black",
             "leading-none",
             "sticky",
-            "top-0",
+            "top-12",
             "z-10",
             "bg-neutral-50 dark:bg-neutral-950",
             // "h-16",

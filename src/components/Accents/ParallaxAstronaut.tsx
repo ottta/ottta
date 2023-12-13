@@ -1,6 +1,7 @@
 "use client";
 
 import landscape from "../../../public/images/astronout-1@2400.png";
+import NameCard from "../Utils/NameCard";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import NextImage from "next/image";
@@ -10,7 +11,7 @@ import { cn } from "@/libs/utils";
 
 import useAgent from "@/hooks/use-agent";
 
-export default function ParallaxAircraft() {
+export default function ParallaxAstronaut() {
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -32,29 +33,25 @@ export default function ParallaxAircraft() {
         "overflow-hidden",
         "border-b",
         "bg-gradient-to-t",
-        "from-neutral-200 dark:from-neutral-900",
+        "from-neutral-300 dark:from-neutral-800",
         "to-transparent"
       )}
     >
-      <motion.div
+      <div
         style={{ fontVariationSettings: `"wdth" 75` }}
         className={cn(
           "absolute",
           "whitespace-nowrap",
           "leading-none",
-          "px-3 lg:px-12"
+          "px-3 lg:px-12",
+          "lg:right-0",
+          "bottom-12"
         )}
       >
-        <div className={cn("text-[11rem] lg:text-[20rem]", "font-black")}>
+        <div className={cn("text-[8rem] lg:text-[20rem]", "font-black")}>
           H45&deg;+
         </div>
-        {/* <div
-          className={cn("text-6xl", "px-4")}
-          style={{ fontFeatureSettings: `"zero" 1` }}
-        >
-          Leeds, England, UK
-        </div> */}
-      </motion.div>
+      </div>
 
       <motion.div
         style={{ rotate, scale }}
@@ -74,6 +71,8 @@ export default function ParallaxAircraft() {
           )}
         />
       </motion.div>
+
+      <NameCard />
 
       <ul
         className={cn(

@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import { type Metadata } from "next";
+import { type Metadata, type Viewport } from "next";
 import { headers } from "next/headers";
 import { type PropsWithChildren } from "react";
 
@@ -10,13 +10,18 @@ import { cn } from "@/libs/utils";
 import Provider from "@/app/Provider";
 
 import AppGrid from "@/components/Utils/AppGrid";
-// import BarBottom from "@/components/Utils/BarBottom";
 import Footer from "@/components/Utils/Footer";
-// import Header from "@/components/Utils/Header";
+import Header from "@/components/Utils/Header";
 import ScrollToTop from "@/components/Utils/ScrollToTop";
-import Separator from "@/components/Utils/Separator";
 
 const isProduction = process.env.NODE_ENV === "production";
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" }
+  ]
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -73,18 +78,9 @@ export default function RootLayout(props: PropsWithChildren) {
     >
       <body>
         <Provider agent={agent}>
-          {/* <Header /> */}
-          <main
-            className={cn(
-              // "min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-6rem)]"
-              "min-h-screen"
-            )}
-          >
-            {children}
-          </main>
+          <Header />
+          <main className={cn("min-h-screen")}>{children}</main>
           <Footer />
-          <Separator />
-          {/* <BarBottom /> */}
           <ScrollToTop />
           <AppGrid />
         </Provider>

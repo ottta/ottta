@@ -17,7 +17,8 @@ function EndCap() {
       className={cn(
         "absolute",
         "h-[calc(100vh-0rem+0px)]",
-        "w-[calc(100vw-1.5rem)] lg:w-[calc(100vw-6rem)]",
+        // "w-[calc(100vw-1.5rem)] lg:w-[calc(100vw-6rem)]",
+        "w-screen",
         "top-0 right-px",
         "translate-x-full",
         "bg-neutral-200 dark:bg-neutral-900",
@@ -93,7 +94,6 @@ export default function HorizontalScroll() {
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
-    // target: undefined,
     offset: ["start end", "end"]
   });
 
@@ -105,7 +105,7 @@ export default function HorizontalScroll() {
       className={cn(
         "border-y",
         "-mt-px",
-        "px-3 lg:px-12",
+        // "px-3 lg:px-12",
         "max-lg:hidden",
         "bg-neutral-200 dark:bg-neutral-900"
       )}
@@ -113,7 +113,7 @@ export default function HorizontalScroll() {
       <div ref={targetRef} className={cn("h-[300vh]", "border-x", "relative")}>
         <div
           className={cn(
-            "sticky top-0 lg:top-0",
+            "sticky top-0",
             "h-screen",
             "flex",
             "overflow-hidden",
@@ -121,10 +121,7 @@ export default function HorizontalScroll() {
           )}
         >
           <motion.div
-            style={{
-              x: bgX
-              // backgroundImage: `url("/images/gajah-small.png")`
-            }}
+            style={{ x: bgX }}
             className={cn(
               "absolute",
               "h-full",
@@ -156,9 +153,10 @@ export default function HorizontalScroll() {
           >
             <div
               className={cn(
-                "w-[calc(100vw-6rem)]",
+                // "w-[calc(100vw-6rem)]",
+                "w-screen",
                 "h-full",
-                "p-4",
+                "py-4 px-12",
                 "relative",
                 "flex items-end",
                 "bg-neutral-200 dark:bg-neutral-900"
@@ -170,7 +168,7 @@ export default function HorizontalScroll() {
                   "text-[20rem]",
                   "font-black",
                   "leading-none",
-                  "px-4",
+                  "px-12",
                   "absolute",
                   "bottom-0",
                   "right-0"

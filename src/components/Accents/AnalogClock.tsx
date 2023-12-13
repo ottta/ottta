@@ -216,7 +216,7 @@ export default function AnalogClock() {
 
   if (!mounted)
     return (
-      <div className={cn("aspect-square w-full", "p-4")}>
+      <div className={cn("aspect-square w-full")}>
         <svg
           viewBox="0 0 48 48"
           width="100%"
@@ -225,16 +225,16 @@ export default function AnalogClock() {
           className={cn("-rotate-90", "stroke-current")}
         >
           <Frame />
-          <Logo />
-          <Pin />
+          {/* <Logo /> */}
+          {/* <Pin /> */}
           <TickMark />
-          <TickNumber />
+          {/* <TickNumber /> */}
         </svg>
       </div>
     );
 
   return (
-    <div id="__analog-clock" className={cn("aspect-square w-full", "p-4")}>
+    <div id="__analog-clock" className={cn("aspect-square w-full")}>
       <svg
         viewBox="0 0 48 48"
         width="100%"
@@ -244,9 +244,9 @@ export default function AnalogClock() {
         className={cn("-rotate-90", "stroke-curent")}
       >
         <Frame />
-        <Logo />
+        {/* <Logo /> */}
         <TickMark />
-        <TickNumber />
+        {/* <TickNumber /> */}
         <Handles />
       </svg>
     </div>

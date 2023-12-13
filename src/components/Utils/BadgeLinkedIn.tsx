@@ -1,4 +1,4 @@
-import profile from "../../../public/images/profile/IMG_9472.png";
+import profile from "../../../public/images/profile/profile-coats.png";
 
 import NextImage from "next/image";
 import NextLink from "next/link";

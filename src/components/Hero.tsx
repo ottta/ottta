@@ -1,6 +1,5 @@
 import { cn } from "@/libs/utils";
 
-// import Typewriter from "@/components/Typewriter";
 import AnalogClock from "@/components/Accents/AnalogClock";
 
 export default function Hero() {
@@ -15,41 +14,52 @@ export default function Hero() {
     >
       <div
         className={cn(
-          "fluid",
           "mx-auto",
           "lg:grid grid-cols-6 lg:grid-cols-12",
           "border-x",
           "grid-flow-dense",
           "max-lg:divide-y lg:divide-x"
-          // "bg-neutral-200 max-lg:dark:bg-neutral-600"
-          // "text-neutral-300"
         )}
       >
-        <div className={cn("col-span-6", "grid lg:auto-rows-fr", "divide-y")}>
-          <div
-            // style={{ backgroundImage: "var(--bg-dotted)" }}
-            className={cn(
-              "p-4",
-              "text-2xl lg:text-6xl",
-              "max-lg:aspect-[2/1]",
-              "max-lg:text-center",
-              "max-lg:hidden"
-              // "max-lg:bg-rose-500 max-lg:dark:bg-rose-600"
-            )}
-          >
-            {/* <Typewriter /> */}
+        <div className={cn("col-span-6", "grid", "divide-y")}>
+          <div className={cn("grid", "grid-cols-6", "divide-x")}>
+            <div className={cn("col-span-3", "p-2 lg:p-4")}>
+              <div
+                className={cn(
+                  "flex",
+                  "flex-col",
+                  "justify-between",
+                  "font-bold",
+                  "h-full",
+                  "bg-neutral-800",
+                  "rounded-xl",
+                  "p-3 lg:p-4"
+                )}
+              >
+                <div className={cn("lg:text-4xl")}>Wednesday</div>
+                <div>
+                  <div className={cn("lg:text-4xl")}>December</div>
+                  <div className={cn("lg:text-8xl")}>17</div>
+                </div>
+              </div>
+            </div>
+            <div className={cn("col-span-3", "p-2 lg:p-4")}>
+              <div className={cn("bg-neutral-800", "p-3 lg:p-4", "rounded-xl")}>
+                <AnalogClock />
+              </div>
+            </div>
           </div>
+
           <div
             className={cn(
               "grid grid-cols-6",
               "lg:divide-x",
-              "hyphens-auto"
-              // "uppercase"
+              "hyphens-auto",
+              "max-lg:hidden"
             )}
           >
             <div
               className={cn(
-                // "max-lg:hidden",
                 "col-span-6 lg:col-span-3",
                 "p-4",
                 "flex items-start",
@@ -57,9 +67,6 @@ export default function Hero() {
                 "gap-y-4"
               )}
             >
-              <div className={cn("text-4xl lg:text-3xl")}>
-                Polymath Material.
-              </div>
               <div
                 className={cn(
                   "text-rose-500 dark:text-rose-600",
@@ -88,40 +95,26 @@ export default function Hero() {
                 "p-3 lg:p-4",
                 "flex items-start"
               )}
-            >
-              <p
-                // style={{ fontVariationSettings: `"wdth" 90` }}
-                className={cn(
-                  "text-xl lg:text-3xl",
-                  "w-full",
-                  // "italic",
-                  "hyphens-auto"
-                  // "font-light",
-                  // "py-8",
-                  // "max-lg:text-center"
-                )}
-              >
-                {/* <q> */}A Designer turned Software Developer. Now run{" "}
-                <strong>Unforma Club</strong>, and develop typography product{" "}
-                <strong>Truetype Supply</strong>.
-                {/* <strong>Truetype Supply:</strong> for{" "}
-                                    <strong>Type Designers &amp; Foundries</strong>. */}
-                {/* </q> */}
-              </p>
-            </div>
+            ></div>
           </div>
         </div>
 
         <div
-          style={{ fontFeatureSettings: `"pnum"` }}
           className={cn(
             "col-span-6",
             "flex items-center justify-center",
-            // "lg:min-h-[calc(100vh-6rem)]",
             "lg:p-12"
           )}
         >
-          <AnalogClock />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 -960 960 960"
+            height="100%"
+            width="100%"
+            fill="currentColor"
+          >
+            <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
+          </svg>
         </div>
       </div>
     </div>

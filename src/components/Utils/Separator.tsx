@@ -1,7 +1,5 @@
 "use client";
 
-import GridContainer from "./GridContainer";
-
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 import { cn } from "@/libs/utils";
@@ -19,16 +17,17 @@ export default function Separator(props: SeparatorProps) {
       className={cn(
         "border-y",
         "px-3 lg:px-12",
-        "-my-px",
+        // "-mt-px",
         "bg-red-4000",
+        "h-12 lg:h-4",
         props.className
       )}
     >
       <ul
         className={cn(
+          "h-full",
           "border-x",
           "grid grid-cols-8 lg:grid-cols-12",
-          "h-12 lg:h-4",
           "divide-x",
           "whitespace-nowrap overflow-hidden"
         )}
