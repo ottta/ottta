@@ -19,7 +19,13 @@ function ModalChild(props: ModalChildProps) {
     <motion.div
       variants={variantsChild}
       transition={{ type: "just" }}
-      className={cn("relative", "px-4 py-2", className)}
+      className={cn(
+        "relative",
+        "px-4 py-2",
+        "pointer-events-auto",
+        "touch-auto",
+        className
+      )}
     >
       {children}
     </motion.div>
@@ -127,12 +133,7 @@ export default function Header() {
               exit="hide"
               animate="show"
               variants={variantsParent}
-              className={cn(
-                "pointer-events-auto",
-                "touch-auto",
-                "relative",
-                "col-span-6 lg:col-span-3"
-              )}
+              className={cn("relative", "col-span-6 lg:col-span-3")}
             >
               <div
                 ref={refHeader}
@@ -141,8 +142,6 @@ export default function Header() {
                   "col-start-1",
                   "flex",
                   "flex-col",
-                  "lg:h-full",
-                  // "overflow-hidden"
                   "divide-y"
                 )}
               >
@@ -157,28 +156,29 @@ export default function Header() {
                     "relative",
                     "z-30",
                     "px-4",
-                    "text-neutral-50 dark:text-neutral-950"
+                    "text-neutral-50 dark:text-neutral-950",
+                    "mb-4",
+                    "pointer-events-auto",
+                    "touch-auto"
                   )}
                 >
                   <NextLink href="/">Menu</NextLink>
                 </div>
 
-                <ModalChild
+                {/* <ModalChild
                   className={cn(
                     "bg-red-400",
                     "z-20",
                     "h-12",
                     "flex items-center"
                   )}
-                >
-                  {/* Madep */}
-                </ModalChild>
+                ></ModalChild> */}
 
                 <ModalChild
                   className={cn(
                     "bg-neutral-50 dark:bg-neutral-950",
                     "min-h-[15rem]",
-                    "border-b",
+                    "!border-b",
                     // "flex-grow",
                     "flex",
                     "flex-col",

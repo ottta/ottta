@@ -188,8 +188,6 @@ export default function Experience() {
 
   return (
     <>
-      {/* <Separator className={cn("!h-12")} /> */}
-
       <div
         className={cn(
           "sticky",
@@ -208,12 +206,11 @@ export default function Experience() {
         )}
       >
         <Separator className={cn("!h-12")} />
-        <div className={cn("fluid", "px-3 lg:px-12")}>
+        <div className={cn("px-3 lg:px-12")}>
           <div
             className={cn(
               "h-12",
               "overflow-hidden",
-              "-mb-px",
               "grid grid-cols-6 lg:grid-cols-12",
               "items-center",
               "font-bold",

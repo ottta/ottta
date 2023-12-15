@@ -15,9 +15,9 @@ export default function Separator(props: SeparatorProps) {
   return (
     <div
       className={cn(
-        "border-y",
+        "border-b",
         "px-3 lg:px-12",
-        // "-mt-px",
+        "-mb-px",
         "bg-red-4000",
         "h-12 lg:h-4",
         props.className

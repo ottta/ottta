@@ -43,9 +43,10 @@ export default function ParallaxAstronaut() {
           "absolute",
           "whitespace-nowrap",
           "leading-none",
-          "px-3 lg:px-12",
-          "lg:right-0",
-          "bottom-12"
+          // "px-3 lg:px-12",
+          // "lg:right-0",
+          "bottom-12",
+          "left-1/2"
         )}
       >
         <div className={cn("text-[8rem] lg:text-[20rem]", "font-black")}>

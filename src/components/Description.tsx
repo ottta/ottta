@@ -1,3 +1,5 @@
+import GridContainer from "./Utils/GridContainer";
+
 import { LIPSUM, cn } from "@/libs/utils";
 
 const DESCRIPTION = [
@@ -9,16 +11,8 @@ const DESCRIPTION = [
 
 export default function Description() {
   return (
-    <div
-      className={cn(
-        "p-3 lg:px-12",
-        "min-h-screen",
-        "grid",
-        "grid-cols-6 lg:grid-cols-12",
-        "!border-transparent"
-      )}
-    >
-      <div className={cn("col-span-6")}>
+    <GridContainer className={cn("lg:divide-x")}>
+      <div className={cn("col-span-8 lg:col-span-3")}>
         <div
           style={{ fontStretch: "condensed" }}
           className={cn(
@@ -31,19 +25,16 @@ export default function Description() {
             "bg-neutral-50 dark:bg-neutral-950",
             // "h-16",
             "flex",
-            "items-center"
+            "items-center",
+            "px-4",
+            "bg-red-500"
           )}
         >
           Prologue
         </div>
       </div>
-      <div
-        className={cn(
-          "col-start-1 lg:col-start-7",
-          "col-span-6 lg:col-span-5",
-          "py-4"
-        )}
-      >
+      <div className={cn("col-span-3")} />
+      <div className={cn("col-span-8 lg:col-span-6", "p-4")}>
         <article
           dangerouslySetInnerHTML={{ __html: LIPSUM.join("") }}
           className={cn(
@@ -55,6 +46,6 @@ export default function Description() {
           )}
         />
       </div>
-    </div>
+    </GridContainer>
   );
 }

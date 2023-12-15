@@ -1,4 +1,5 @@
 import { getProducts } from "@/libs/fetcher";
+import { cn } from "@/libs/utils";
 
 import BlogCards from "@/components/Blogs/BlogCards";
 import GridContainer from "@/components/Utils/GridContainer";
@@ -15,7 +16,7 @@ export default async function Page() {
   });
   return (
     <>
-      <Separator />
+      <Separator className={cn("!h-12")} />
       <GridContainer>
         {products.success && products.data.length !== 0 && (
           <BlogCards products={products.data} />

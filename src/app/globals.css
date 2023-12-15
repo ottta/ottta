@@ -32,14 +32,15 @@ body {
   font-feature-settings: "onum", "pnum";
 }
 
-/* a[target="_blank"] {
+a[target="_blank"] {
   @apply text-rose-500 dark:text-rose-600;
-  @apply hover:underline;
-  @apply after:font-sans;
+  @apply underline;
+  /* @apply hover:underline; */
+  /* @apply after:font-sans;
   @apply after:content-["\2197"];
   @apply after:align-text-top;
-  @apply after:leading-none;
-} */
+  @apply after:leading-none; */
+}
 
 a {
   @apply relative;

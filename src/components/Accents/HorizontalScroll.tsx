@@ -13,80 +13,91 @@ import CrossWord from "@/components/Accents/CrossWord";
 
 function EndCap() {
   return (
-    <ul
+    <div
       className={cn(
         "absolute",
-        "h-[calc(100vh-0rem+0px)]",
-        // "w-[calc(100vw-1.5rem)] lg:w-[calc(100vw-6rem)]",
+        "h-screen",
         "w-screen",
-        "top-0 right-px",
-        "translate-x-full",
+        "top-0 right-0",
+        // "translate-x-full",
+        "translate-x-[calc(100%-1px)]",
         "bg-neutral-200 dark:bg-neutral-900",
-        "grid grid-cols-12",
-        "divide-x"
+        "px-3 lg:px-12"
       )}
     >
-      {Array(3)
-        .fill("")
-        .map((_, i) => {
-          const isFirst = i === 0;
-          const isSecond = i === 1;
-          const isThird = i === 2;
-          return (
-            <li
-              key={i}
-              className={cn(
-                "-ml-px",
-                "overflow-hidden",
-                "relative",
-                isFirst && "col-span-6",
-                isSecond && "col-span-3",
-                isThird && "col-span-3",
-                !isFirst && "flex flex-col divide-y"
-              )}
-            >
-              {isFirst && <ContainerInfo />}
-              {!isFirst && (
-                <>
-                  <div className={cn("h-1/2", "relative")}>
-                    {isThird && (
+      <div className={cn("border-xs", "h-full")}>
+        <ul
+          className={cn(
+            // "w-[calc(100vw-1.5rem)] lg:w-[calc(100vw-6rem)]",
+            "grid grid-cols-12",
+            // "divide-x",
+            "w-full",
+            "h-full"
+          )}
+        >
+          {Array(3)
+            .fill("")
+            .map((_, i) => {
+              const isFirst = i === 0;
+              const isSecond = i === 1;
+              const isThird = i === 2;
+              return (
+                <li
+                  key={i}
+                  className={cn(
+                    "-ml-px",
+                    "overflow-hidden",
+                    "relative",
+                    isFirst && "col-span-6",
+                    isSecond && "col-span-3",
+                    isThird && "col-span-3",
+                    !isFirst && "flex flex-col divide-y"
+                  )}
+                >
+                  {isFirst && <ContainerInfo />}
+                  {!isFirst && (
+                    <>
+                      <div className={cn("h-1/2", "relative")}>
+                        {isThird && (
+                          <div
+                            className={cn(
+                              "border",
+                              "rounded-full",
+                              "w-full aspect-square",
+                              "absolute",
+                              "top-1/2 left-1/2",
+                              "-translate-x-1/2 -translate-y-1/2"
+                            )}
+                          />
+                        )}
+                      </div>
                       <div
                         className={cn(
-                          "border",
-                          "rounded-full",
-                          "w-full aspect-square",
-                          "absolute",
-                          "top-1/2 left-1/2",
-                          "-translate-x-1/2 -translate-y-1/2"
+                          "h-1/2",
+                          "bg-cover bg-center",
+                          "text-red-500",
+                          "backdrop:grayscale",
+                          "p-4",
+                          "text-4xl",
+                          "font-bold",
+                          "grayscale"
                         )}
-                      />
-                    )}
-                  </div>
-                  <div
-                    className={cn(
-                      "h-1/2",
-                      "bg-cover bg-center",
-                      "text-red-500",
-                      "backdrop:grayscale",
-                      "p-4",
-                      "text-4xl",
-                      "font-bold",
-                      "grayscale"
-                    )}
-                    style={{
-                      backgroundImage: isThird
-                        ? "url(/images/reservoir.jpg)"
-                        : "none"
-                    }}
-                  >
-                    {isThird && <>FFF</>}
-                  </div>
-                </>
-              )}
-            </li>
-          );
-        })}
-    </ul>
+                        style={{
+                          backgroundImage: isThird
+                            ? "url(/images/reservoir.jpg)"
+                            : "none"
+                        }}
+                      >
+                        {isThird && <>FFF</>}
+                      </div>
+                    </>
+                  )}
+                </li>
+              );
+            })}
+        </ul>
+      </div>
+    </div>
   );
 }
 

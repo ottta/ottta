@@ -31,7 +31,7 @@ export default function Hero() {
                   "justify-between",
                   "font-bold",
                   "h-full",
-                  "bg-neutral-800",
+                  "bg-neutral-300 dark:bg-neutral-800",
                   "rounded-xl",
                   "p-3 lg:p-4"
                 )}
@@ -44,7 +44,13 @@ export default function Hero() {
               </div>
             </div>
             <div className={cn("col-span-3", "p-2 lg:p-4")}>
-              <div className={cn("bg-neutral-800", "p-3 lg:p-4", "rounded-xl")}>
+              <div
+                className={cn(
+                  "bg-neutral-300 dark:bg-neutral-800",
+                  "p-3 lg:p-4",
+                  "rounded-xl"
+                )}
+              >
                 <AnalogClock />
               </div>
             </div>
