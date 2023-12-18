@@ -51,8 +51,16 @@ export default function BlogTocMobile(props: BlogTocProps) {
           "backdrop-blur-sm"
         )}
       >
-        <div className={cn("flex", "gap-x-3", "overflow-hidden", "w-full")}>
-          <span className={cn("font-bold", "shrink-0")}>On this page</span>
+        <div
+          className={cn(
+            "flex",
+            "gap-x-3",
+            "overflow-hidden",
+            "w-full",
+            "font-bold"
+          )}
+        >
+          <span className={cn("shrink-0")}>On this page :</span>
           <TOCIndicator items={items} />
         </div>
         <span className={cn("shrink-0")}>

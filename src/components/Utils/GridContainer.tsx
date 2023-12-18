@@ -8,7 +8,7 @@ interface GridContainerProps
 export default function GridContainer(props: GridContainerProps) {
   const { children, ...rest } = props;
   return (
-    <div className={cn("border-y", "px-3 lg:px-12", "-my-px")}>
+    <div className={cn("border-y", "px-4 lg:px-12", "-my-px")}>
       <div data-layout="fluid" className={cn("border-x")}>
         <div
           {...rest}

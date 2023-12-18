@@ -35,7 +35,7 @@ export default function ScrollToTop() {
         <button
           onClick={() => window.scrollTo({ top: 0 })}
           className={cn(
-            "w-16 lg:w-12",
+            "w-12 lg:w-12",
             "aspect-square",
             "text-rose-500 dark:text-rose-600",
             "bg-rose-300 dark:bg-rose-800",

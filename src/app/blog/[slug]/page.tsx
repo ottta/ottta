@@ -61,7 +61,7 @@ export default async function Page(props: PageProps) {
   const { content, description, name, updatedAt } = blog.data[0];
   return (
     <>
-      <Separator className={cn("!h-12")} />
+      <Separator className={cn("!h-40 lg:!h-12")} />
 
       <GridContainer
         className={cn(
@@ -73,7 +73,7 @@ export default async function Page(props: PageProps) {
         <div
           className={cn(
             "max-lg:order-2",
-            "col-span-6",
+            "col-span-8 lg:col-span-6",
             "p-3 py-8 lg:p-4",
             "flex flex-col",
             "justify-between",
@@ -159,7 +159,7 @@ export default async function Page(props: PageProps) {
         <div
           className={cn(
             "max-lg:order-2",
-            "col-span-6",
+            "col-span-8 lg:col-span-6",
             "max-lg:border-y",
             "overflow-hidden"
           )}
@@ -174,7 +174,7 @@ export default async function Page(props: PageProps) {
         <div
           className={cn(
             "max-lg:order-1",
-            "col-span-6 lg:col-span-3",
+            "col-span-8 lg:col-span-3",
             "max-lg:sticky max-lg:top-16",
             "max-lg:z-10"
           )}
@@ -186,7 +186,7 @@ export default async function Page(props: PageProps) {
           className={cn(
             "max-lg:order-3",
             "max-lg:bg-amber-200 max-lg:dark:bg-neutral-900",
-            "col-span-6 lg:col-span-3",
+            "col-span-8 lg:col-span-3",
             "flex flex-col justify-between"
           )}
         >

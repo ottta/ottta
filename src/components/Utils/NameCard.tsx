@@ -16,7 +16,7 @@ export default function NameCard() {
 
         "pointer-events-none",
         "touch-none",
-        "px-3 lg:px-12"
+        "px-4 lg:px-12"
       )}
     >
       <div
@@ -42,13 +42,17 @@ export default function NameCard() {
             "leading-tight"
           )}
         >
-          <div className={cn("text-4xl", "font-black", "leading-none")}>
+          <div
+            className={cn("text-3xl lg:text-4xl", "font-black", "leading-none")}
+          >
             Open to Work or Collaboration
           </div>
 
           <div>
-            <div className={cn("text-2xl", "font-bold")}>Taufik Oktama</div>
-            <div className={cn("text-xl")}>
+            <div className={cn("text-xl lg:text-2xl", "font-bold")}>
+              Taufik Oktama
+            </div>
+            <div className={cn("text-lg lg:text-xl")}>
               Graphic Designer Turned Software &amp; Font Developer
             </div>
           </div>

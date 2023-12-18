@@ -46,10 +46,10 @@ export default function ParallaxAstronaut() {
           // "px-3 lg:px-12",
           // "lg:right-0",
           "bottom-12",
-          "left-1/2"
+          "left-4 lg:left-1/2"
         )}
       >
-        <div className={cn("text-[8rem] lg:text-[20rem]", "font-black")}>
+        <div className={cn("text-[10rem] lg:text-[20rem]", "font-black")}>
           H45&deg;+
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function ParallaxAstronaut() {
       <ul
         className={cn(
           "absolute",
-          "left-3 right-3",
+          "left-4 right-4",
           "lg:left-12 lg:right-12",
           "top-0 bottom-0",
           "border-x",

@@ -16,10 +16,10 @@ export default function Separator(props: SeparatorProps) {
     <div
       className={cn(
         "border-b",
-        "px-3 lg:px-12",
+        "px-4 lg:px-12",
         "-mb-px",
         "bg-red-4000",
-        "h-12 lg:h-4",
+        "h-24 lg:h-4",
         props.className
       )}
     >
