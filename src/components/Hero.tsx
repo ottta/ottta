@@ -7,8 +7,8 @@ import AnalogClock from "@/components/Accents/AnalogClock";
 export default function Hero() {
   return (
     <GridContainer>
-      <div className={cn("col-span-8 lg:col-span-6", "grid", "divide-y")}>
-        <div className={cn("grid", "grid-cols-6", "divide-x")}>
+      <div className={cn("col-span-8 lg:col-span-6", "grid", )}>
+        <div className={cn("grid", "grid-cols-6", )}>
           <div className={cn("col-span-3", "p-2 lg:p-4")}>
             <div
               className={cn(
@@ -45,7 +45,6 @@ export default function Hero() {
         <div
           className={cn(
             "grid grid-cols-6",
-            "lg:divide-x",
             "hyphens-auto",
             "max-lg:hidden"
           )}

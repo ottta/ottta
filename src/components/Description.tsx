@@ -23,11 +23,9 @@ export default function Description() {
             "top-12",
             "z-10",
             "bg-neutral-50 dark:bg-neutral-950",
-            // "h-16",
             "flex",
             "items-center",
             "px-4",
-            "bg-red-500"
           )}
         >
           Prologue

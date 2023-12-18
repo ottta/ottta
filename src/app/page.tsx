@@ -14,7 +14,6 @@ import Hero from "@/components/Hero";
 import HeroIndex from "@/components/HeroIndex";
 import GridContainer from "@/components/Utils/GridContainer";
 import HorizontalScroller from "@/components/Utils/HorizontalScroller";
-import NameCard from "@/components/Utils/NameCard";
 import Separator from "@/components/Utils/Separator";
 
 type HCard = {

@@ -16,7 +16,7 @@ export default async function Page() {
   });
   return (
     <>
-      <Separator className={cn("!h-12")} />
+      <Separator className={cn("!h-40 lg:!h-12")} />
       <GridContainer>
         {products.success && products.data.length !== 0 && (
           <BlogCards products={products.data} />

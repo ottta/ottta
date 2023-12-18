@@ -1,5 +1,6 @@
 "use client";
 
+import GridContainer from "./Utils/GridContainer";
 import Separator from "./Utils/Separator";
 import slugify from "slugify";
 
@@ -199,14 +200,15 @@ export default function Experience() {
           "border-b",
           // "px-3 lg:px-12",
           "-mb-px -mt-px",
-          "h-24",
+          // "lg:h-24",
           "flex",
           "flex-col",
           "justify-end"
         )}
       >
-        <Separator className={cn("!h-12")} />
-        <div className={cn("px-3 lg:px-12")}>
+        <Separator className={cn("!h-16 lg:!h-12")} />
+
+        <div className={cn("px-4 lg:px-12")}>
           <div
             className={cn(
               "h-12",
@@ -243,7 +245,7 @@ export default function Experience() {
       <ul id="__list-experience" className={cn("flex flex-col", "-mb-px")}>
         {years.reverse().map((year, i) => (
           <Fragment key={i}>
-            <li key={i} className={cn("border-y", "px-3 lg:px-12")}>
+            <li key={i} className={cn("border-y", "px-4 lg:px-12")}>
               <div
                 className={cn(
                   "fluid",
