@@ -106,9 +106,7 @@ function Detail(props: Work) {
               </li>
             ))}
           </ul>
-          <div
-            className={cn("text-4xl lg:text-6xl", "font-bold", "leading-none")}
-          >
+          <div className={cn("text-4xl lg:text-6xl", "leading-none")}>
             {project}
           </div>
         </div>

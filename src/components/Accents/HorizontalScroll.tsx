@@ -1,6 +1,6 @@
 "use client";
 
-import gajah from "../../../public/images/gajah-small.png";
+import gajah from "../../../public/images/gajah-small-posterize.png";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import NextImage from "next/image";

@@ -144,12 +144,9 @@ export default async function Page() {
   return (
     <>
       <ParallaxAstronaut />
-      <Description />
       <Separator />
-      <HeroIndex />
-      <Separator />
-      <Hero />
-      <Separator />
+      {/* <Hero />
+      <Separator /> */}
 
       <HorizontalScroller>
         <div
@@ -198,6 +195,9 @@ export default async function Page() {
 
       <Separator />
 
+      <Description />
+      <Separator />
+
       <HighlightCards
         title="Works"
         basePath="/work"
@@ -233,6 +233,9 @@ export default async function Page() {
         />
       )}
 
+      <Separator />
+
+      <HeroIndex />
       <Separator />
     </>
   );

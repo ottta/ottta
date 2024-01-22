@@ -129,3 +129,7 @@ a[data-active="true"] {
 /* p em {
     @apply font-serif;
 } */
+
+blockquote {
+  @apply !font-normal;
+}

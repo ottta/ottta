@@ -40,14 +40,9 @@ export const text = localFont({
   variable: "--font-text",
   src: [
     {
-      path: "../../public/fonts/OpenSans[wdth,wght].ttf",
-      weight: "300 800",
-      style: "normal"
-    },
-    {
-      path: "../../public/fonts/OpenSans-Italic[wdth,wght].ttf",
-      weight: "300 800",
-      style: "italic"
+      path: "../../public/fonts/Ordinal[slnt,wght].woff2",
+      weight: "300 700",
+      style: "normal italic"
     }
   ]
 });

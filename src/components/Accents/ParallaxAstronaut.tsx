@@ -1,6 +1,6 @@
 "use client";
 
-import landscape from "../../../public/images/astronout-1@2400.png";
+import landscape from "../../../public/images/astronout@2400-posterize.png";
 import NameCard from "../Utils/NameCard";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -50,7 +50,7 @@ export default function ParallaxAstronaut() {
         )}
       >
         <div className={cn("text-[10rem] lg:text-[20rem]", "font-black")}>
-          H45&deg;+
+          H45&deg;
         </div>
       </div>
 

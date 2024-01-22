@@ -82,11 +82,13 @@ export default async function Page(props: PageProps) {
             // "bg-neutral-200 dark:bg-neutral-900"
           )}
         >
-          <div className={cn("text-5xl lg:text-7xl font-black")}>{name}</div>
+          <div className={cn("text-5xl lg:text-6xl font-bold")}>{name}</div>
           <p
             className={cn(
-              "text-3xl lg:text-5xl",
-              "font-serif italic",
+              "text-3xl lg:text-4xl",
+              "italic",
+              // "font-serif italic",
+              "font-light",
               "hyphens-auto"
             )}
             dangerouslySetInnerHTML={{ __html: `<q>${description}</q>` }}
